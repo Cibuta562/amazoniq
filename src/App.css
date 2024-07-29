@@ -23,13 +23,14 @@ html, body, #root {
 }
 
 .hero-heading{
-  padding-top: 40px;
+  padding-top: 30px;
   color: white;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 250;
-  font-size: 34px;
-  margin: 0 10px;
+  letter-spacing: 3px;
+  font-weight: 299;
+  font-size: 30px;
+  margin: 0 20px;
 }
 
 
@@ -102,7 +103,8 @@ html, body, #root {
     font-style: normal;
     font-weight: 250;
     font-size: 19px;
-    margin: 8px;
+    margin: 8px 17px;
+
   }
 
 }

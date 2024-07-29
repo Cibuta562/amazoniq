@@ -38,7 +38,7 @@ function App() {
             <div className="content">
                 <Menu />
                 <h1 className="hero-heading"></h1>
-                <h1 className="hero-heading">WE'RE BREWING SOMETHING FOR YOU</h1>
+                <h1 className="hero-heading">WE ARE BREWING SOMETHING FOR YOU</h1>
                 <br/>
                 <br/>
                 <br/>
@@ -50,9 +50,15 @@ function App() {
                 </div>
                 {/*<p className={`hero-p-brew ${fadeState}`}>{brewList[currentIndex]} in our comunity</p>*/}
                 <div className="media-icons">
+                    <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank">
                     <img className="social-icon" src={insta}/>
+                    </a>
+                    <a href="https://chat.whatsapp.com/DaEV4nslvgG08c7JAPHz5n" target="_blank">
                     <img className="social-icon"  src={meta}/>
+                    </a>
+                    <a href="https://www.tiktok.com/@amazoniq.coffee" target="_blank">
                     <img className="social-icon"  src={tiktok}/>
+                    </a>
                 </div>
             </div>
         </div>
