@@ -1,0 +1,33 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+}
+
+.logo{
+    text-align: left;
+    color: white;
+    margin: 0;
+    background-color: white;
+
+}
+
+.logo.scrolled{
+    color: white;
+}
+
+.img-logo{
+    margin-top: 3px ;
+    height: 40px;
+}
+
+.menu.scrolled {
+    /*background-color: #232b22;*/
+    color: white;
+}

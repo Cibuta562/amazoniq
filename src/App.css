@@ -1,0 +1,90 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./fonts/KastelovAxiformaLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url('./assets/bg.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-heading{
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 38px;
+  margin: 0 20px;
+}
+
+.hero-p{
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 22px;
+}
+
+.hero-p-brew{
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.hero-container{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 1.5s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+
+
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.media-icons{
+  justify-content: center;
+}
+
+.social-icon{
+  padding: 15px;
+  height: 60px;
+  width: 60px;
+}
+
