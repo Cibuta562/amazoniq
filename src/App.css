@@ -13,7 +13,6 @@ html, body, #root {
 .App {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   height: 100%;
   width: 100%;
@@ -22,16 +21,7 @@ html, body, #root {
   background-size: cover;
 }
 
-.hero-heading{
-  padding-top: 10vh;
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  letter-spacing: 3px;
-  font-weight: 299;
-  font-size: 28px;
-  margin: 0 20px;
-}
+
 
 
 
@@ -98,16 +88,26 @@ html, body, #root {
   display: flex;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 801px) and (max-width: 1200px){
+  .hero-heading{
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 800px) {
 
   .hero-p{
+    padding-top: 15vh;
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19px;
-    margin: 8px 5px;
+    font-size: 18px;
     letter-spacing: 0.5px;
+    margin-top: 8vh;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .hero-p-j{
@@ -115,22 +115,81 @@ html, body, #root {
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 18px;
     margin: 8px 0px;
     letter-spacing: 0.5px;
   }
 
+  .hero-heading{
+    padding-top: 28vh;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 27px;
+    margin: 0 20px;
+  }
+
+  .media-icons{
+    padding-top: 5vh;
+    justify-content: space-around;
+  }
+
 }
 
-@media (min-width: 600px) {
+@media  (max-width: 1000px) and (orientation: landscape)  {
+  .hero-p, .hero-p-j{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 8px;
+  }
+
+  .hero-heading{
+    padding-top: 28vh;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-weight: 420;
+    font-size: 28px;
+    margin: 0 20px;
+  }
+
+  .hero-p{
+    padding-top: 5vh;
+    margin-top: 8vh;
+  }
+}
+
+@media (min-width: 1000px) {
 
   .hero-p, .hero-p-j{
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 20px;
     margin: 8px;
+  }
+
+  .hero-p{
+    padding-top: 15vh;
+    margin-top: 8vh;
+  }
+
+  .hero-heading{
+    padding-top: 28vh;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-weight: 420;
+    font-size: 28px;
+    margin: 0 20px;
   }
 
 

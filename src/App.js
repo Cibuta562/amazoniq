@@ -37,8 +37,8 @@ function App() {
             <div className="bg-overlay"></div>
             <div className="content">
                 <Menu />
-                <h1 className="hero-heading">WE ARE BREWING SOMETHING FOR YOU</h1>
-                <p className="hero-p" style={{marginTop: "8vh"}}>MEANWHILE, PLEASE ENJOY A COFFEE</p>
+                <h1 className="hero-heading">WE ARE BREWING SOMETHING FOR YOU!</h1>
+                <p className="hero-p" >MEANWHILE, PLEASE ENJOY A COFFEE</p>
                 <div className="justify">
                 <p className="hero-p-j">AND JOIN OUR AMAZONIQ FAMILY
                 </p>
