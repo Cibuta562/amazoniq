@@ -149,7 +149,7 @@ html, body, #root {
   }
 
   .hero-heading{
-    padding-top: 22vh;
+    padding-top: 20vh;
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -160,7 +160,7 @@ html, body, #root {
   }
 
   .hero-p{
-    padding-top: 5vh;
+    padding-top: 2vh;
     margin-top: 8vh;
   }
 
