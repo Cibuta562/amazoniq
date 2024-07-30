@@ -37,14 +37,13 @@ function App() {
             <div className="bg-overlay"></div>
             <div className="content">
                 <Menu />
-                <h1 className="hero-heading"></h1>
                 <h1 className="hero-heading">WE ARE BREWING SOMETHING FOR YOU</h1>
                 <br/>
                 <br/>
                 <br/>
                 <p className="hero-p">MEANWHILE, PLEASE ENJOY A COFFEE</p>
                 <div className="justify">
-                <p className="hero-p">AND JOIN OUR AMAZONIQ FAMILY
+                <p className="hero-p-j">AND JOIN OUR AMAZONIQ FAMILY
                 </p>
                 <img className="heart-img" src={heart}/>
                 </div>

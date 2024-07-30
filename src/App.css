@@ -23,13 +23,13 @@ html, body, #root {
 }
 
 .hero-heading{
-  padding-top: 30px;
+  padding-top: 12vh;
   color: white;
   font-family: "Inter", sans-serif;
   font-style: normal;
   letter-spacing: 3px;
   font-weight: 299;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0 20px;
 }
 
@@ -75,7 +75,7 @@ html, body, #root {
 }
 
 .media-icons{
-  padding-top: 50px;
+  padding-top: 7vh;
   justify-content: space-around;
 }
 
@@ -88,8 +88,9 @@ html, body, #root {
 }
 
 .heart-img{
-  margin-top: 7px;
+  margin-top: 5px;
   height: 25px;
+  margin-left: 15px;
 }
 
 .justify{
@@ -105,15 +106,25 @@ html, body, #root {
     font-style: normal;
     font-weight: 300;
     font-size: 19px;
-    margin: 8px 15px;
+    margin: 8px 20px;
+    letter-spacing: 0.5px;
+  }
 
+  .hero-p-j{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    margin: 8px 0px;
+    letter-spacing: 0.5px;
   }
 
 }
 
 @media (min-width: 600px) {
 
-  .hero-p{
+  .hero-p, .hero-p-j{
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -121,6 +132,7 @@ html, body, #root {
     font-size: 24px;
     margin: 8px;
   }
+
 
 }
 
