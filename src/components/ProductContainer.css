@@ -1,8 +1,24 @@
 .heading-details{
     padding-top: 10px;
-    width: 94%;
+    width: 88%;
     display: flex;
     justify-content: space-between;
+}
+
+.decoration-line-top{
+    margin-right: 80px;
+    width: 200px;
+    height: 1px;
+    background-color: black;
+    margin-top: -7px;
+}
+
+.decoration-line-bottom{
+    margin-right: 100px;
+    width: 180px;
+    height: 1px;
+    background-color: black;
+    margin-top: -7px;
 }
 
 .product {
@@ -10,7 +26,7 @@
     border: 1px solid #ddd;
     padding: 15px;
     width: 350px;
-    height: 450px;
+    height: 470px;
     box-sizing: border-box;
     text-align: center;
     border-radius: 5px;
@@ -20,8 +36,8 @@
 }
 
 .product-image {
-    width: 300px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     margin-bottom: 10px;
 }
 
@@ -41,8 +57,8 @@
 .product-description {
     font-size: 1em;
     color: #000000;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 8px;
+    margin-left: 20px;
     margin-right: 120px;
     text-align: left;
 

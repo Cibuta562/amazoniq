@@ -9,7 +9,9 @@ const Product = ({ name, price, description, image }) => {
                 <h3 className="product-name">{name}</h3>
                 <p className="product-price">{price}</p>
             </div>
+            <div className="decoration-line-top"></div>
             <p className="product-description">{description}</p>
+            <div className="decoration-line-bottom"></div>
         </div>
     );
 };
