@@ -1,6 +1,6 @@
 import React from 'react';
-import Product from './Product';
 import './ProductGrid.css';
+import Product from "./Product";
 
 const ProductGrid = () => {
     const products = [
