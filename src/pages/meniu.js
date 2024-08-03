@@ -1,9 +1,9 @@
-import ProdcutGrid from "../components/ProdcutGrid";
+import ProductGrid from "../components/ProductGrid";
 
 function Meniu() {
 return(
     <div>
-        <ProdcutGrid/>
+        <ProductGrid/>
     </div>
 )
 }
