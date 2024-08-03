@@ -10,7 +10,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px); /* Fixed width for each product */
     gap: 20px;
-    padding-top: 100px;
     justify-content: center; /* Center the items within the grid */
 }
 
@@ -28,11 +27,10 @@
     align-items: center;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
     .product-grid {
         grid-template-columns: repeat(4, 350px); /* Limit to 4 fixed-width columns */
         gap: 20px;
         justify-content: center; /* Center the grid items */
-        max-width: calc(350px * 4 + 60px); /* Max width for 4 items plus gaps */
     }
 }
