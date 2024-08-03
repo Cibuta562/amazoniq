@@ -8,7 +8,7 @@ const ProductGrid = () => {
             name: 'COLD BREW TONIC',
             price: '300 ml',
             description: '80 ml cold brew + \n' +
-                '200 ml apă tonică Franklin + gheata + garnish\n',
+                '200 ml apă tonică Franklin + gheata + garnish + cox mult',
             image: 'https://via.placeholder.com/150',
         },
         {
