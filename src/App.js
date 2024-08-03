@@ -15,12 +15,12 @@ const brewList = [
 
 function App() {
     return (
-
         <BrowserRouter>
                 <Menu />
                 <Routes>
                     <Route path='/' element={<Loading/>} />
                     <Route path='/under-construction/meniu' element={<Meniu/>} />
+                    <Route path="*" element={<Loading />} />
                 </Routes>
         </BrowserRouter>
     );
