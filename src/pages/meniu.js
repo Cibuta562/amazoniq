@@ -4,6 +4,9 @@ function Meniu() {
 return(
     <div>
         <ProductGrid/>
+        <br/>
+        <br/>
+        <br/>
     </div>
 )
 }

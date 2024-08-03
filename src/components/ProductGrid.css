@@ -1,20 +1,20 @@
-
-
-/* Flex container for centering the grid */
+/* Flex container for centering the grid horizontally */
 .grid-wrapper {
     display: flex;
-    justify-content: center; /* Center the grid horizontally */
+    justify-content: center; /* Center the grid container horizontally */
+    padding-top: 100px;
 }
 
 /* Main product grid */
 .product-grid {
-    padding-top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px); /* Set fixed 350px width for products */
+    grid-template-columns: repeat(auto-fill, 350px); /* Fixed width for each product */
     gap: 20px;
-    justify-content: center; /* Center the grid content */
+    padding-top: 100px;
+    justify-content: center; /* Center the items within the grid */
 }
 
+/* Product card styling */
 .product {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
