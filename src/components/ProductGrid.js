@@ -1,6 +1,7 @@
 import React from 'react';
 import './ProductGrid.css';
 import Product from "./ProductContainer";
+import coldBrewTonic from "../assets/cold-brew-water.png"
 
 const ProductGrid = () => {
     const products = [
@@ -9,7 +10,7 @@ const ProductGrid = () => {
             price: '300 ml',
             description: '80 ml cold brew + \n' +
                 '200 ml apă tonică Franklin + gheata + garnish + cox mult',
-            image: 'https://via.placeholder.com/150',
+            image: coldBrewTonic
         },
         {
             name: 'Product 2',
