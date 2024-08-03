@@ -1,10 +1,16 @@
-
+.heading-details{
+    padding-top: 10px;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .product {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     padding: 15px;
     width: 350px;
+    height: 450px;
     box-sizing: border-box;
     text-align: center;
     border-radius: 5px;
@@ -14,25 +20,30 @@
 }
 
 .product-image {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
+    width: 300px;
+    height: 250px;
     margin-bottom: 10px;
 }
 
 .product-name {
     font-size: 1.2em;
     margin: 10px 0;
+    font-family: Inter;
 }
 
 .product-price {
-    font-size: 1.1em;
-    color: #333;
-    margin: 5px 0;
+    font-size: 1.2em;
+    color: #000000;
+    margin: 10px 0;
+    font-family: Inter;
 }
 
 .product-description {
-    font-size: 0.9em;
-    color: #666;
+    font-size: 1em;
+    color: #000000;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 120px;
+    text-align: left;
+
 }

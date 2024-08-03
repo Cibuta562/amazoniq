@@ -5,9 +5,10 @@ import Product from "./ProductContainer";
 const ProductGrid = () => {
     const products = [
         {
-            name: 'COX',
-            price: '$10',
-            description: 'This is a great product that does many things.',
+            name: 'COLD BREW TONIC',
+            price: '300 ml',
+            description: '80 ml cold brew + \n' +
+                '200 ml apă tonică Franklin + gheata + garnish\n',
             image: 'https://via.placeholder.com/150',
         },
         {
