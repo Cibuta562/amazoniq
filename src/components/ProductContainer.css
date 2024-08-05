@@ -5,6 +5,35 @@
     justify-content: space-between;
 }
 
+.flex-dropdown-active{
+    display: flex;
+    margin-right: 80px;
+    height: 10px;
+}
+
+.arrow-active{
+    height: 6px;
+    width: 10px;
+    margin-top: -11px;
+}
+
+.product-description {
+    opacity: 0; /* Start hidden */
+    max-height: 0; /* Collapse height */
+    overflow: hidden; /* Hide overflowing content */
+    transition: opacity 0.7s ease, max-height 0.7s ease, margin-top 0.7s ease; /* Smooth transitions */
+}
+
+
+.product-description-visible {
+    opacity: 1; /* Fully visible */
+    max-height: 200px; /* Expand to show content */
+    margin: 15px;
+}
+
+
+
+
 .decoration-line-top{
     margin-right: 80px;
     width: 200px;
@@ -14,38 +43,56 @@
 }
 
 .decoration-line-bottom{
-    margin-right: 100px;
+    margin-right: 10px;
     width: 180px;
     height: 1px;
     background-color: black;
     margin-top: -7px;
 }
 
+
 .product {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    padding: 15px;
-    width: 350px;
-    height: 470px;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 350px;
+    padding: 15px;
+    background-color: #f2f2eb;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: height 0.7s ease, width 0.7s ease, padding 0.7s ease;
 }
+
+
+
+
 
 .product-image {
     width: 280px;
     height: 280px;
     margin-bottom: 10px;
     object-fit: cover;
+    box-sizing: border-box;
+    transition: none;
 }
+
+
+.product-image-container {
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+
 
 .product-name {
     font-size: 1.2em;
     margin: 10px 0;
     font-family: Inter;
+    font-weight: 450;
 }
 
 .product-price {
@@ -58,7 +105,7 @@
 .product-description {
     font-size: 1em;
     color: #000000;
-    margin-top: 8px;
+    margin-top: 6px;
     margin-left: 20px;
     margin-right: 120px;
     text-align: left;

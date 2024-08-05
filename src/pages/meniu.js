@@ -1,8 +1,9 @@
 import ProductGrid from "../components/ProductGrid";
+import "./meniu.css"
 
 function Meniu() {
 return(
-    <div>
+    <div className="meniu-bg">
         <ProductGrid/>
         <br/>
         <br/>
