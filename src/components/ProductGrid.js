@@ -34,7 +34,7 @@ const ProductGrid = () => {
             image: v60single
         },
         {
-            name: 'DOUBLE ESPRESSO DECAF',
+            name: 'V60 w. RARE',
             price: '300 ml',
             description: '80 ml cold brew + \n' +
                 '200 ml apă tonică Franklin + gheata + garnish + cox mult',
