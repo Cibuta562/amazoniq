@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './ProductContainer.css';
-import logo from "../assets/Amazoniq Icon Coal 2.svg"
+import logo from "../assets/40x40 coal.svg"
 
 const Product = ({ name, price, description, image }) => {
 

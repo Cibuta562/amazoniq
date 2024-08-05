@@ -61,7 +61,7 @@
     height: 10px; /* Set the height of the div */
     margin-top: -7px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-right: 37px;
+    margin-right: 28px;
 }
 
 .decoration-line-bottom-active{
@@ -71,15 +71,15 @@
     width: 200px; /* Make the div stretch to the full width of its container */
     height: 12px;
     margin-top: -12px; /* Adjust margin if necessary */
-    margin-right: 37px;
+    margin-right: 30px;
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
 .logo-bottom{
     /*top: 350px;*/
     /*left: 78%;*/
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 48px;
     /*position: absolute;*/
 }
 
