@@ -11,44 +11,88 @@
     height: 10px;
 }
 
-.arrow-active{
-    height: 6px;
-    width: 10px;
-    margin-top: -11px;
-}
 
 .product-description {
     opacity: 0; /* Start hidden */
     max-height: 0; /* Collapse height */
     overflow: hidden; /* Hide overflowing content */
-    transition: opacity 0.7s ease, max-height 0.7s ease, margin-top 0.7s ease; /* Smooth transitions */
+    transition: max-height 0.6s ease; /* Smooth transitions */
+    margin-left: 20px;
+    margin-right: 120px;
+    margin-top: -5px; /* Start with 0 margin-top */
 }
-
 
 .product-description-visible {
     opacity: 1; /* Fully visible */
     max-height: 200px; /* Expand to show content */
-    margin: 15px;
+    margin-top: 10px; /* Apply margin-top when visible */
+}
+
+.product-description {
+    font-size: 1em;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 120px;
+    text-align: left;
 }
 
 
 
 
 .decoration-line-top{
-    margin-right: 80px;
-    width: 200px;
-    height: 1px;
-    background-color: black;
-    margin-top: -7px;
+    margin-top: -5px;
+    width: 203px;
+    height: 2px;
+    background-image: url("../assets/UPPER LINE.svg"); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the element */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin-right: 79px;
 }
 
-.decoration-line-bottom{
-    margin-right: 10px;
-    width: 180px;
-    height: 1px;
-    background-color: black;
-    margin-top: -7px;
+.decoration-line-bottom {
+    background-image: url("../assets/Dropdown CLOSED.svg"); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the element */
+    width: 202px; /* Make the div stretch to the full width of its container */
+    height: 10px; /* Set the height of the div */
+    margin-top: -7px; /* Adjust margin if necessary */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin-right: 39px;
 }
+
+.decoration-line-bottom-active{
+    background-image: url("../assets/Dropdown OPEN.svg"); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 200px; /* Make the div stretch to the full width of its container */
+    height: 12px;
+    margin-top: -12px; /* Adjust margin if necessary */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.logo-bottom{
+    /*top: 350px;*/
+    /*left: 78%;*/
+    height: 40px;
+    width: 40px;
+    /*position: absolute;*/
+}
+
+/*.logo-bottom-active{*/
+/*    top: 435px;*/
+/*    left: 78%;*/
+/*    height: 40px;*/
+/*    width: 40px;*/
+/*    position: absolute;*/
+/*}*/
+
+.bottom-flex{
+    display: inline-flex;
+}
+
 
 
 .product {
@@ -63,6 +107,7 @@
     box-sizing: border-box;
     text-align: center;
     transition: height 0.7s ease, width 0.7s ease, padding 0.7s ease;
+    position: relative;
 }
 
 
@@ -93,6 +138,8 @@
     margin: 10px 0;
     font-family: Inter;
     font-weight: 450;
+    text-align: left;
+    width: 70%;
 }
 
 .product-price {
@@ -102,12 +149,3 @@
     font-family: Inter;
 }
 
-.product-description {
-    font-size: 1em;
-    color: #000000;
-    margin-top: 6px;
-    margin-left: 20px;
-    margin-right: 120px;
-    text-align: left;
-
-}

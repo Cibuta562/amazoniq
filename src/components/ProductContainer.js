@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './ProductContainer.css';
-import arrow from "../assets/arrow.png"
+import logo from "../assets/Amazoniq Icon Coal 2.svg"
 
 const Product = ({ name, price, description, image }) => {
 
@@ -27,9 +27,10 @@ const Product = ({ name, price, description, image }) => {
             <p className={`product-description ${isDescriptionVisible ? 'product-description-visible' : ''}`}>
                 {description}
             </p>
-            <div className="flex-dropdown-active" onClick={toggleDescription}>
-            <div className="decoration-line-bottom"></div>
-            <img className="arrow-active" src={arrow} alt="arrow-lipsa"/>
+            <div onClick={toggleDescription} className="bottom-flex">
+            <div className={`decoration-line-bottom ${isDescriptionVisible ? 'decoration-line-bottom-active' : ''}`}></div>
+            {/*<img className={`logo-bottom ${isDescriptionVisible ? 'logo-bottom-active' : ''}`} src={logo} alt="arrow-lipsa"/>*/}
+                <img className="logo-bottom" src={logo} alt="arrow-lipsa"/>
             </div>
         </div>
     );

@@ -6,14 +6,14 @@ import coldBrewTonic from "../assets/cold-brew-water.png"
 const ProductGrid = () => {
     const products = [
         {
-            name: 'COLD BREW TONIC',
+            name: 'DOUBLE ESPRESSO DECAF',
             price: '300 ml',
             description: '80 ml cold brew + \n' +
                 '200 ml apă tonică Franklin + gheata + garnish + cox mult',
             image: coldBrewTonic
         },
         {
-            name: 'Product 2',
+            name: 'DOUBLE DECAF',
             price: '$20',
             description: 'Another fantastic product with a lot of features.',
             image: 'https://via.placeholder.com/150',
