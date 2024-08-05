@@ -16,7 +16,7 @@
     opacity: 0; /* Start hidden */
     max-height: 0; /* Collapse height */
     overflow: hidden; /* Hide overflowing content */
-    transition: max-height 0.3s ease; /* Smooth transitions */
+    transition: max-height 0.1s ease; /* Smooth transitions */
     margin-left: 20px;
     margin-right: 120px;
     margin-top: -5px; /* Start with 0 margin-top */
