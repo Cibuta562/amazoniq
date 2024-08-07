@@ -17,6 +17,16 @@ import coldBrewMilk from "../assets/img_12.png"
 import coldBrewTonic from "../assets/img_13.png"
 import affogato from "../assets/img_14.png"
 import frappe from "../assets/img_15.png"
+import babyccino from "../assets/img_16.png"
+import tea from "../assets/img_17.png"
+import chai from "../assets/img_18.png"
+import hotChocolate from "../assets/img_19.png"
+import matcha from "../assets/img_20.png"
+import apa from "../assets/img_21.png"
+import apaMinerala from "../assets/img_22.png"
+import apăTonica from "../assets/img_23.png"
+import limonada from "../assets/img_24.png"
+import limonadaZmeura from "../assets/img_25.png"
 
 
 const ProductGrid = () => {
@@ -135,7 +145,102 @@ const ProductGrid = () => {
             description: 'Reteta noastra proprie de Frappe contine - 70 g înghețată friddi de vanilie + espresso dublu 40 ml + 150 ml lapte + gheata + crumble of oreo',
             image: frappe
         },
-
+        {
+            name: 'BABYCCINO',
+            price: '220 ml',
+            description: 'Cremă de lapte pentru copii – 220 ml',
+            image: babyccino
+        },
+        {
+            name: 'TEA',
+            price: '320 ml',
+            description: 'Diferite sortimente de ceaiuri - 6 g ceai vrac + 320 ml apă fierbinte',
+            image: tea
+        },
+        {
+            name: 'CHAI LATTE',
+            price: '225 ml',
+            description: '45 ml masala chai ( KO FI TI )+ lapte 180 ml',
+            image: chai
+        },
+        {
+            name: 'HOT CHOCOLATE',
+            price: '300 ml',
+            description: '20 g ciocolată (50%) + lapte 280 ml',
+            image: hotChocolate
+        },
+        {
+            name: 'MATCHA LATTE',
+            price: '300 ml',
+            description: '5 g matcha + 20 ml apă fierbinte + lapte de ovăz 280 ml',
+            image: matcha
+        },
+        {
+            name: 'FLAT WHITE DECAF',
+            price: '220 ml',
+            description: 'Espresso dublu 40 ml + lapte 180 ml',
+            image: flatWhite
+        },
+        {
+            name: 'CHAI LATTE',
+            price: '225 ml',
+            description: '45 ml masala chai ( KO FI TI )+ lapte 180 ml',
+            image: chai
+        },
+        {
+            name: 'DOUBLE ESPRESSO DECAF',
+            price: '40 ml',
+            description: '45 ml masala chai ( KO FI TI )+ lapte 180 ml',
+            image: dubluEspresso
+        },
+        {
+            name: 'LONG BLACK DECAF',
+            price: '80 ml',
+            description: 'Espresso dublu 40 ml + 40 ml hot water',
+            image: longBlack
+        },
+        {
+            name: 'DOUBLE LATTE DECAF',
+            price: '320 ml',
+            description: 'Espresso dublu 40 ml + lapte 280 ml',
+            image: singleLatte
+        },
+        {
+            name: 'ICE LATTE DECAF',
+            price: '190 ml',
+            description: 'Espresso dublu 40 ml + 150 ml lapte + gheață',
+            image: iceLatte
+        },
+        {
+            name: 'APĂ PLATĂ',
+            price: '330ML',
+            description: 'Garanție returnare 0,50 lei',
+            image: apa
+        },
+        {
+            name: 'APĂ MINERALĂ',
+            price: '330 ml',
+            description: 'Garanție returnare 0,50 lei',
+            image: apaMinerala
+        },
+        {
+            name: 'APĂ TONICĂ',
+            price: '200 ml',
+            description: 'Garanție returnare 0,50 lei - CONȚINE ZAHĂR 7.9% -',
+            image: apăTonica
+        },
+        {
+            name: 'LIMONADĂ SIMPLĂ',
+            price: '330 ml',
+            description: 'Garanție returnare 0,50 lei - CONTINE 14% SUC DIN LAMAIE, ZAHAR 8.4%',
+            image: limonada
+        },
+        {
+            name: 'LIMONADĂ ZMEURĂ',
+            price: '330 ml',
+            description: 'CONTINE 10% SUC DIN LAMAIE + 10% SUC NATURAL DIN ZMEURA + ZAHAR 7.1%',
+            image: limonadaZmeura
+        },
     ];
 
     return (
