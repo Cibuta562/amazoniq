@@ -27,6 +27,15 @@ import apaMinerala from "../assets/img_22.png"
 import apăTonica from "../assets/img_23.png"
 import limonada from "../assets/img_24.png"
 import limonadaZmeura from "../assets/img_25.png"
+import socata from "../assets/img_26.png"
+import cookie from "../assets/img_27.png"
+import banana from "../assets/img_28.png"
+import cupcake from "../assets/img_29.png"
+import cookeieCombpo from "../assets/img_30.png"
+import ovaz from "../assets/img_31.png"
+import mazare from "../assets/img_32.png"
+import bere from "../assets/img_33.png"
+import prosecco from "../assets/img_34.png"
 
 
 const ProductGrid = () => {
@@ -240,6 +249,72 @@ const ProductGrid = () => {
             price: '330 ml',
             description: 'CONTINE 10% SUC DIN LAMAIE + 10% SUC NATURAL DIN ZMEURA + ZAHAR 7.1%',
             image: limonadaZmeura
+        },
+        {
+            name: 'SOCATA ARTIZANALA',
+            price: '275 ml',
+            description: 'CONTINE FLOARE DE SOC, LAMAIE, ZAHAR 8.7%',
+            image: socata
+        },
+        {
+            name: 'CHOCOLATE COOKIE',
+            price: '1 buc',
+            description: 'Alergeni: ' +
+                'FAINA DE GRAU ALBA (NATURALA, FARA ADITIVI), OUA, UNT, CIOCOLATA BELGIANA 70% CACAO',
+            image: cookie
+        },
+        {
+            name: 'BANANA BREAD',
+            price: '100 g',
+            description: 'Alergeni: ' +
+                'FAINA DE GRAU ALBA (NATURALA FARA ADITIVI), OUA, LAPTE, NUCA',
+            image: banana
+        },
+        {
+            name: 'VEGAN CUPCAKE',
+            price: '100 g',
+            description: 'Alergeni\n' +
+                'VEGAN FRIENDLY',
+            image: cupcake
+        },
+        {
+            name: 'CHOCOLATE COOKIE COMBO',
+            price: '2 buc',
+            description: 'Alergeni: ' +
+                'FAINA DE GRAU ALBA (NATURALA, FARA ADITIVI), OUA, UNT, CIOCOLATA BELGIANA 70% CACAO',
+            image: cookeieCombpo
+        },
+        {
+            name: 'EXTRA SHOT of ESPRESSO',
+            price: '20 ml',
+            description: '',
+            image: espresso
+        },
+        {
+            name: "LAPTE DE OVAZ",
+            price: '1 L',
+            description: 'OATLY - 1L',
+            image: ovaz
+        },
+        {
+            name: "LAPTE DE MAZARE",
+            price: '1 L',
+            description: 'SPROUD MILK - 1L',
+            image: mazare
+        },
+        {
+            name: "BERE ARTIZANALA",
+            price: '330 ml',
+            description: 'Garanție returnare 0,50 lei\n' +
+                'De la prietenii de la Anagram',
+            image: bere
+        },
+        {
+            name: "PROSECCO DOC EXTRA DRY SERENA",
+            price: '200 ml',
+            description: 'Garanție returnare 050 lei\n' +
+                'Sticluțe de 200ML',
+            image: prosecco
         },
     ];
 
