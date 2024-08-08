@@ -69,7 +69,7 @@ const Product = ({ name, price, description, image }) => {
                     <div className="decoration-line-bottom-active" onClick={toggleDescription}></div>
                 </div>
             </div>
-                <img className="logo-bottom" src={logo} alt="arrow-lipsa"/>
+                <img className="logo-bottom" src={logo} alt="arrow-lipsa" onClick={toggleDescription}/>
         </div>
     );
 };
