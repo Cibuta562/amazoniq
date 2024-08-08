@@ -6,10 +6,18 @@ const Product = ({ name, price, description, image }) => {
 
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
-    // Function to toggle the description visibility
     const toggleDescription = () => {
-        setIsDescriptionVisible(!isDescriptionVisible);
+        setIsDescriptionVisible(prevState => {
+            if (prevState) {
+                // Collapse immediately
+                setTimeout(() => setIsDescriptionVisible(false), 0);
+            } else {
+                setIsDescriptionVisible(true);
+            }
+            return !prevState;
+        });
     };
+
 
 
 
