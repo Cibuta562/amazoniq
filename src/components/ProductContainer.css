@@ -12,32 +12,28 @@
 }
 
 
-.product-description {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease; /* Smooth transitions */
-    margin-left: 20px;
-    margin-right: 120px;
-    margin-top: -5px;
-}
+/*.product-description {*/
+/*    max-height: 0;*/
+/*    overflow: hidden;*/
+/*    !*transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease; !* Smooth transitions *!*!*/
 
-.product-description-visible {
-    opacity: 1;
-    max-height: 200px;
-    margin-top: 10px;
-}
+/*}*/
 
-.product-description.product-description-visible {
-    transition: max-height 0.5s ease, opacity 0.3s ease-in, margin-top 0.3s ease-in;
-}
+/*.product-description-visible {*/
+/*    opacity: 1;*/
+/*    max-height: 200px;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+/*.product-description.product-description-visible {*/
+/*    transition: max-height 0.5s ease, opacity 0.3s ease-in, margin-top 0.3s ease-in;*/
+/*}*/
 
 .product-description {
     font-size: 1em;
     color: #000000;
-    margin-left: 20px;
-    margin-right: 120px;
     text-align: left;
+    margin: 2px 120px 2px 10px;
 }
 
 
@@ -50,9 +46,21 @@
     width: 202px; /* Make the div stretch to the full width of its container */
     height: 1px; /* Set the height of the div */
     background-color: black;
-    margin-top: -7px; /* Adjust margin if necessary */
+    margin-top: 5px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     margin-right: 77px;
+}
+
+.decoration-line-top2 {
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the element */
+    width: 152px; /* Make the div stretch to the full width of its container */
+    height: 1px; /* Set the height of the div */
+    background-color: black;
+    margin-top: 5px; /* Adjust margin if necessary */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin-right: 127px;
 }
 
 
@@ -63,10 +71,12 @@
     background-position: center; /* Centers the image within the element */
     width: 202px; /* Make the div stretch to the full width of its container */
     height: 10px; /* Set the height of the div */
-    margin-top: -7px; /* Adjust margin if necessary */
+    margin-top: 2px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-right: 28px;
+    margin-right: 77px;
 }
+
+
 
 .decoration-line-bottom-active{
     background-image: url("../assets/Dropdown OPEN.svg"); /* Your background image */
@@ -74,14 +84,16 @@
     background-repeat: no-repeat; /* Prevents the image from repeating */
     width: 200px; /* Make the div stretch to the full width of its container */
     height: 12px;
-    margin-top: -12px; /* Adjust margin if necessary */
+    margin-top: 2px; /* Adjust margin if necessary */
     margin-right: 30px;
+    margin-left: 10px;
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
 .logo-bottom{
     /*top: 350px;*/
     /*left: 78%;*/
+    margin-left: 240px;
     height: 35px;
     width: 48px;
     /*position: absolute;*/
@@ -153,6 +165,8 @@
     margin: 10px 0;
     font-family: Inter;
 }
+
+
 
 
 

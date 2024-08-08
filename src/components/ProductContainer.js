@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './ProductContainer.css';
+import "./ProductContainer.sass"
 import logo from "../assets/40x40 coal.svg"
 
 const Product = ({ name, price, description, image }) => {
 
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+    const [ulHeight, setUlHeight] = useState('0px');
+    const ulRef = useRef(null);
 
     const toggleDescription = () => {
         setIsDescriptionVisible(prevState => {
@@ -19,6 +22,17 @@ const Product = ({ name, price, description, image }) => {
     };
 
 
+    useEffect(() => {
+        if (ulRef.current) {
+            if (isDescriptionVisible) {
+                setUlHeight(`${ulRef.current.scrollHeight + 1}px`);
+            } else {
+                setUlHeight('0px');
+            }
+        }
+    }, [isDescriptionVisible]);
+
+
 
 
     return (
@@ -31,16 +45,31 @@ const Product = ({ name, price, description, image }) => {
                 <h3 className="product-name">{name}</h3>
                 <p className="product-price">{price}</p>
             </div>
-            <div className="decoration-div-top">
             <div className="decoration-line-top"></div>
+            {/*/!*<div className="decoration-line-top"></div>*!/*/}
+            {/*/!*</div>*!/*/}
+            {/*/!*<div onClick={toggleDescription} className="bottom-flex">*!/*/}
+            {/*<div*/}
+            {/*    className={`decoration-line-bottom ${isDescriptionVisible ? 'hidden' : ''}`}*/}
+            {/*    onClick={toggleDescription}*/}
+            {/*></div>*/}
+            <div className="decoration-line-top2"></div>
+            <div
+                className={`wrapper wrapper1 ${isDescriptionVisible ? 'active' : ''}`}
+                id="wrapper"
+                onClick={toggleDescription}
+            >
+                <p className="click-text">
+                     <span className="arrow"></span>
+                </p>
+                <div className="div-desc" ref={ulRef} style={{ height: ulHeight }}>
+                    <p className="product-description">
+                        {description}
+                    </p>
+                    <div className="decoration-line-bottom-active" onClick={toggleDescription}></div>
+                </div>
             </div>
-            <p className={`product-description ${isDescriptionVisible ? 'product-description-visible' : ''}`}>
-                {description}
-            </p>
-            <div onClick={toggleDescription} className="bottom-flex">
-            <div className={`decoration-line-bottom ${isDescriptionVisible ? 'decoration-line-bottom-active' : ''}`}></div>
                 <img className="logo-bottom" src={logo} alt="arrow-lipsa"/>
-            </div>
         </div>
     );
 };
