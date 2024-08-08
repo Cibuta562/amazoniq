@@ -45,7 +45,7 @@ const Product = ({ name, price, description, image }) => {
                 <h3 className="product-name">{name}</h3>
                 <p className="product-price">{price}</p>
             </div>
-            <div className="decoration-line-top"></div>
+            <div className="decoration-line-top" onClick={toggleDescription}></div>
             {/*/!*<div className="decoration-line-top"></div>*!/*/}
             {/*/!*</div>*!/*/}
             {/*/!*<div onClick={toggleDescription} className="bottom-flex">*!/*/}
@@ -53,7 +53,7 @@ const Product = ({ name, price, description, image }) => {
             {/*    className={`decoration-line-bottom ${isDescriptionVisible ? 'hidden' : ''}`}*/}
             {/*    onClick={toggleDescription}*/}
             {/*></div>*/}
-            <div className="decoration-line-top2"></div>
+            <div className="decoration-line-top2" onClick={toggleDescription}></div>
             <div
                 className={`wrapper wrapper1 ${isDescriptionVisible ? 'active' : ''}`}
                 id="wrapper"
