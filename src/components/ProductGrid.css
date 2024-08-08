@@ -14,6 +14,25 @@
     justify-content: center; /* Center the items within the grid */
 }
 
+.sort-dropdown-label{
+    color: white;
+    font-family: Inter;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.sort-dropdown{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sort-dropdown-selection{
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: Inter;
+    background-color: #f2f2eb;
+}
+
 
 @media (min-width: 1440px) {
     .product-grid {
