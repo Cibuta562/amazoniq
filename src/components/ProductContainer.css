@@ -13,19 +13,19 @@
 
 
 .product-description {
-    opacity: 0; /* Start hidden */
-    max-height: 0; /* Collapse height */
-    overflow: hidden; /* Hide overflowing content */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease; /* Smooth transitions */
     margin-left: 20px;
     margin-right: 120px;
-    margin-top: -5px; /* Start with 0 margin-top */
+    margin-top: -5px;
 }
 
 .product-description-visible {
-    opacity: 1; /* Fully visible */
-    max-height: 200px; /* Expand to show content */
-    margin-top: 10px; /* Apply margin-top when visible */
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 10px;
 }
 
 .product-description.product-description-visible {
