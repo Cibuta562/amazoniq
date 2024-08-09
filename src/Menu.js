@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import bg from "./assets/18.png"
+import bg from "./assets/Amazoniq Inline Coal 3.svg"
 
 const Menu = () => {
     const [scrolled, setScrolled] = useState(false);
