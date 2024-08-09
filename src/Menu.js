@@ -21,12 +21,30 @@ const Menu = () => {
         };
     }, []);
 
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+
     return (
-        <div className={`menu ${scrolled ? 'scrolled' : ''}`}>
-            <div className={`logo ${scrolled ? 'scrolled' : ''}`}>
-                <img className="img-logo" src={bg}/>
+        <nav className="navbar">
+            <div className="navbar-header">
+                <div className="navbar-logo">
+                    <img src={bg} alt="Logo" />
+                </div>
+                <button className="navbar-toggle" onClick={toggleMenu}>
+                    &#9776; {/* Hamburger menu icon */}
+                </button>
             </div>
-        </div>
+            <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+                <a href="#section1">OUR FAMILY</a>
+                <a href="#section2">DRINKS</a>
+                <a href="#section3">MERCH & BEANS</a>
+            </div>
+        </nav>
     );
 };
 
