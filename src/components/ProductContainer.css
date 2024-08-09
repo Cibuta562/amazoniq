@@ -1,5 +1,5 @@
 .heading-details{
-    padding-top: 10px;
+    padding-top: 20px;
     width: 88%;
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@
     height: 2px; /* Set the height of the div */
     margin-top: 5px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-right: 77px;
+    margin-right: 78px;
 }
 
 .arrow-dec{
@@ -59,12 +59,29 @@
 .decoration-flex{
     display: flex;
     width: 202px;
-    margin-right: 77px;
+    margin-right: 78px;
 }
 
 .arrow-dec.active{
     opacity: 0;
+
 }
+
+
+.decoration-line-top2.active{
+    opacity: 0;
+}
+
+
+/*.arrow-dec{*/
+/*    opacity: 1;*/
+/*    transition: opacity 0.3s ease-in;*/
+/*}*/
+
+/*.decoration-line-top2{*/
+/*    opacity: 1;*/
+/*    transition: opacity 0.3s ease-in;*/
+/*}*/
 
 .decoration-line-top2 {
     background-image: url("../assets/Dropdown upper line.svg");
@@ -133,7 +150,7 @@
     flex-direction: column;
     align-items: center;
     width: 350px;
-    padding: 15px;
+    padding: 15px 15px 50px;
     background-color: #f2f2eb;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -143,6 +160,15 @@
 }
 
 
+.logo-bottom {
+    position: absolute;
+    padding-top: 20px;
+    bottom: 10px;
+    right: 35px;
+    height: 35px;
+    width: 48px;
+    transition: 0.15s ease;
+}
 
 
 
@@ -167,7 +193,7 @@
 
 .product-name {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 0;
     font-family: Inter;
     font-weight: 450;
     text-align: left;
@@ -177,7 +203,7 @@
 .product-price {
     font-size: 1.2em;
     color: #000000;
-    margin: 10px 0;
+    margin: 0;
     font-family: Inter;
 }
 

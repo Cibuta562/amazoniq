@@ -26,7 +26,7 @@ const Product = ({ name, price, description, image }) => {
     useEffect(() => {
         if (ulRef.current) {
             if (isDescriptionVisible) {
-                setUlHeight(`${ulRef.current.scrollHeight + 1}px`);
+                setUlHeight(`${ulRef.current.scrollHeight + 10}px`);
             } else {
                 setUlHeight('0px');
             }
@@ -55,9 +55,9 @@ const Product = ({ name, price, description, image }) => {
             {/*    onClick={toggleDescription}*/}
             {/*></div>*/}
             <div className="decoration-flex" onClick={toggleDescription}>
-            <div className="decoration-line-top2" onClick={toggleDescription}>
+            <div className={`decoration-line-top2 ${isDescriptionVisible ? 'active' : ''}`}>
             </div>
-                <img src={arrow} className={`arrow-dec ${isDescriptionVisible ? 'active' : ''}`} alt="lipsa poza" onClick={toggleDescription} />
+                <img src={arrow} className={`arrow-dec ${isDescriptionVisible ? 'active' : ''}`} alt="lipsa poza"  />
             </div>
             <div
                 className={`wrapper wrapper1 ${isDescriptionVisible ? 'active' : ''}`}
@@ -74,7 +74,7 @@ const Product = ({ name, price, description, image }) => {
                     <div className="decoration-line-bottom-active" onClick={toggleDescription}></div>
                 </div>
             </div>
-                <img className="logo-bottom" src={logo} alt="arrow-lipsa" onClick={toggleDescription}/>
+            <img className="logo-bottom" src={logo} alt="arrow-lipsa" onClick={toggleDescription}/>
         </div>
     );
 };
