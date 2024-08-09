@@ -40,27 +40,42 @@
 
 
 .decoration-line-top {
+    background-image: url("../assets/Dropdown upper line.svg");
     background-size: cover; /* Ensures the image covers the entire element */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image within the element */
     width: 202px; /* Make the div stretch to the full width of its container */
-    height: 1px; /* Set the height of the div */
-    background-color: black;
+    height: 2px; /* Set the height of the div */
     margin-top: 5px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     margin-right: 77px;
 }
 
+.arrow-dec{
+    width: 16px;
+    height: 16px;
+}
+
+.decoration-flex{
+    display: flex;
+    width: 202px;
+    margin-right: 77px;
+}
+
+.arrow-dec.active{
+    opacity: 0;
+}
+
 .decoration-line-top2 {
+    background-image: url("../assets/Dropdown upper line.svg");
     background-size: cover; /* Ensures the image covers the entire element */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image within the element */
-    width: 152px; /* Make the div stretch to the full width of its container */
-    height: 1px; /* Set the height of the div */
-    background-color: black;
+    width: 180px; /* Make the div stretch to the full width of its container */
+    height: 2px; /* Set the height of the div */
     margin-top: 5px; /* Adjust margin if necessary */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-right: 127px;
+    margin-right: 17px;
 }
 
 
