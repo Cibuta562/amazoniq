@@ -54,7 +54,7 @@ const Product = ({ name, price, description, image }) => {
             {/*    className={`decoration-line-bottom ${isDescriptionVisible ? 'hidden' : ''}`}*/}
             {/*    onClick={toggleDescription}*/}
             {/*></div>*/}
-            <div className="decoration-flex">
+            <div className="decoration-flex" onClick={toggleDescription}>
             <div className="decoration-line-top2" onClick={toggleDescription}>
             </div>
                 <img src={arrow} className={`arrow-dec ${isDescriptionVisible ? 'active' : ''}`} alt="lipsa poza" onClick={toggleDescription} />
