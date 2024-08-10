@@ -111,7 +111,7 @@
     }
 
     .navbar-links.open {
-        max-height: calc(100vh - 60px); /* Expand to full screen height minus the navbar */
+        max-height: calc(100vh - 50px); /* Expand to full screen height minus the navbar */
         opacity: 1; /* Fade in */
     }
 
