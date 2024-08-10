@@ -38,17 +38,16 @@
 
 
 
-
 .decoration-line-top {
-    background-image: url("../assets/Dropdown upper line.svg");
-    background-size: cover; /* Ensures the image covers the entire element */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image within the element */
-    width: 202px; /* Make the div stretch to the full width of its container */
-    height: 2px; /* Set the height of the div */
-    margin-top: 5px; /* Adjust margin if necessary */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-right: 78px;
+    background-image: url("../assets/Line 1.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 202px;
+    height: 2px;
+    margin-top: 5px;
+    margin-right: 76px;
+    box-sizing: border-box;
 }
 
 .arrow-dec{
