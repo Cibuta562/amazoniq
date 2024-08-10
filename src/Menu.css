@@ -60,8 +60,8 @@
 
 /* Toggle button (hidden on desktop) */
 .navbar-toggle {
-    width: 20px;
-    height: 10px;
+    width: 30px;
+    height: 15px;
     background-size: cover; /* Ensures the image covers the entire element */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image within the element */
@@ -94,6 +94,7 @@
     }
 
     .navbar-img{
+        margin-top: 1px;
         margin-left: -25px;
         height: 10px;
     }
@@ -111,7 +112,7 @@
         max-height: 0; /* Start with max-height 0 for transition */
         background-color: rgb(0, 0, 0);
         position: fixed;
-        top: 54px; /* Adjust this based on the height of your navbar */
+        top: 45px; /* Adjust this based on the height of your navbar */
         left: 0;
         justify-content: center;
         align-items: center;
@@ -123,7 +124,7 @@
     }
 
     .navbar-links.open {
-        max-height: calc(100vh - 50px); /* Expand to full screen height minus the navbar */
+        max-height: calc(100vh - 40px); /* Expand to full screen height minus the navbar */
         opacity: 1; /* Fade in */
     }
 
@@ -142,5 +143,6 @@
         background-color: rgb(242, 242, 235);
         color: #252422;
         text-decoration: none;
+        font-size: 15px;
     }
 }
