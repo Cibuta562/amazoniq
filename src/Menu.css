@@ -30,6 +30,7 @@
 .navbar-logo img {
     width: 100%;
     max-width: 200px;
+    height: 22px;
 }
 
 /* Links container for desktop */
@@ -38,9 +39,9 @@
     justify-content: flex-end;
     flex: 3;
     white-space: nowrap; /* Prevent links from wrapping onto multiple lines */
-    margin-right: 50px;
+    margin-right: 70px;
     font-family: Inter, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 350;
 }
 
@@ -53,12 +54,18 @@
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #555; /* Change color on hover */
 }
 
 /* Toggle button (hidden on desktop) */
 .navbar-toggle {
+    width: 20px;
+    height: 10px;
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image within the element */
+    background-image: url("./assets/HamburgerMenu.svg");
     display: none;
     background-color: transparent;
     border: none;
@@ -123,9 +130,12 @@
         text-decoration: none;
         font-size: 1.5em;
         transition: background-color 0.3s ease; /* Smooth transition for background color */
+        text-decoration: none;
     }
 
     .navbar-links a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgb(242, 242, 235);
+        color: #252422;
+        text-decoration: none;
     }
 }

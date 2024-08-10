@@ -36,7 +36,6 @@ const Menu = () => {
                     <img src={bg} alt="Logo" />
                 </div>
                 <button className="navbar-toggle" onClick={toggleMenu}>
-                    &#9776; {/* Hamburger menu icon */}
                 </button>
             </div>
             <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
