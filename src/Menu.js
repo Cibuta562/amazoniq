@@ -33,7 +33,7 @@ const Menu = () => {
         <nav className="navbar">
             <div className="navbar-header">
                 <div className="navbar-logo">
-                    <img src={bg} alt="Logo" />
+                    <img src={bg} alt="Logo" className="navbar-img"/>
                 </div>
                 <button className="navbar-toggle" onClick={toggleMenu}>
                 </button>

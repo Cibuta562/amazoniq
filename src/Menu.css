@@ -93,9 +93,14 @@
         width: auto;
     }
 
+    .navbar-img{
+        margin-left: -25px;
+        height: 10px;
+    }
+
     .navbar-toggle {
         display: block;
-        margin-right: 30px;
+        margin-right: 50px;
     }
 
     .navbar-links {
