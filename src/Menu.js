@@ -32,9 +32,11 @@ const Menu = () => {
     return (
         <nav className="navbar">
             <div className="navbar-header">
+                <a style={{textDecoration: "none"}} href="https://amazoniq.netlify.app/">
                 <div className="navbar-logo">
                     <img src={bg} alt="Logo" className="navbar-img"/>
                 </div>
+                </a>
                 <button className="navbar-toggle" onClick={toggleMenu}>
                 </button>
             </div>
