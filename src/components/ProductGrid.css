@@ -1,43 +1,154 @@
-/* Flex container for centering the grid horizontally */
 .grid-wrapper {
     display: flex;
-    justify-content: center; /* Center the grid container horizontally */
+    justify-content: center;
     padding-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Main product grid */
+/* Outer container to center the grid and manage space for the sidebar */
+.product-row-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a max width for better centering */
+    margin: 0 auto;
+    padding: 0 20px; /* Ensure some padding for the overall layout */
+}
+
+/* Sidebar (filter dropdown) */
+.sidebar {
+    width: 180px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: sticky;
+    text-align: right;
+    height: 300px;
+    top: 100px; /* Adjust this based on your header height if needed */
+    display: none; /* Hidden by default */
+    background: #f9f9f9; /* Background for better visibility */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better separation */
+}
+
+.button-close{
+    top: 100px;
+    position: sticky;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    display: none; /* Hidden by default */
+}
+
+.sidebar-label {
+    display: block;
+    font-size: 18px;
+    font-family: Inter;
+    margin-bottom: 10px;
+}
+
+.sidebar-selection {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-family: Inter;
+    background-color: #fff;
+}
+
+/* Product grid layout */
+
+
 .product-grid {
-    padding-top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 350px); /* Fixed width for each product */
-    gap: 20px;
-    justify-content: center; /* Center the items within the grid */
-}
-
-.sort-dropdown-label{
-    color: white;
-    font-family: Inter;
-    font-size: 18px;
-    margin-right: 5px;
-}
-
-.sort-dropdown{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+    width: 100%;
+    align-items: center;
     text-align: center;
-    padding-top: 100px;
+    box-sizing: border-box;
 }
 
-.sort-dropdown-selection{
-    padding: 5px 15px;
-    font-size: 18px;
-    font-family: Inter;
-    background-color: #f2f2eb;
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Display the sidebar only on wider screens */
+@media (min-width: 1350px) {
+    .sidebar {
+        display: block;
+        position: sticky;
+
+    }
+
+    .button-close {
+        display: block;
+        position: sticky;
+    }
 }
 
 
-@media (min-width: 1440px) {
+@media (max-width: 1350px) {
+    /* Flex container for centering the grid horizontally */
+    .grid-wrapper {
+        display: flex;
+        justify-content: center; /* Center the grid container horizontally */
+        padding-top: 100px;
+    }
+
+    /* Main product grid */
     .product-grid {
-        grid-template-columns: repeat(4, 350px); /* Limit to 4 fixed-width columns */
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px); /* Fixed width for each product */
+        gap: 50px;
+        justify-content: center; /* Center the items within the grid */
+    }
+
+    .sort-dropdown-label{
+        color: white;
+        font-family: Inter;
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .sort-dropdown{
+        text-align: center;
+        padding-top: 100px;
+        width: 200px;
+        padding-left: 20px;
+    }
+
+    .sort-dropdown-selection{
+        padding: 5px 15px;
+        font-size: 18px;
+        font-family: Inter;
+        background-color: #f2f2eb;
+    }
+
+    .product-row-grid{
+        display: flex;
+        width: 100%;
+    }
+}
+
+/* For larger screens, ensure grid columns fit better */
+@media (min-width: 1350px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        justify-content: center; /* Center the grid items */
     }
 }

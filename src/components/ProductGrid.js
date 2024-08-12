@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './ProductGrid.css';
 import Product from "./ProductContainer";
 import coldBrewSimplu from "../assets/product-images-webp/img_35.webp"
@@ -41,6 +41,7 @@ import prosecco from "../assets/product-images-webp/img_34.webp"
 const ProductGrid = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [showSidebar, setShowSidebar] = useState(true);
 
     const products = [
         {
@@ -361,8 +362,12 @@ const ProductGrid = () => {
 
     const categories = [...new Set(products.map(product => product.category))];
 
-    const handleCategoryChange = (event) => {
-        setSelectedCategory(event.target.value);
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+    };
+
+    const toggleSidebar = () => {
+        setShowSidebar(prevState => !prevState);
     };
 
     const filteredProducts = selectedCategory
@@ -370,17 +375,24 @@ const ProductGrid = () => {
         : products;
 
     return (
-        <div>
-            <div className="sort-dropdown">
-                <label htmlFor="category" className="sort-dropdown-label">Filter by Category: </label>
-                <select id="category" className="sort-dropdown-selection" value={selectedCategory} onChange={handleCategoryChange}>
-                    <option value="">All Categories</option>
-                    {categories.map((category, index) => (
-                        <option key={index} value={category}>{category}</option>
-                    ))}
-                </select>
-            </div>
+        <div className="grid-wrapper">
+            <button className="button-close" onClick={toggleSidebar} >
 
+            </button>
+            {showSidebar && (
+                <div className="sidebar">
+                    <ul>
+                        <li><button onClick={() => handleCategoryChange('')}>All Categories</button></li>
+                        {categories.map((category, index) => (
+                            <li key={index}>
+                                <button onClick={() => handleCategoryChange(category)}>
+                                    {category}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
             <div className="product-grid">
                 {filteredProducts.map((product, index) => (
                     <Product
