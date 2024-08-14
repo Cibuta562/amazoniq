@@ -102,9 +102,21 @@
     }
 
     .navbar-toggle {
+        width: 30px;
+        height: 30px; /* Adjust height for better visibility */
+        background-image: url("./assets/HamburgerMenu.svg");
+        background-size: contain; /* Make sure the image fits within the button */
+        background-repeat: no-repeat;
+        background-position: center;
         display: block;
-        margin-right: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-right: 20px;
+        z-index: 103; /* Ensure it appears above other elements */
     }
+
 
     .navbar-links {
         display: flex;
