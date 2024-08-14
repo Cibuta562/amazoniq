@@ -102,8 +102,8 @@
     }
 
     .navbar-toggle {
-        width: 30px;
-        height: 30px; /* Adjust height for better visibility */
+        width: 20px;
+        height: 20px; /* Adjust height for better visibility */
         background-image: url("./assets/HamburgerMenu.svg");
         background-size: contain; /* Make sure the image fits within the button */
         background-repeat: no-repeat;
