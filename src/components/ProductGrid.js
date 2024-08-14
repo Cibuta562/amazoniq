@@ -42,6 +42,7 @@ const ProductGrid = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('');
     const [showSidebar, setShowSidebar] = useState(true);
+    const [showMobileDropdown, setShowMobileDropdown] = useState(false);
 
     const products = [
         {
@@ -370,15 +371,48 @@ const ProductGrid = () => {
         setShowSidebar(prevState => !prevState);
     };
 
+    const toggleMobileDropdown = () => {
+        setShowMobileDropdown(prevState => !prevState);
+    };
+
+    useEffect(() => {
+        // Close the dropdown when a category is selected
+        if (selectedCategory || "ALL PRODUCTS") {
+            setShowMobileDropdown(false);
+        }
+    }, [selectedCategory]);
+
     const filteredProducts = selectedCategory
         ? products.filter(product => product.category === selectedCategory)
         : products;
 
     return (
         <div>
-            <div style={{ paddingTop: "200px" }}></div>
+            <div className="padding-top-div"></div>
             <div className="product-heading-container">
                 {/* Heading section if needed */}
+            </div>
+            <div className="parent-container">
+                <div className="mobile-dropdown-container">
+                    <button className="mobile-dropdown-toggle" onClick={toggleMobileDropdown}>
+                        {selectedCategory || 'WHAT FILLS YOUR CUP?'}
+                    </button>
+                    {/* Dropdown Menu */}
+                    <ul className={`mobile-dropdown ${showMobileDropdown ? 'show' : ''}`}>
+                        <li>
+                            <button className={`button-category ${selectedCategory === '' ? 'active' : ''}`} onClick={() => handleCategoryChange('')}>
+                                ALL PRODUCTS
+                            </button>
+                        </li>
+                        {categories.map((category, index) => (
+                            <li key={index}>
+                                <button className={`button-category ${selectedCategory === category ? 'active' : ''}`} onClick={() => handleCategoryChange(category)}>
+                                    {category}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
             <div className="grid-wrapper">
                 <button className="button-close" onClick={toggleSidebar}>
