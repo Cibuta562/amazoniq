@@ -228,8 +228,9 @@ li{
     left: 0; /* Align to the left edge */
     right: 0; /* Align to the right edge */
     margin: auto; /* Center horizontally */
-    width: 100%; /* Set a fixed width for the dropdown */
+    width: calc(100% - 2px);
     z-index: 2; /* Ensure it stays on top of other elements */
+    border: 1px solid #f2f2eb;
 }
 
 .mobile-dropdown-toggle {
@@ -244,7 +245,7 @@ li{
     background-color: #252422;
     border: 0;
     cursor: pointer;
-    z-index: 2; /* Ensure it's above other content */
+    z-index: 4; /* Ensure it's above other content */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
 }
 
@@ -253,10 +254,10 @@ li{
     list-style: none;
     padding: 0;
     border: 2px solid #1c6c1c;
+    width: calc(100% - 2px);
     margin: 0;
     background-color: rgb(43, 82, 21);
     position: absolute; /* Absolute positioning relative to container */
-    width: 100%;
     left: 50%;
     top: 58px; /* Position below the toggle button */
     transform: translateX(-50%); /* Center horizontally */
