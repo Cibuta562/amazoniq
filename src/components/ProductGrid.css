@@ -261,7 +261,7 @@ li{
     transform: translateX(-50%); /* Center horizontally */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
-    height: 85vh; /* Set fixed height */
+    height: 90vh; /* Set fixed height */
     overflow-y: auto; /* Allow scrolling if content is too tall */
     display: flex;
     z-index: 3;
