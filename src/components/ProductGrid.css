@@ -53,12 +53,12 @@
     margin-left: 20px;
     position: sticky;
     text-align: center;
-    height: 408px;
+    height: 498px;
     top: 100px; /* Adjust this based on your header height if needed */
     display: none; /* Hidden by default */
     background: rgba(48, 130, 11, 0.5); /* Background for better visibility */
     border: 2px solid #30820B;
-    padding: 0px 0px;
+    padding: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better separation */
 }
 
@@ -80,7 +80,7 @@ li{
 }
 
 .button-category {
-    height: 45px;
+    height: 55px;
     width: 180px;
     background-color: transparent;
     border: 2px solid transparent;
@@ -89,7 +89,7 @@ li{
     font-weight: 540;
     font-size: 18px;
     margin: 0;
-    padding: 5px 0px;
+    padding: 0;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -191,7 +191,7 @@ li{
     }
 
     .padding-top-div{
-        padding-top: 200px;
+        padding-top: 100px;
     }
 }
 
@@ -242,13 +242,14 @@ li{
     font-family: Inter, sans-serif;
     color: #ffffff;
     background-color: #252422;
-    border: 0px;
+    border: 0;
     cursor: pointer;
     z-index: 2; /* Ensure it's above other content */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
 }
 
 .mobile-dropdown {
+    display: flex;
     list-style: none;
     padding: 0;
     border: 2px solid #1c6c1c;
@@ -259,11 +260,11 @@ li{
     left: 50%;
     top: 58px; /* Position below the toggle button */
     transform: translateX(-50%); /* Center horizontally */
+    visibility: hidden; /* Initially not visible */
+    transition: opacity 0.4s ease, visibility 0.4s ease;
     opacity: 0; /* Initially hidden */
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
     height: 93vh; /* Set fixed height */
     overflow-y: auto; /* Allow scrolling if content is too tall */
-    display: flex;
     z-index: 3;
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center items vertically */
@@ -271,6 +272,7 @@ li{
 }
 
 .mobile-dropdown.show {
+    visibility: visible; /* Make it visible */
     transform: translateX(-50%) translateY(0); /* Move to visible position */
     opacity: 1; /* Fully visible */
 }
@@ -303,10 +305,6 @@ li{
 @media (max-width: 1450px) {
     .mobile-dropdown-container {
         display: block;
-    }
-
-    .padding-top-div{
-        padding-top: 200px;
     }
     /* Hide the sidebar on mobile devices */
     .sidebar {

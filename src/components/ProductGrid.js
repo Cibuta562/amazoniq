@@ -386,7 +386,7 @@ const ProductGrid = () => {
         };
 
         // Close the dropdown and scroll to the top when a category is selected
-        if (selectedCategory || selectedCategory === "ALL PRODUCTS") {
+        if (selectedCategory || "ALL PRODUCTS") {
             setShowMobileDropdown(false);
             scrollToTop(); // Scroll to the top
         }
