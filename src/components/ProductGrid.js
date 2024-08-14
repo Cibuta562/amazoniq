@@ -36,6 +36,7 @@ import ovaz from "../assets/product-images-webp/img_31.webp"
 import mazare from "../assets/product-images-webp/img_32.webp"
 import bere from "../assets/product-images-webp/img_33.webp"
 import prosecco from "../assets/product-images-webp/img_34.webp"
+import arrowToggle from "../assets/arrowClose.svg"
 
 
 const ProductGrid = () => {
@@ -376,9 +377,18 @@ const ProductGrid = () => {
     };
 
     useEffect(() => {
-        // Close the dropdown when a category is selected
-        if (selectedCategory || "ALL PRODUCTS") {
+        // Function to handle scrolling to top
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling effect
+            });
+        };
+
+        // Close the dropdown and scroll to the top when a category is selected
+        if (selectedCategory || selectedCategory === "ALL PRODUCTS") {
             setShowMobileDropdown(false);
+            scrollToTop(); // Scroll to the top
         }
     }, [selectedCategory]);
 
@@ -396,6 +406,7 @@ const ProductGrid = () => {
                 <div className="mobile-dropdown-container">
                     <button className="mobile-dropdown-toggle" onClick={toggleMobileDropdown}>
                         {selectedCategory || 'WHAT FILLS YOUR CUP?'}
+                        <img className="arrow-toggle-mobile" src={arrowToggle}/>
                     </button>
                     {/* Dropdown Menu */}
                     <ul className={`mobile-dropdown ${showMobileDropdown ? 'show' : ''}`}>

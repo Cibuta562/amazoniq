@@ -224,7 +224,7 @@ li{
 .mobile-dropdown-container {
     display: none; /* Default hidden */
     position: fixed; /* Fixed position relative to the viewport */
-    top: 46px; /* Adjust this based on your navbar height */
+    top: 45px; /* Adjust this based on your navbar height */
     left: 0; /* Align to the left edge */
     right: 0; /* Align to the right edge */
     margin: auto; /* Center horizontally */
@@ -237,7 +237,7 @@ li{
     top: 0; /* Stick to the top of its container */
     width: 100%;
     margin: 0 auto;
-    height: 48px;
+    height: 60px;
     font-size: 18px;
     font-family: Inter, sans-serif;
     color: #ffffff;
@@ -257,11 +257,11 @@ li{
     position: absolute; /* Absolute positioning relative to container */
     width: 100%;
     left: 50%;
-    top: 47px; /* Position below the toggle button */
+    top: 58px; /* Position below the toggle button */
     transform: translateX(-50%); /* Center horizontally */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
-    height: 90vh; /* Set fixed height */
+    height: 93vh; /* Set fixed height */
     overflow-y: auto; /* Allow scrolling if content is too tall */
     display: flex;
     z-index: 3;
@@ -290,6 +290,12 @@ li{
     border: none;
     cursor: pointer;
     text-align: center;
+}
+
+.arrow-toggle-mobile{
+    height: 20px;
+    width: 30px;
+    padding-left: 30px;
 }
 
 
