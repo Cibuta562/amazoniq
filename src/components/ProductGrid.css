@@ -233,6 +233,12 @@ li{
     border: 1px solid #f2f2eb;
 }
 
+.mobile-dropdown-container.show{
+    border: 2px solid #1c6c1c;
+    width: calc(100% - 4px);
+    top: 45px; /* Adjust this based on your navbar height */
+}
+
 .mobile-dropdown-toggle {
     position: sticky; /* Keeps the button sticky if needed */
     top: 0; /* Stick to the top of its container */
@@ -249,12 +255,13 @@ li{
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
 }
 
+
 .mobile-dropdown {
     display: flex;
     list-style: none;
     padding: 0;
     border: 2px solid #1c6c1c;
-    width: calc(100% - 2px);
+    width: calc(100% - 0px);
     margin: 0;
     background-color: rgb(43, 82, 21);
     position: absolute; /* Absolute positioning relative to container */
@@ -273,6 +280,7 @@ li{
 }
 
 .mobile-dropdown.show {
+    top: 59px;
     visibility: visible; /* Make it visible */
     transform: translateX(-50%) translateY(0); /* Move to visible position */
     opacity: 1; /* Fully visible */

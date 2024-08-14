@@ -403,7 +403,7 @@ const ProductGrid = () => {
                 {/* Heading section if needed */}
             </div>
             <div className="parent-container">
-                <div className="mobile-dropdown-container">
+                <div className={`mobile-dropdown-container ${showMobileDropdown ? 'show' : ''}`}>
                     <button className="mobile-dropdown-toggle" onClick={toggleMobileDropdown}>
                         {selectedCategory || 'WHAT FILLS YOUR CUP?'}
                         <img className="arrow-toggle-mobile" src={arrowToggle}/>
