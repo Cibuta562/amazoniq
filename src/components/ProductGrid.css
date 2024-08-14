@@ -1,10 +1,39 @@
 .grid-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 0;
     width: 100%;
     box-sizing: border-box;
 }
+
+.product-heading-container {
+    position: sticky;
+    top: 40px; /* Stick to the top of the viewport */
+    width: 100%;
+    z-index: 10; /* Ensure it stays on top of other content */
+    /*padding-top: 100px;*/
+    /*padding-bottom: 45px;*/
+}
+
+.product-heading-title {
+    width: 100%;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 44px;
+    text-align: center;
+    /* Adjust if necessary */
+    margin: 0
+    /*margin: 0 0 0 9%;*/
+}
+
+/* Decorative line under the heading */
+.product-heading-decoration {
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff; /* Adjust color if necessary */
+    margin: 10px auto 0 auto; /* Center align and space from title */
+}
+
 
 /* Outer container to center the grid and manage space for the sidebar */
 .product-row-grid {
@@ -23,22 +52,69 @@
     margin-right: 20px;
     margin-left: 20px;
     position: sticky;
-    text-align: right;
-    height: 300px;
+    text-align: center;
+    height: 408px;
     top: 100px; /* Adjust this based on your header height if needed */
     display: none; /* Hidden by default */
-    background: #f9f9f9; /* Background for better visibility */
-    padding: 10px;
+    background: rgba(48, 130, 11, 0.5); /* Background for better visibility */
+    border: 2px solid #30820B;
+    padding: 0px 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better separation */
 }
+
+ul{
+    margin: 0;
+    list-style: none;
+    background-color: transparent;
+    font-family: Inter;
+    font-weight: 600;
+    width: 180px;
+    border: none;
+    padding: 0;
+}
+
+li{
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.button-category {
+    height: 45px;
+    width: 180px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-weight: 540;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for buttons within .button-category */
+.button-category:hover {
+    background-color: #30820b;
+    color: #ffffff;
+}
+
+/* Styling for the active category button */
+.button-category.active {
+    background-color: #30820b;
+    color: #ffffff;
+}
+
 
 .button-close{
     top: 100px;
     position: sticky;
     width: 40px;
     height: 40px;
-    margin-left: 15px;
+    /*margin-left: 20px;*/
     display: none; /* Hidden by default */
+    background-image: url("../assets/arrowClose.svg");
 }
 
 .sidebar-label {
@@ -57,98 +133,110 @@
 }
 
 /* Product grid layout */
-
-
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Minimum 350px per item */
+    gap: 50px; /* Keep the gap between columns consistent */
     width: 100%;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin-bottom: 10px;
-}
-
-.sidebar button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: left;
-}
-
 /* Display the sidebar only on wider screens */
-@media (min-width: 1350px) {
+@media (min-width: 1450px) {
     .sidebar {
+        margin-top: 17px;
+        border-radius: 2px;
+        font-weight: 700;
         display: block;
         position: sticky;
-
     }
 
     .button-close {
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 20px;
         display: block;
         position: sticky;
+        background-image: url("../assets/arrowClose.svg");
+        background-color: transparent;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: none;
+        border: none;
+        height: 50px;
+        width: 50px;
+    }
+
+    /* Product grid centered with consistent spacing */
+    .product-grid {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 350px); /* Each item has a fixed width */
+        gap: 40px; /* Consistent gap between items */
+        justify-content: center; /* Center the grid within its container */
+    }
+
+    /* Outer container to center the grid and manage space for the sidebar */
+    .product-row-grid {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: calc(4 * 350px + 3 * 50px + 240px); /* Adjust the max-width to fit the grid and sidebar */
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px; /* Ensure some padding for the overall layout */
     }
 }
 
 
-@media (max-width: 1350px) {
+
+@media (max-width: 1450px) {
     /* Flex container for centering the grid horizontally */
     .grid-wrapper {
         display: flex;
         justify-content: center; /* Center the grid container horizontally */
-        padding-top: 100px;
+        padding-top: 0;
     }
 
     /* Main product grid */
     .product-grid {
-        padding-top: 100px;
+        padding-top: 20px;
         display: grid;
         grid-template-columns: repeat(auto-fill, 350px); /* Fixed width for each product */
         gap: 50px;
         justify-content: center; /* Center the items within the grid */
     }
 
-    .sort-dropdown-label{
-        color: white;
-        font-family: Inter;
-        font-size: 18px;
-        margin-right: 5px;
-    }
-
-    .sort-dropdown{
-        text-align: center;
-        padding-top: 100px;
-        width: 200px;
-        padding-left: 20px;
-    }
-
-    .sort-dropdown-selection{
-        padding: 5px 15px;
-        font-size: 18px;
-        font-family: Inter;
-        background-color: #f2f2eb;
-    }
-
-    .product-row-grid{
+    .product-row-grid {
         display: flex;
         width: 100%;
     }
 }
 
-/* For larger screens, ensure grid columns fit better */
-@media (min-width: 1350px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-}
+/*!* For larger screens, ensure grid columns fit better *!*/
+/*@media (min-width: 1600px) {*/
+/*    .grid-wrapper {*/
+/*        justify-content: center; !* Center the entire grid-wrapper *!*/
+/*        padding-top: 100px;*/
+/*    }*/
+
+/*    .product-row-grid {*/
+/*        justify-content: space-between; !* Center the content within the grid-wrapper *!*/
+/*        max-width: 1400px; !* Set a max width to better center the content *!*/
+/*        width: 100%;*/
+/*        margin: 0 auto; !* Center the container within the wrapper *!*/
+/*    }*/
+
+/*    .product-grid {*/
+/*        padding-top: 100px;*/
+/*        display: grid;*/
+/*        grid-template-columns: repeat(3, 1fr); !* Maximum of 4 items per row *!*/
+/*        gap: 50px; !* Consistent gap between items *!*/
+/*        justify-content: space-between; !* Center the items within the grid *!*/
+/*        width: 100%;*/
+/*        box-sizing: border-box;*/
+/*    }*/
+/*}*/

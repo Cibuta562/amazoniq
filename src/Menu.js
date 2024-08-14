@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import bg from "./assets/Amazoniq Inline Coal 3.svg"
+import bg from "./assets/Amazoniq Inline Coal 3.svg";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,29 +23,38 @@ const Menu = () => {
         };
     }, []);
 
-
-    const [menuOpen, setMenuOpen] = useState(false);
-
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
 
     return (
         <nav className="navbar">
             <div className="navbar-header">
-                <a style={{textDecoration: "none"}} href="https://amazoniq.netlify.app/">
-                <div className="navbar-logo">
-                    <img src={bg} alt="Logo" className="navbar-img"/>
-                </div>
-                </a>
+                <Link to="/" onClick={closeMenu}>
+                    <a style={{textDecoration: "none"}}>
+                        <div className="navbar-logo">
+                            <img src={bg} alt="Logo" className="navbar-img"/>
+                        </div>
+                    </a>
+                </Link>
                 <button className="navbar-toggle" onClick={toggleMenu}>
+                    {/* Toggle button content */}
                 </button>
             </div>
             <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-                <a href="#section1">OUR FAMILY</a>
-                <a href="#section2">DRINKS</a>
-                <a href="#section3">MERCH & BEANS</a>
+                <Link to="/under-construction/our-family" onClick={closeMenu}>
+                    OUR FAMILY
+                </Link>
+                <Link to="/under-construction/meniu" onClick={closeMenu}>
+                    DRINKS
+                </Link>
+                <Link to="/under-construction/merch-and-beans" onClick={closeMenu}>
+                    MERCH & BEANS
+                </Link>
             </div>
         </nav>
     );

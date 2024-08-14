@@ -375,34 +375,50 @@ const ProductGrid = () => {
         : products;
 
     return (
-        <div className="grid-wrapper">
-            <button className="button-close" onClick={toggleSidebar} >
-
-            </button>
-            {showSidebar && (
-                <div className="sidebar">
-                    <ul>
-                        <li><button onClick={() => handleCategoryChange('')}>All Categories</button></li>
-                        {categories.map((category, index) => (
-                            <li key={index}>
-                                <button onClick={() => handleCategoryChange(category)}>
-                                    {category}
+        <div>
+            <div style={{ paddingTop: "200px" }}></div>
+            <div className="product-heading-container">
+                {/* Heading section if needed */}
+            </div>
+            <div className="grid-wrapper">
+                <button className="button-close" onClick={toggleSidebar}>
+                    {/* Icon or text for closing sidebar */}
+                </button>
+                {showSidebar && (
+                    <div className="sidebar">
+                        <ul>
+                            <li>
+                                <button
+                                    className={`button-category ${selectedCategory === '' ? 'active' : ''}`}
+                                    onClick={() => handleCategoryChange('')}
+                                >
+                                    ALL PRODUCTS
                                 </button>
                             </li>
-                        ))}
-                    </ul>
+                            {categories.map((category, index) => (
+                                <li key={index}>
+                                    <button
+                                        className={`button-category ${selectedCategory === category ? 'active' : ''}`}
+                                        onClick={() => handleCategoryChange(category)}
+                                    >
+                                        {category}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                <div className="product-grid">
+                    {filteredProducts.map((product, index) => (
+                        <Product
+                            key={index}
+                            name={product.name}
+                            price={product.price}
+                            description={product.description}
+                            image={product.image}
+                        />
+                    ))}
                 </div>
-            )}
-            <div className="product-grid">
-                {filteredProducts.map((product, index) => (
-                    <Product
-                        key={index}
-                        name={product.name}
-                        price={product.price}
-                        description={product.description}
-                        image={product.image}
-                    />
-                ))}
             </div>
         </div>
     );
