@@ -228,7 +228,7 @@ li{
     left: 0; /* Align to the left edge */
     right: 0; /* Align to the right edge */
     margin: auto; /* Center horizontally */
-    width: 90%; /* Set a fixed width for the dropdown */
+    width: 100%; /* Set a fixed width for the dropdown */
     z-index: 2; /* Ensure it stays on top of other elements */
 }
 
