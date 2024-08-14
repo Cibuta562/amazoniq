@@ -271,7 +271,7 @@ li{
     visibility: hidden; /* Initially not visible */
     transition: opacity 0.4s ease, visibility 0.4s ease;
     opacity: 0; /* Initially hidden */
-    height: 93vh; /* Set fixed height */
+    height: 89vh; /* Set fixed height */
     overflow-y: auto; /* Allow scrolling if content is too tall */
     z-index: 3;
     flex-direction: column; /* Stack items vertically */
