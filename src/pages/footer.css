@@ -1,0 +1,27 @@
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+    justify-content: space-between; /* Distribute space between sections */
+    background-color: #f1f1f1; /* Example background color */
+    padding: 20px; /* Padding around the footer */
+    border-top: 2px solid #8d8b8b; /* Top border for the footer */
+}
+
+.footer-section {
+    font-family: Inter;
+    height: 100px;
+    width: 33.33%; /* Each section takes up 33.33% of the container width */
+    padding: 10px; /* Padding inside each section */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex; /* Apply flexbox to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text inside each section */
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        width: 100%; /* Full width for each section on smaller screens */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+}

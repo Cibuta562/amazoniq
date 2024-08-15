@@ -6,6 +6,7 @@ import Loading from "./pages/loading"
 import Meniu from "./pages/meniu";
 import Family from "./pages/family";
 import MerchAndBeans from "./pages/merchAndBeans";
+import Footer from "./pages/footer";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/under-construction/our-family" element={<Family />} />
                     <Route path="/under-construction/merch-and-beans" element={<MerchAndBeans />} />
                 </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 }
