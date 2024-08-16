@@ -35,15 +35,13 @@ const Menu = () => {
         <nav className="navbar">
             <div className="navbar-header">
                 <Link to="/" onClick={closeMenu}>
-                    <a style={{textDecoration: "none"}}>
                         <div className="navbar-logo">
                             <img src={bg} alt="Logo" className="navbar-img"/>
                         </div>
-                    </a>
                 </Link>
-                <button className="navbar-toggle" onClick={toggleMenu}>
+                <div className="navbar-toggle" onClick={toggleMenu}>
                     {/* Toggle button content */}
-                </button>
+                </div>
             </div>
             <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                 <Link to="/under-construction/our-family" onClick={closeMenu}>

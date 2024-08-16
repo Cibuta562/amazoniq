@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/static/Inter_24pt-Black.ttf') format('truetype');
+  font-weight: 900; /* Black weight is typically 900 */
+  font-style: normal;
+}
+

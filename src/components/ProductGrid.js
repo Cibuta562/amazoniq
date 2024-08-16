@@ -37,6 +37,8 @@ import mazare from "../assets/product-images-webp/img_32.webp"
 import bere from "../assets/product-images-webp/img_33.webp"
 import prosecco from "../assets/product-images-webp/img_34.webp"
 import arrowToggle from "../assets/arrowClose.svg"
+import LoadingSpinner from "./loadingSpinner";
+import {useLoading} from "./loadingAnimation";
 
 
 const ProductGrid = () => {
@@ -396,6 +398,8 @@ const ProductGrid = () => {
         ? products.filter(product => product.category === selectedCategory)
         : products;
 
+
+
     return (
         <div>
             <div className="padding-top-div"></div>
@@ -406,7 +410,7 @@ const ProductGrid = () => {
                 <div className={`mobile-dropdown-container ${showMobileDropdown ? 'show' : ''}`}>
                     <button className="mobile-dropdown-toggle" onClick={toggleMobileDropdown}>
                         {selectedCategory || 'WHAT FILLS YOUR CUP?'}
-                        <img className="arrow-toggle-mobile" src={arrowToggle}/>
+                        <img className="arrow-toggle-mobile" src={arrowToggle} alt="toggle-mobile"/>
                     </button>
                     {/* Dropdown Menu */}
                     <ul className={`mobile-dropdown ${showMobileDropdown ? 'show' : ''}`}>
