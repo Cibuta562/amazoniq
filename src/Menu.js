@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import bg from "./assets/Amazoniq Inline Coal 3.svg";
+import bg from "./assets/AMAZONIQ INLINE COAL CLEAR.svg";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
