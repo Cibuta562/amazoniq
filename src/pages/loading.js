@@ -5,12 +5,14 @@ import tiktok from "../assets/TikTok Black On Seashell White.svg";
 import heart from "../assets/HEART.svg"
 
 import '../App.css';
+import MenuPreview from "../menuPreview";
 
 
 function Loading() {
 
     return (
         <div className="App">
+            <MenuPreview/>
             <div className="bg-overlay"></div>
             <div className="content">
                 <h1 className="hero-heading">WE ARE BREWING SOMETHING FOR YOU!</h1>

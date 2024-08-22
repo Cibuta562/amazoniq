@@ -19,3 +19,10 @@ code {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'KumbhSans';
+  src: url('./fonts/KumbhSans-VariableFont_YOPQ,wght.ttf') format('truetype');
+  font-weight: 300; /* Black weight is typically 900 */
+  font-style: normal;
+}
+

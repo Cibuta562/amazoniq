@@ -98,7 +98,7 @@ html, body, #root {
 @media (max-width: 800px) {
 
   .hero-p{
-    padding-top: 10vh;
+    padding-top: 14vh;
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -121,7 +121,7 @@ html, body, #root {
   }
 
   .hero-heading{
-    padding-top: 18vh;
+    padding-top: 20vh;
     color: white;
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -132,7 +132,7 @@ html, body, #root {
   }
 
   .media-icons{
-    padding-top: 5vh;
+    padding-top: 7vh;
     justify-content: space-around;
   }
 

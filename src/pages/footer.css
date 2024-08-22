@@ -1,23 +1,80 @@
+.footer-cont{
+    background-color: #252422;
+}
+
 .footer-container {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
     justify-content: space-between; /* Distribute space between sections */
-    background-color: #f1f1f1; /* Example background color */
+    background-color: #252422; /* Example background color */
+    padding-top: 100px;
     padding: 20px; /* Padding around the footer */
-    border-top: 2px solid #8d8b8b; /* Top border for the footer */
+    /*border-top: 2px solid #8d8b8b; !* Top border for the footer *!*/
 }
 
-.footer-section {
-    font-family: Inter;
-    height: 100px;
-    width: 33.33%; /* Each section takes up 33.33% of the container width */
+.footer-section-1, .footer-section-2, .footer-section-3 {
+    font-family: KumbhSans;
+    height: 300px;
+    /* Each section takes up 33.33% of the container width */
     padding: 10px; /* Padding inside each section */
     box-sizing: border-box; /* Include padding and border in width */
-    display: flex; /* Apply flexbox to center content */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    text-align: center; /* Center text inside each section */
 }
+
+.footer-section-1{
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    width: 20%;
+    margin-left: 1%;
+    font-size: 20px;
+    text-align: left;
+}
+
+.footer-top-section-container{
+    display: flex;
+    width: 100%;
+}
+
+.footer-top-logo{
+    height: 31px;
+    width: 15%;
+    text-align: right;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-family: KumbhSans;
+    font-size: 30px;
+    font-weight: 400;
+    color: #f2f2eb;
+}
+
+.footer-top-line{
+   width: 85%;
+    margin-top: 20px;
+   height: 1px;
+    background-color: #f2f2eb;
+}
+
+@media (max-width: 900px) {
+    .footer-top-line{
+        width: 75%;
+    }
+
+    .footer-top-logo{
+        width: 25%;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-top-line{
+        width: 50%;
+    }
+
+    .footer-top-logo{
+        width: 50%;
+    }
+}
+
 
 @media (max-width: 768px) {
     .footer-section {
