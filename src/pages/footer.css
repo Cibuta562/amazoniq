@@ -500,11 +500,13 @@ a{
     .anpc-img1{
         margin-top: 60px;
         width: 100%;
+        object-fit: contain;
     }
 
     .anpc-img2{
         margin-top: 40px;
         width: 100%;
+        object-fit: contain;
     }
 
     .cards-footer-cont{

@@ -43,13 +43,13 @@ function Footer() {
             <div className="footer-mobile-line-top"></div>
             <div className="footer-section-2">
                 <p className="footer-heading">MENU</p>
-                <Link to={Family}>
+                <Link to="/under-construction/our-family">
                     <p className="footer-p">Our family</p>
                 </Link>
-                <Link to={Meniu}>
+                <Link to="/under-construction/meniu">
                     <p  className="footer-p">Drinks</p>
                 </Link>
-                <Link to={MerchAndBeans}>
+                <Link to="/under-construction/merch-and-beans">
                     <p  className="footer-p">Shop with us</p>
                 </Link>
             </div>

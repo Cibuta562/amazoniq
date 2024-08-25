@@ -39,7 +39,7 @@
     flex: 3;
     white-space: nowrap; /* Prevent links from wrapping onto multiple lines */
     margin-right: 70px;
-    font-family: Inter, sans-serif;
+    font-family: KumbhSans;
     font-size: 16px;
     font-weight: 350;
 }

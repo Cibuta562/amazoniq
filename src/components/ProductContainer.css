@@ -41,6 +41,8 @@
     color: #000000;
     text-align: left;
     margin: 2px 120px 2px 10px;
+    font-family: KumbhSans;
+    font-weight: 550;
 }
 
 
@@ -201,8 +203,8 @@
 .product-name {
     font-size: 1.2em;
     margin: 0;
-    font-family: Inter;
-    font-weight: 450;
+    font-family: KumbhSans;
+    font-weight: 600;
     text-align: left;
     width: 70%;
 }
@@ -211,7 +213,8 @@
     font-size: 1.2em;
     color: #000000;
     margin: 0;
-    font-family: Inter;
+    font-weight: 600;
+    font-family: KumbhSans;
 }
 
 
