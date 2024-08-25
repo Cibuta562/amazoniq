@@ -34,10 +34,10 @@ function Footer() {
             <div className="footer-section-1">
                 Coltisorul de specialitate, unde se bea cafea buna, se rade mult si se leaga prietenii magice, din 2022, pana acum.
                 <div className="footer-socials-container">
-                    <a href="#" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
-                    <a href="#" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>
-                    <a href="#" className="logo-footer-social1"><img src={logoTikTok} alt="logo-social"/></a>
-                    <a href="#" className="logo-footer-social"><img src={logoWhatsApp} alt="logo-social"/></a>
+                    <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
+                    <a href="https://www.facebook.com/amazoniq.coffee" target="_blank" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>
+                    <a href="https://www.tiktok.com/@amazoniq.coffee" target="_blank" className="logo-footer-social1"><img src={logoTikTok} alt="logo-social"/></a>
+                    <a href="https://chat.whatsapp.com/DaEV4nslvgG08c7JAPHz5n" target="_blank" className="logo-footer-social"><img src={logoWhatsApp} alt="logo-social"/></a>
                 </div>
             </div>
             <div className="footer-mobile-line-top"></div>
@@ -90,7 +90,7 @@ function Footer() {
                 </div>
                 <div className="footer-anpc-section-container">
                     <div className="footer-anpc-text">
-                        <a><p className="footer-anpc-p">
+                        <a href="https://www.generationsalez.com/" target="_blank"><p className="footer-anpc-p">
                             Powered by Generation Salez
                         </p></a>
                         <a><p className="footer-anpc-p">
