@@ -5,6 +5,7 @@
     color: #000000;
     position: fixed;
     top: 0;
+    height: 30px;
     width: 100%;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -28,8 +29,9 @@
 }
 
 .navbar-logo img {
-    width: 150px;
-    height: 22px;
+    margin-top: 3px;
+    width: 165px;
+    height: 30px;
 }
 
 /* Links container for desktop */
@@ -48,6 +50,7 @@
     color: #000000;
     text-decoration: none;
     padding: 0 15px;
+    font-size: 19px;
     border-right: 1px solid black;
     transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color */
 }
