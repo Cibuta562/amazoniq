@@ -411,11 +411,12 @@ a{
         margin-right: 10%;
         width: 80%;
         text-align: center;
-        height: 200px;
+        height: 210px;
+        margin-top: 10px;
     }
 
     .footer-socials-container{
-        margin-top: 65px;
+        margin-top: 70px;
     }
 
     .logo-footer-social1{
@@ -427,7 +428,7 @@ a{
         height: 200px;
         width: 100%;
         margin: 0;
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     .footer-section-3{
@@ -473,7 +474,7 @@ a{
         height: 50px;
         text-align: center;
         width: 100%;
-        padding-top: 30px;
+        padding-top: 15px;
     }
 
     .footer-legal-text{
@@ -544,7 +545,7 @@ a{
     }
 
     .footer-anpc-cont{
-        margin-top: -50px;
+        margin-top: -80px;
     }
 
     .footer-anpc-p{
@@ -558,7 +559,7 @@ a{
     .footer-vine-1{
          display: initial;
          position: absolute;
-         left: 88%;
+         left: 87%;
          height: 300px;
          width: 50px;
          object-fit: cover;
@@ -568,7 +569,7 @@ a{
         display: initial;
         position: absolute;
         height: 300px;
-        margin-top: 356px;
+        margin-top: 326px;
         left: 20%;
         width: 50px;
         object-fit: cover;

@@ -243,7 +243,7 @@ li{
     position: sticky; /* Keeps the button sticky if needed */
     top: 0; /* Stick to the top of its container */
     width: 100%;
-    margin: 0 auto;
+    margin: 2px auto 0;
     height: 60px;
     font-size: 18px;
     font-family: KumbhSans;
