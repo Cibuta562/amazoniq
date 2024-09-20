@@ -88,7 +88,7 @@
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 1800px;
+    top: 2120px;
     background-color: #f2f2eb;
 }
 
@@ -103,7 +103,9 @@
 }
 
 .map-container{
-    height: 1800px;
+    border-top: solid #090909 5px;
+    border-bottom: solid #090909 5px;
+    height: 100%;
     width: 100%;
     background-image: url("../assets/bg.svg");
     background-repeat: no-repeat;
@@ -111,7 +113,7 @@
 }
 
 .heading-container{
-    padding-top: 80px;
+    padding-top: 220px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -119,21 +121,34 @@
 
 .heading-map{
     font-family: KumbhSans;
-    font-weight: 500;
+    font-weight: 550;
     color: #f2f2eb;
     font-size: 32px;
     margin-right: 20px;
+    margin-top: 30px;
 }
 
 .heading-heart{
+    margin-top: 15px;
     height: 30px;
 }
 
 .map-asset-container{
-    height: 400px;
+    height: 500px;
     background-color: #1c6c1c;
     border: solid 2px #f2f2eb;
-    width: 40%;
+    width: 70%;
+}
+
+.map-asset-container1{
+    margin-top: 80px;
+    display: none;
+    height: 500px;
+    background-color: #1c6c1c;
+    border: solid 2px #f2f2eb;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .maps-container{
@@ -146,7 +161,7 @@
 }
 
 .map-google{
-    height: 400px;
+    height: 500px;
     width: 100%;
     border: none;
 }
@@ -155,14 +170,16 @@
     padding-top: 100px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .address-detail{
+    margin-top: -40px;
     color: #f2f2eb;
     font-family: KumbhSans;
     font-size: 22px;
-    width: 35%;
+    margin-left: 10px;
+    width: 40%;
 }
 
 .circle-decorator{
@@ -187,9 +204,10 @@
 }
 
 .vertical-dec{
-    width: 1px;
-    background-color: #f2f2eb;
+    /*width: 1px;*/
+    /*background-color: #f2f2eb;*/
     height: 100px;
+    width: 10px;
 }
 
 .address-detail-mobile{
@@ -201,11 +219,12 @@
     border-radius: 25px;
     position: absolute;
     z-index: 1;
-    top: 740px;
-    width: 90%;
-    border: 2px solid #f2f2eb;
-    margin-right: 5%;
-    margin-left: 5%;
+    top: 780px;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #f2f2eb;
+    text-align: center;
 }
 
 .citate-about-us{
@@ -215,6 +234,276 @@
     text-align: center;
     margin-top: 8px;
 }
+
+
+.citate-about-us-top{
+    position: absolute;
+    color: #f2f2eb;
+    font-size: 18px;
+    font-family: KumbhSans;
+    text-align: center;
+    margin-top: 8px;
+    z-index: 1;
+    top: 720px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.review-card{
+    height: 200px;
+    width: 30%;
+    padding: 20px;
+    background-color: #252422;
+    margin: 20px;
+    border-radius: 20px;
+    border: solid #090909 2px;
+    font-family: KumbhSans;
+    font-size: 18px;
+    color: #f2f2eb;
+}
+
+.review-name{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 6px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.review-text{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.profile-picture{
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.review-stars{
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.review-date-container{
+    display: flex;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.review-text{
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+
+.review-carousel-container{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 50px;
+    display: flex;
+}
+
+.heading-map-down{
+    text-align: center;
+    font-size: 30px;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+}
+
+.reviews-maps-top{
+    display: flex;
+
+}
+
+.review-date-container{
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.review-asset{
+    width: 170px;
+}
+
+.review-asset-rate{
+    width: 220px;
+}
+
+.rate-us-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rate-us-p{
+    font-size: 32px;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    margin-right: 15px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.show-form-button {
+    margin-top: 70px;
+    padding: 20px 20px;
+    width: 91%;
+    background-color: #252422;
+    border-radius: 15px;
+    border: solid #090909 2px;
+    color: white;
+    cursor: pointer;
+    font-family: KumbhSans;
+    font-size: 22px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 89%;
+    margin-left:7%;
+    margin-right: 7%;
+    padding: 20px;
+    background-color: #252422;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    border: solid #090909 2px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.input-contact{
+    border: 2px solid #30820B;
+    font-family: KumbhSans;
+
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #252422;
+    color: #f2f2eb;
+    font-size: 16px;
+}
+
+
+
+.full-width {
+    flex: 1 0 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    margin-right: 0px;
+}
+
+.contact-heading{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    font-family: KumbhSans;
+    color: #f2f2eb;
+    font-size: 22px;
+}
+
+
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #30820B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #30820B;
+}
+
+
+.form-group textarea{
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #30820B;
+    border-radius: 4px;
+    background-color: #252422;
+    color: #f2f2eb;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+textarea{
+    width: 100%; /* Make input and textarea fit the container width */
+    max-width: 100%; /* Prevent input fields from growing beyond their container */
+    box-sizing: border-box;
+}
+
+/* X button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f2f2eb;
+}
+
+.close-button:hover {
+    color: #30820B;
+}
+
+label{
+    font-family: KumbhSans;
+    font-size: 18px;
+    color: #f2f2eb;
+    padding-bottom: 5px;
+}
+
+
+input{
+    border: 1px solid #1c6c1c;
+}
+
 
 @media (max-width: 600px) {
     .lamp-img{
@@ -263,10 +552,22 @@
     }
 
     .map-asset-container{
+        display: flex;
         background-color: #1c6c1c;
         border: solid 2px #f2f2eb;
         width: 80%;
         margin: 80px 10%;
+    }
+
+    .map-asset-container1{
+        margin-bottom: 80px;
+        display: flex;
+        height: 500px;
+        background-color: #1c6c1c;
+        border: solid 2px #f2f2eb;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .p-address{
@@ -319,7 +620,8 @@
     }
 
     .review-carousel-container{
-
+        display: none;
+        margin-top: 80px;
     }
 
     .reviews-maps-top{
@@ -334,6 +636,8 @@
         margin: 20px;
         border-radius: 20px;
         border: solid black 6px;
+        font-family: KumbhSans;
+        font-size: 18px;
     }
 
     .review-name{
@@ -361,7 +665,18 @@
     .review-stars{
         align-items: center;
         justify-content: center;
-        text-align: center;
+        margin-right: 10px;
+    }
+
+    .review-date-container{
+        display: flex;
+        margin-top: 12px;
+    }
+
+    .review-text{
+        text-align: left;
+        padding: 0;
+        margin-left: 0;
     }
 
     .despre-noi-heading{
@@ -396,6 +711,7 @@
         margin-left: 10%;
         margin-right: 10%;
     }
+
 
 }
 

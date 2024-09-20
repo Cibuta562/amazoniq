@@ -6,25 +6,30 @@ import Footer from "./footer";
 import Slider from 'react-slick';
 import logo from "../assets/logo-maimuta-alb.svg"
 import heart from "../assets/HEART.svg"
+import reviewAsset from "../assets/review-asset.svg"
+import {useState} from "react";
 
 const reviews = [
     {
         name: 'John Doe',
         profilePicture: 'https://via.placeholder.com/150', // Placeholder image
         review: 'Great service and amazing quality! Highly recommended.',
-        stars: 5
+        stars: 5,
+        date: "4 months ago"
     },
     {
         name: 'Jane Smith',
         profilePicture: 'https://via.placeholder.com/150',
         review: 'The experience was fantastic. Will definitely come back!',
-        stars: 4
+        stars: 4,
+        date: "4 months ago"
     },
     {
         name: 'Alex Johnson',
         profilePicture: 'https://via.placeholder.com/150',
         review: 'Good service but a bit expensive.',
-        stars: 3
+        stars: 3,
+        date: "4 months ago"
     },
     // Add more reviews as needed
 ];
@@ -51,6 +56,12 @@ function Family() {
             }
         }
         return starElements;
+    };
+
+    const [formVisible, setFormVisible] = useState(false);
+
+    const toggleForm = () => {
+        setFormVisible(!formVisible);
     };
 
     return(
@@ -86,11 +97,10 @@ function Family() {
                 </div>
                 <div className="maps-container">
                     <div className="map-asset-container">
-                        <iframe
-                            className="map-google"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.776979574313!2d26.018142776440925!3d44.417221971076074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b20178d43f3b1f%3A0xf33ae61c9173290a!2sAMAZONIQ%20%7C%20specialty%20coffee%20%7C%20DTR!5e0!3m2!1sro!2sro!4v1725515609923!5m2!1sro!2sro"
-                            allowFullScreen="" loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"
+                                allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"
+                                  frameBorder="0" scrolling="no" allowFullScreen
+                                id="atlist-embed"></iframe>
                     </div>
                     <div className="address-detail-mobile">
                         <div className="address-p-container">
@@ -107,25 +117,24 @@ function Family() {
                             </div>
                         </div>
                     </div>
-                    <div className="map-asset-container">
-                        <iframe
-                            className="map-google"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5161.615173519856!2d26.099649895497098!3d44.41512109796786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ffbd130c71a5%3A0x10c5304d516dfbbb!2sAMAZONIQ%20%7C%20specialty%20coffee%20%7C%20%C8%98INCAI!5e0!3m2!1sro!2sro!4v1725515510961!5m2!1sro!2sro"
-                            allowFullScreen="" loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
                     <div className="address-detail-mobile">
+                        <div className="map-asset-container1">
+                            <iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"
+                                    allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"
+                                    frameBorder="0" scrolling="no" allowFullScreen
+                                    id="atlist-embed"></iframe>
+                        </div>
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="address-p">
-                                <p className="p-address">Drumul Taberei 24</p>
+                                <p className="p-address">Gheorghe Sincai 2A</p>
                             </div>
                         </div>
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="schedule-p">
-                                <p  className="p-address">L-V 8:00 - 18:00</p>
-                                <p  className="p-address">S-D 8:30 - 17:30</p>
+                                <p  className="p-address">L-V 7:00 - 18:00</p>
+                                <p  className="p-address">S-D 8:30 - 18:30</p>
                             </div>
                         </div>
                     </div>
@@ -146,9 +155,9 @@ function Family() {
                             </div>
                         </div>
                     </div>
-                    <div className="vertical-dec">
+                    {/*<div className="vertical-dec">*/}
 
-                    </div>
+                    {/*</div>*/}
                     <div className="address-detail">
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
@@ -165,6 +174,12 @@ function Family() {
                         </div>
                     </div>
                 </div>
+                <div className="heading-container">
+                    <p className="heading-map" style={{marginTop: "50px"}}>
+                        PEOPLE LOVE US
+                    </p>
+                    <img src={heart} className="heading-heart" alt="heart-logo"/>
+                </div>
                 <div className="family-decoration-line-bottom"></div>
                     <div className="review-carousel-container">
                             {reviews.map((review, index) => (
@@ -177,11 +192,81 @@ function Family() {
                                         />
                                         <h3 className="review-name">{review.name}</h3>
                                     </div>
-                                    <p className="review-text">"{review.review}"</p>
-                                    <div className="review-stars">{renderStars(review.stars)}</div>
+                                    <div className="review-date-container">
+                                    <div className="review-stars">
+                                        <img className="review-asset" src={reviewAsset}/>
+                                    </div>
+                                    <div className="review-date">{review.date}</div>
+                                    </div>
+                                    <p className="review-text">{review.review}</p>
                                 </div>
                             ))}
                     </div>
+                <div className="rate-us-container">
+                    <p className="rate-us-p">RATE US!</p>
+                    <img className="review-asset-rate" src={reviewAsset}/>
+                </div>
+                <div className="family-decoration-line-bottom-bottom"></div>
+                <div className="contact-form-container">
+                    {/* Button to show the form */}
+                    {!formVisible && (
+                        <button onClick={toggleForm} className="show-form-button">
+                            CONTACT US!
+                        </button>
+                    )}
+
+                    {/* Form that becomes visible on button click */}
+                    {formVisible && (
+                        <form className="contact-form">
+                            {/* X button to close the form */}
+                            <button type="button" className="close-button" onClick={toggleForm}>
+                                &times;
+                            </button>
+
+                            <div className="contact-heading">
+                                CONTACT US !
+                            </div>
+
+                            <div className="row">
+                                <div className="form-group">
+                                    <label htmlFor="nume">Nume si Prenume</label>
+                                    <input  className="input-contact" type="text" id="nume" name="nume" placeholder="Nume si Prenume" required />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="prenume">Telefon</label>
+                                    <input className="input-contact" type="tel" id="prenume" name="prenume" placeholder="Telefon" required />
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="form-group">
+                                    <label htmlFor="telefon">Email</label>
+                                    <input className="input-contact" type="email" id="telefon" name="telefon" placeholder="Email" required />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="email">Motiv de Contact</label>
+                                    <input className="input-contact" type="text" id="email" name="email" placeholder="Motiv" required />
+                                </div>
+                            </div>
+
+
+                            <div className="form-group full-width">
+                                <label htmlFor="mesaj">Mesaj</label>
+                                <textarea style={{resize: "none"}} className="input-contact" id="mesaj" name="mesaj" rows="4" placeholder="Mesaj"></textarea>
+                            </div>
+
+                            <div className="form-group full-width">
+                                <div></div>
+                            </div>
+
+
+                            <button type="submit">Trimite</button>
+                        </form>
+                    )}
+                </div>
+            </div>
+            <div style={{height: "50px", backgroundColor: "#252422"}}>
+
             </div>
            <Footer/>
         </div>

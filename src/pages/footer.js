@@ -58,7 +58,7 @@ function Footer() {
                 <a href="#"><p  className="footer-p">Contact</p></a>
                 <a href="#"><p  className="footer-p">Prelucrarea datelor</p></a>
                 <a href="#"><p  className="footer-p">Politica cookie</p></a>
-                <a href="#"><p  className="footer-p">Termeni si conditii</p></a>
+                {/*<a href="#"><p  className="footer-p">Termeni si conditii</p></a>*/}
             </div>
             <div className="footer-mobile-line-bottom"></div>
         </div>
