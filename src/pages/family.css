@@ -1,6 +1,45 @@
 .family-container{
-    height: 880px;
+    height: 1080px;
     background-color: #252422;
+}
+
+.heart-on-top{
+    position: absolute;
+    top: 300px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.family-heading-top{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*width: fit-content;*/
+    top: 650px;
+    z-index: 5;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.citate-about-us {
+    font-size: 24px;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+    opacity: 1; /* Default visibility */
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
 }
 
 /*.bg-overlay{*/
@@ -12,7 +51,17 @@
 /*    width: 100%;*/
 /*}*/
 
+.top-black-screen{
+    background-image: url('../assets/heroBG.svg');
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+    margin-top: 50px;
+    width: 100%;
+}
+
 .family-vines{
+    margin-top: -75px;
     position: absolute;
     z-index: 3;
     width: 100%;
@@ -20,7 +69,6 @@
 }
 
 .family-vines-img{
-    margin-top: 50px;
     height: 100%;
     width: 100vw;
 }
@@ -47,7 +95,7 @@
     right: 0;
     margin: auto;
     /*width: fit-content;*/
-    top: 260px;
+    top: 1090px;
     z-index: 5;
     color: #f2f2eb;
     font-family: KumbhSans;
@@ -56,15 +104,32 @@
 }
 
 .family-p{
+     position: absolute;
+     text-align: justify;
+     left: 0;
+     right: 0;
+     margin: auto;
+     /*width: fit-content;*/
+     top: 1220px;
+     font-size: 20px;
+     width: 510px;
+     z-index: 5;
+     color: white;
+     font-family: KumbhSans;
+     font-weight: 200;
+
+ }
+
+.family-p2{
     position: absolute;
     text-align: justify;
     left: 0;
     right: 0;
     margin: auto;
     /*width: fit-content;*/
-    top: 350px;
+    top: 1380px;
     font-size: 20px;
-    width: 400px;
+    width: 510px;
     z-index: 5;
     color: white;
     font-family: KumbhSans;
@@ -72,13 +137,31 @@
 
 }
 
+.family-p3{
+    position: absolute;
+    text-align: justify;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*width: fit-content;*/
+    top: 1435px;
+    font-size: 20px;
+    width: 510px;
+    z-index: 5;
+    color: white;
+    font-family: KumbhSans;
+    font-weight: 200;
+
+}
+
+
 .family-decoration-line{
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 700px;
+    top: 1600px;
     background-color: #f2f2eb;
 }
 
@@ -88,7 +171,7 @@
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 2120px;
+    top: 3120px;
     background-color: #f2f2eb;
 }
 
@@ -97,7 +180,7 @@
     height: 80px;
     position: absolute;
     z-index: 1;
-    top: 620px;
+    top: 1520px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -113,7 +196,7 @@
 }
 
 .heading-container{
-    padding-top: 220px;
+    padding-top: 150px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -137,7 +220,7 @@
     height: 500px;
     background-color: #1c6c1c;
     border: solid 2px #f2f2eb;
-    width: 70%;
+    width: 60%;
 }
 
 .map-asset-container1{
@@ -215,11 +298,11 @@
 }
 
 .despre-noi-heading{
-    height: 40px;
+    height: 44px;
     border-radius: 25px;
     position: absolute;
     z-index: 1;
-    top: 780px;
+    top: 1720px;
     width: 500px;
     left: 50%;
     transform: translateX(-50%);
@@ -229,7 +312,7 @@
 
 .citate-about-us{
     color: #f2f2eb;
-    font-size: 18px;
+    font-size: 20px;
     font-family: KumbhSans;
     text-align: center;
     margin-top: 8px;
@@ -239,12 +322,12 @@
 .citate-about-us-top{
     position: absolute;
     color: #f2f2eb;
-    font-size: 18px;
+    font-size: 20px;
     font-family: KumbhSans;
     text-align: center;
     margin-top: 8px;
     z-index: 1;
-    top: 720px;
+    top: 1660px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -336,7 +419,7 @@
 }
 
 .review-asset-rate{
-    width: 220px;
+    width: 45px;
 }
 
 .rate-us-container{
@@ -351,6 +434,7 @@
     color: #f2f2eb;
     font-family: KumbhSans;
     margin-right: 15px;
+    font-weight: 400;
 }
 
 .contact-form-container {
