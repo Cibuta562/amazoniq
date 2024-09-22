@@ -1,6 +1,17 @@
 .family-container{
-    height: 1080px;
+    height: 1100px;
     background-color: #252422;
+    border: none;
+    margin-top: -5px;
+}
+
+.family-container-layer{
+    background-color: rgba(9, 9, 9, 0.66);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 500px;
+    height: 1100px;
 }
 
 .heart-on-top{
@@ -42,6 +53,8 @@
     opacity: 0;
 }
 
+
+
 /*.bg-overlay{*/
 /*   z-index: 4;*/
 /*   background-color: rgba(37, 36, 34, 0.54);*/
@@ -52,7 +65,7 @@
 /*}*/
 
 .top-black-screen{
-    background-image: url('../assets/heroBG.svg');
+    background-image: url('../assets/OAMENI IMBRATISATI .png');
     background-position: center;
     background-size: cover;
     height: 900px;
@@ -71,6 +84,7 @@
 .family-vines-img{
     height: 100%;
     width: 100vw;
+    object-fit: cover;
 }
 
 .lamp-img{
@@ -94,13 +108,12 @@
     left: 0;
     right: 0;
     margin: auto;
-    /*width: fit-content;*/
-    top: 1090px;
+    top: 1250px;
     z-index: 5;
     color: #f2f2eb;
     font-family: KumbhSans;
     font-weight: 100;
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .family-p{
@@ -110,7 +123,7 @@
      right: 0;
      margin: auto;
      /*width: fit-content;*/
-     top: 1220px;
+     top: 1355px;
      font-size: 20px;
      width: 510px;
      z-index: 5;
@@ -118,7 +131,7 @@
      font-family: KumbhSans;
      font-weight: 200;
 
- }
+}
 
 .family-p2{
     position: absolute;
@@ -127,7 +140,7 @@
     right: 0;
     margin: auto;
     /*width: fit-content;*/
-    top: 1380px;
+    top: 1530px;
     font-size: 20px;
     width: 510px;
     z-index: 5;
@@ -144,7 +157,7 @@
     right: 0;
     margin: auto;
     /*width: fit-content;*/
-    top: 1435px;
+    top: 1395px;
     font-size: 20px;
     width: 510px;
     z-index: 5;
@@ -160,8 +173,9 @@
     margin-right: 5%;
     margin-left: 5%;
     position: absolute;
+    z-index: 3;
     height: 1px;
-    top: 1600px;
+    top: 1760px;
     background-color: #f2f2eb;
 }
 
@@ -171,16 +185,16 @@
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 3120px;
+    top: 3050px;
     background-color: #f2f2eb;
 }
 
 .family-image{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     z-index: 1;
-    top: 1520px;
+    top: 1680px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -190,13 +204,13 @@
     border-bottom: solid #090909 5px;
     height: 100%;
     width: 100%;
-    background-image: url("../assets/bg.svg");
+    background-image: url("../assets/Pattern fundal LEMN.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .heading-container{
-    padding-top: 150px;
+    padding-top: 80px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -206,14 +220,19 @@
     font-family: KumbhSans;
     font-weight: 550;
     color: #f2f2eb;
-    font-size: 32px;
+    font-size: 42px;
     margin-right: 20px;
     margin-top: 30px;
 }
 
 .heading-heart{
-    margin-top: 15px;
-    height: 30px;
+    margin-top: -2px;
+    height: 28px;
+}
+
+.heading-heart1{
+    margin-top: 8px;
+    height: 34px;
 }
 
 .map-asset-container{
@@ -301,8 +320,8 @@
     height: 44px;
     border-radius: 25px;
     position: absolute;
-    z-index: 1;
-    top: 1720px;
+    z-index: 3;
+    top: 1860px;
     width: 500px;
     left: 50%;
     transform: translateX(-50%);
@@ -327,7 +346,7 @@
     text-align: center;
     margin-top: 8px;
     z-index: 1;
-    top: 1660px;
+    top: 1800px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -393,7 +412,7 @@
 .review-carousel-container{
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
 }
 
@@ -419,18 +438,19 @@
 }
 
 .review-asset-rate{
-    width: 45px;
+    height: 55px;
+    width: 55px;
 }
 
 .rate-us-container{
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .rate-us-p{
-    font-size: 32px;
+    font-size: 42px;
     color: #f2f2eb;
     font-family: KumbhSans;
     margin-right: 15px;
@@ -445,7 +465,7 @@
 }
 
 .show-form-button {
-    margin-top: 70px;
+    margin-top: 50px;
     padding: 20px 20px;
     width: 91%;
     background-color: #252422;
@@ -460,15 +480,15 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 89%;
-    margin-left:7%;
-    margin-right: 7%;
-    padding: 20px;
+    width: 90%;
+    margin-left:5%;
+    margin-right: 5%;
     background-color: #252422;
     border-radius: 5px;
     margin-top: 20px;
     position: relative;
     border: solid #090909 2px;
+
 }
 
 .row {
@@ -520,7 +540,7 @@
 .contact-heading{
     text-align: center;
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-family: KumbhSans;
     color: #f2f2eb;
     font-size: 22px;
@@ -588,6 +608,39 @@ input{
     border: 1px solid #1c6c1c;
 }
 
+.contact-warning-container{
+    height: 110px;
+    margin-bottom: 50px;
+    border: 2px solid #30820B;
+    border-radius: 8px;
+    background-color: #232B22;
+    color: #f2f2eb;
+}
+
+.contact-warning-p{
+    font-family: KumbhSans;
+    padding-left: 15px;
+}
+
+
+
+.contact-warning-li{
+    font-family: KumbhSans;
+    color: #f2f2eb;
+    margin-left: 25px;
+}
+
+.button-submit{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.contact-container{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 
 @media (max-width: 600px) {
     .lamp-img{
@@ -597,9 +650,23 @@ input{
 
 @media (max-width: 768px) {
 
+    .top-black-screen{
+        background-image: url('../assets/heroBG.svg');
+        background-position: center;
+        background-size: cover;
+        height: 885px;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .family-vines-img{
+        height: 100%;
+        width: 100vw;
+        object-fit: cover;
+    }
 
     .family-container {
-        height: 900px;
+        height: 1020px;
     }
 
 
@@ -608,10 +675,30 @@ input{
         width: 100%;
     }
 
+    .family-heading-top{
+        font-size: 35px;
+    }
+
     .family-p{
         font-size: 20px;
-        width: 300px;
-        line-height: 22px;
+        width: 310px;
+        line-height: 23px;
+        z-index: 3;
+    }
+
+    .family-p2{
+        font-size: 20px;
+        width: 310px;
+        line-height: 23px;
+        margin-top: 107px;
+        z-index: 3;
+    }
+
+    .family-p3{
+        font-size: 20px;
+        width: 310px;
+        line-height: 23px;
+        margin-top: 126px;
     }
 
     .family-decoration-line{
@@ -619,10 +706,14 @@ input{
         width: 100%;
         position: absolute;
         height: 1px;
-        top: 680px;
+        top: 1790px;
         background-color: #f2f2eb;
     }
 
+
+    .family-image{
+        margin-top: 180px;
+    }
 
 
     .maps-container{
@@ -656,6 +747,9 @@ input{
 
     .p-address{
         font-size: 24px;
+        width: 250px;
+        margin-right: -30px;
+        margin-left: 10px;
     }
 
     .circle-decorator{
@@ -692,11 +786,20 @@ input{
         margin-right: 5%;
         padding-top: 50px;
         margin-bottom: -60px;
+        display: flex;
+        align-items: center;
 
     }
 
     .heading-map{
-        font-size: 26px;
+        font-size: 32px;
+        margin-right: 5px;
+        width: 60%;
+    }
+
+    .heading-heart1{
+        margin-top: 18px;
+        height: 60px;
     }
 
     .family-decoration-line-bottom{
@@ -705,7 +808,8 @@ input{
 
     .review-carousel-container{
         display: none;
-        margin-top: 80px;
+        /*width: 100%;*/
+        /*margin-top: 80px;*/
     }
 
     .reviews-maps-top{
@@ -714,6 +818,7 @@ input{
     }
 
     .review-card{
+        width: 290px;
         height: 200px;
         padding: 25px;
         background-color: #f2f2eb;
@@ -768,7 +873,7 @@ input{
         border-radius: 25px;
         position: absolute;
         z-index: 1;
-        top: 780px;
+        top: 1880px;
         width: 90%;
         border: 1px solid #f2f2eb;
         margin-right: 5%;
@@ -790,7 +895,7 @@ input{
         text-align: center;
         margin-top: 8px;
         z-index: 1;
-        top: 720px;
+        top: 1815px;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;

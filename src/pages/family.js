@@ -9,7 +9,11 @@ import heart from "../assets/HEART.svg"
 import reviewAsset from "../assets/review-asset.svg"
 import reviewAssetWhite from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 7.svg"
 import reviewAssetGreen from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 6.svg"
+import vinesAll from "../assets/lamps and vines together.svg"
 import {useEffect, useState} from "react";
+import Carousel from "react-multi-carousel";
+
+import "react-multi-carousel/lib/styles.css";
 
 const reviews = [
     {
@@ -66,15 +70,6 @@ const reviews = [
 
 function Family() {
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    };
 
     const renderStars = (stars) => {
         const starElements = [];
@@ -97,7 +92,7 @@ function Family() {
     const messages = [
         "Se regleaza din soft - Boboc",
         "Imi place sa desenez floricele - Raluca",
-        "Ce nu te doboara te face mai puternic - Cris"
+        "Ce te doboara te face mai puternic - Cris"
     ];
 
     const shuffleArray = (array) => {
@@ -156,6 +151,21 @@ function Family() {
         setHoveredIndex(-1); // Reset when mouse leaves the container
     };
 
+    const responsive = {
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+
     return(
         <div>
             <Menu/>
@@ -167,27 +177,24 @@ function Family() {
             <div className="family-bg">
                 <div className="bg-overlay"></div>
                 <div className="family-vines">
-                    <img className="family-vines-img" src={vinesTop} alt="vines"/>
+                    <img className="family-vines-img" src={vinesAll} alt="vines"/>
                 </div>
-                <div className="family-lamps">
-                    <img className="lamp-img" src={lamp} alt="lamps"/>
-                </div>
+                {/*<div className="family-lamps">*/}
+                {/*    <img className="lamp-img" src={lamp} alt="lamps"/>*/}
+                {/*</div>*/}
                 <div className="family-container">
                 </div>
             </div>
             <p className="family-heading">ABOUT US</p>
             <p className="family-p">
-                Am pornit in clatoria minunata de a va oferi cafeaua de cea mai buna calitate, alaturi de partenerii
-                nostri de la MABO by Bogdan Georgescu, vice-campion la prajit cafea. Ne dorim sa va puteti bucura de
-                aceasta experienta si acasa, asadar, pe rafturile noastre, gasiti o selectie atenta de origini cu
-                profiluri unice.
+                We have embarked on the wonderful journey of providing you with the highest quality coffee, alongside our partners at MABO by Bogdan Georgescu, the runner-up in coffee roasting. We want you to enjoy this experience at home as well! Therefore, on our shelves, you will find a carefully selected range of origins with unique profiles.
             </p>
             <p className="family-p2">
-                Pe scurt, AMAZONIQ este locul unde se bea cafea buna, se rade mult si se leaga prietenii magice.
+                In shorter terms, AMAZONIQ is the place where good coffee is enjoyed, laughter is abundant, and magical friendships are formed. We look forward to welcoming you!
             </p>
-            <p className="family-p3">
-                Va asteptam cu drag!
-            </p>
+            {/*<p className="family-p3">*/}
+            {/*    Va asteptam cu drag!*/}
+            {/*</p>*/}
             <img className="family-image" src={logo} alt="logo"/>
             <div className="family-decoration-line"></div>
             <p className="citate-about-us-top">Each of us is unique~</p>
@@ -286,7 +293,7 @@ function Family() {
                     <p className="heading-map" style={{marginTop: "50px"}}>
                         YOUR LOVE IS APPRECIATED
                     </p>
-                    <img src={heart} className="heading-heart" alt="heart-logo"/>
+                    <img src={heart} className="heading-heart1" alt="heart-logo"/>
                 </div>
                 <div className="family-decoration-line-bottom"></div>
                 <div className="review-carousel-container">
@@ -326,6 +333,28 @@ function Family() {
                         </a>
                     ))}
                 </div>
+                    {/*<div className="slider-container">*/}
+                    {/*    <Slider {...settings}>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>1</h3>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>2</h3>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>3</h3>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>4</h3>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>5</h3>*/}
+                    {/*        </div>*/}
+                    {/*        <div>*/}
+                    {/*            <h3>6</h3>*/}
+                    {/*        </div>*/}
+                    {/*    </Slider>*/}
+                    {/*</div>*/}
                 <div className="family-decoration-line-bottom-bottom"></div>
                 <div className="contact-form-container">
                     {/* Button to show the form */}
@@ -342,19 +371,26 @@ function Family() {
                             <button type="button" className="close-button" onClick={toggleForm}>
                                 &times;
                             </button>
-
+                            <div className="contact-container">
                             <div className="contact-heading">
                                 CONTACT US !
                             </div>
 
+
+                            <div className="contact-warning-container">
+                                <p className="contact-warning-p">Soooo..... if you really want to, you can contact us for the following reasons:</p>
+                                    <li className="contact-warning-li">job opportunity (we are a really cool team)</li>
+                                    <li className="contact-warning-li">community events suggestions (we love to drink good coffee;) and talk a lot)</li>
+                            </div>
+
                             <div className="row">
                                 <div className="form-group">
-                                    <label htmlFor="nume">Nume si Prenume</label>
+                                    <label htmlFor="nume">Name and Surname</label>
                                     <input className="input-contact" type="text" id="nume" name="nume"
                                            placeholder="Nume si Prenume" required/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="prenume">Telefon</label>
+                                    <label htmlFor="prenume">Phone</label>
                                     <input className="input-contact" type="tel" id="prenume" name="prenume"
                                            placeholder="Telefon" required/>
                                 </div>
@@ -367,7 +403,7 @@ function Family() {
                                            placeholder="Email" required/>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="email">Motiv de Contact</label>
+                                    <label htmlFor="email">Reason</label>
                                     <input className="input-contact" type="text" id="email" name="email"
                                            placeholder="Motiv" required/>
                                 </div>
@@ -375,7 +411,7 @@ function Family() {
 
 
                             <div className="form-group full-width">
-                                <label htmlFor="mesaj">Mesaj</label>
+                                <label htmlFor="mesaj">Message</label>
                                 <textarea style={{resize: "none"}} className="input-contact" id="mesaj" name="mesaj"
                                           rows="4" placeholder="Mesaj"></textarea>
                             </div>
@@ -385,7 +421,8 @@ function Family() {
                             </div>
 
 
-                            <button type="submit">Trimite</button>
+                            <button className="button-submit" type="submit">Trimite</button>
+                            </div>
                         </form>
                     )}
                 </div>
