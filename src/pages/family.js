@@ -212,10 +212,10 @@ function Family() {
                 </div>
                 <div className="maps-container">
                     <div className="map-asset-container">
-                        <iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"
-                                allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"
-                                frameBorder="0" scrolling="no" allowFullScreen
-                                id="atlist-embed"></iframe>
+                            <iframe width="100%" height="500" frameBorder="0" scrolling="no" marginHeight="0"
+                                    marginWidth="0"
+                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amazoniq+(Amazoniq%20Drumul%20Taberei)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                <a href="https://www.gps.ie/">gps vehicle tracker</a></iframe>
                     </div>
                     <div className="address-detail-mobile">
                         <div className="address-p-container">
@@ -380,19 +380,19 @@ function Family() {
                             <div className="contact-warning-container">
                                 <p className="contact-warning-p">Soooo..... if you really want to, you can contact us for the following reasons:</p>
                                     <li className="contact-warning-li">job opportunity (we are a really cool team)</li>
-                                    <li className="contact-warning-li">community events suggestions (we love to drink good coffee;) and talk a lot)</li>
+                                    <li className="contact-warning-li">community events suggestions (we love to drink good coffee ;) and talk a lot)</li>
                             </div>
 
                             <div className="row">
                                 <div className="form-group">
                                     <label htmlFor="nume">Name and Surname</label>
                                     <input className="input-contact" type="text" id="nume" name="nume"
-                                           placeholder="Nume si Prenume" required/>
+                                           placeholder="Name and Surname" required/>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="prenume">Phone</label>
                                     <input className="input-contact" type="tel" id="prenume" name="prenume"
-                                           placeholder="Telefon" required/>
+                                           placeholder="Phone" required/>
                                 </div>
                             </div>
 
@@ -405,7 +405,7 @@ function Family() {
                                 <div className="form-group">
                                     <label htmlFor="email">Reason</label>
                                     <input className="input-contact" type="text" id="email" name="email"
-                                           placeholder="Motiv" required/>
+                                           placeholder="Reason" required/>
                                 </div>
                             </div>
 
@@ -413,7 +413,7 @@ function Family() {
                             <div className="form-group full-width">
                                 <label htmlFor="mesaj">Message</label>
                                 <textarea style={{resize: "none"}} className="input-contact" id="mesaj" name="mesaj"
-                                          rows="4" placeholder="Mesaj"></textarea>
+                                          rows="4" placeholder="Message"></textarea>
                             </div>
 
                             <div className="form-group full-width">

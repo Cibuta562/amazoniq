@@ -226,8 +226,8 @@
 }
 
 .heading-heart{
-    margin-top: -2px;
-    height: 28px;
+    margin-top: -11px;
+    height: 35px;
 }
 
 .heading-heart1{
@@ -240,6 +240,7 @@
     background-color: #1c6c1c;
     border: solid 2px #f2f2eb;
     width: 60%;
+    filter: grayscale(100%) invert(90%) contrast(80%);
 }
 
 .map-asset-container1{
@@ -663,6 +664,7 @@ input{
         height: 100%;
         width: 100vw;
         object-fit: cover;
+        margin-top: 75px;
     }
 
     .family-container {
@@ -676,7 +678,8 @@ input{
     }
 
     .family-heading-top{
-        font-size: 35px;
+        margin-top: -40px;
+        font-size: 33px;
     }
 
     .family-p{
