@@ -67,7 +67,7 @@
 
 .top-black-screen{
     background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
-    background-position: center;
+    background-position: 10% 50%;
     background-size: cover;
     height: 900px;
     margin-top: 50px;
@@ -459,17 +459,23 @@
 }
 
 .rate-us-container{
+    border-radius: 15px;
     margin-bottom: 60px;
     margin-top: 30px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
     background-color: #252422;
+    border: solid #090909 2px;
+    width: 91%;
+    margin-right: 4.5%;
+    margin-left: 4.5%;
 }
 
 .rate-us-p{
-    font-size: 42px;
+    font-size: 40px;
     color: #f2f2eb;
     font-family: KumbhSans;
     margin-right: 15px;
@@ -497,7 +503,7 @@
 }
 
 .contact-form {
-    margin-top: 400px;
+    /*margin-top: 400px;*/
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -628,7 +634,7 @@ input{
 }
 
 .contact-warning-container{
-    height: 110px;
+    height: 120%;
     margin-bottom: 50px;
     border: 2px solid #30820B;
     border-radius: 8px;
@@ -639,6 +645,7 @@ input{
 .contact-warning-p{
     font-family: KumbhSans;
     padding-left: 15px;
+    margin-top: 10px;
 }
 
 
@@ -647,6 +654,7 @@ input{
     font-family: KumbhSans;
     color: #f2f2eb;
     margin-left: 25px;
+    margin-bottom: 10px;
 }
 
 .button-submit{
@@ -686,7 +694,7 @@ input{
 
     .top-black-screen{
         background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
-        background-position: center;
+        background-position: 43% 50%;
         background-size: cover;
         height: 885px;
         margin-top: 50px;
@@ -844,12 +852,12 @@ input{
 
     .heading-heart{
         margin-top: -2px;
-        height: 30px;
+        height: 40px;
     }
 
     .heading-heart1{
         margin-top: 18px;
-        height: 60px;
+        height: 80px;
     }
 
     .family-decoration-line-bottom{
@@ -952,6 +960,7 @@ input{
     }
 
     .rate-us-container{
+        height: 125px;
         position: absolute;
         border-radius: 25px;
         top: 4700px;

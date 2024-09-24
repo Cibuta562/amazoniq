@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import Family from "./family";
 import Meniu from "./meniu";
 import MerchAndBeans from "./merchAndBeans";
-import logo from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR BOTTOM.svg"
+import logo from "../assets/Amazoniq Icon Seashell White.svg"
 import logoInsta from "../assets/socials-footer/INSTAGRAM (1).svg"
 import logoFacebook from "../assets/socials-footer/FACEBOOK (1).svg"
 import logoTikTok from "../assets/socials-footer/TIKTOK (1).svg"
@@ -12,7 +12,7 @@ import mapFooter from "../assets/socials-footer/Map asset dark.svg"
 import logoMC from "../assets/socials-footer/ma_symbol_opt_73_2x.png"
 import logoVisa from "../assets/socials-footer/Visa_Brandmark_White_RGB_2021.png"
 import logoAmazoniq from "../assets/socials-footer/AMAZONIQ INLINE SEASHELL WHITE CLEAR.svg"
-import vine from "../assets/socials-footer/Vine2.png"
+import vine from "../assets/product-images-webp/VINE nou pentru SUBSOL.webp"
 
 function Footer() {
     return(

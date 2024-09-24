@@ -4,12 +4,12 @@ import lamp from "../assets/ABOUT US Ceiling lamps with lines.svg"
 import Menu from "../Menu";
 import Footer from "./footer";
 import Slider from 'react-slick';
-import logo from "../assets/logo-maimuta-alb.svg"
-import heart from "../assets/HEART.svg"
+import logo from "../assets/Amazoniq Icon Seashell White.svg"
+import heart from "../assets/Inima cu PUNCT.svg"
 import reviewAsset from "../assets/review-asset.svg"
-import reviewAssetWhite from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 7.svg"
+import reviewAssetWhite from "../assets/Amazoniq Icon Seashell White.svg"
 import reviewAssetGreen from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 6.svg"
-import vinesAll from "../assets/lamps and vines together.svg"
+import vinesAll from "../assets/product-images-webp/lamps and vines together.webp"
 import rope from "../assets/LONG ROPE.svg"
 import {useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
@@ -187,6 +187,20 @@ function Family() {
             );
     };
 
+    const links = [
+        'https://link1.com',
+        'https://link2.com'
+    ];
+
+
+    const [randomLink, setRandomLink] = useState('');
+
+
+    useEffect(() => {
+        const selectedLink = links[Math.floor(Math.random() * links.length)];
+        setRandomLink(selectedLink);
+    }, []);
+
     return(
         <div>
             <Menu/>
@@ -358,7 +372,7 @@ function Family() {
                     <p className="rate-us-p">RATE US!</p>
                     <div className="rating-asset-container">
                         {[...Array(5)].map((_, index) => (
-                            <a href="https://www.google.com/search?hl=ro-RO&gl=ro&q=AMAZONIQ+%7C+specialty+coffee+%7C+DTR,+Bloc+521,+Drumul+Taberei+96,+Bucure%C8%99ti+061408&ludocid=17526573910239422730&lsig=AB86z5VzSNmrzcDeIK5E_rZCUMkQ#lrd=0x40b20178d43f3b1f:0xf33ae61c9173290a,3"
+                            <a href={randomLink}
                                target="_blank">
                                 <img
                                     key={index}

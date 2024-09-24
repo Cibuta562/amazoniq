@@ -52,288 +52,284 @@ const ProductGrid = () => {
             name: 'SINGLE ESPRESSO',
             category : 'HOT-COFFEE',
             price: '20 ml',
-            description: '8g cafea Mabo, apă fierbinte',
+            description: 'Single Espresso',
             image: espresso
         },
         {
             name: 'DOUBLE ESPRESSO',
             category : 'HOT-COFFEE',
             price: '40 ml',
-            description: '16g cafea Mabo, apă fierbinte',
+            description: 'Double Espresso',
             image: dubluEspresso
         },
         {
             name: 'LONG BLACK',
             category : 'HOT-COFFEE',
             price: '80 ml',
-            description: 'Espresso dublu 40 ml + 40 ml apă fierbinte',
+            description: 'Double Espresso 40 ml + 40ml Hot Water',
             image: longBlack
         },
         {
             name: 'V60 SINGLE ORIGIN',
             category : 'HOT-COFFEE',
             price: '350 ml',
-            description: 'Cafea la filtru SINGLE ORIGIN',
+            description: 'Filter Coffee - Single Origin',
             image: v60single
         },
         {
             name: 'V60 w. RARE',
             category : 'HOT-COFFEE',
             price: '350 ml',
-            description: 'Cafea la filtru MICROLOT',
+            description: 'Filter Coffee - Microlots',
             image: v60single
         },
         {
             name: 'CORTADO',
             category : 'HOT-COFFEE',
             price: '90 ml',
-            description: 'Espresso 20 ml + lapte 70 ml',
+            description: 'Single Espresso 20 ml + 70 ml Milk',
             image: cortado
         },
         {
             name: 'CAPPUCCINO',
             category : 'HOT-COFFEE',
             price: '180 ml',
-            description: 'Espresso 20 ml + lapte 160 ml',
+            description: 'Single Espresso 20 ml + 160 ml Milk',
             image: cortado
         },
         {
             name: 'FLAT WHITE',
             category : 'HOT-COFFEE',
             price: '220 ml',
-            description: 'Espresso dublu 40 ml + lapte 180 ml',
+            description: 'Double Espresso 40 ml + 180 ml Milk',
             image: flatWhite
         },
         {
             name: 'SINGLE LATTE',
             category : 'HOT-COFFEE',
             price: '320 ml',
-            description: 'Espresso 20 ml + lapte 300 ml',
+            description: 'Single Espresso 20 ml + 300ml Milk',
             image: singleLatte
         },
         {
             name: 'DOUBLE LATTE',
             category : 'HOT-COFFEE',
             price: '320 ml',
-            description: 'Espresso 40 ml + lapte 280 ml',
+            description: 'Double Espresso 40 ml + 280 Milk',
             image: singleLatte
         },
         {
             name: 'MOCHA LATTE',
             category : 'HOT-COFFEE',
             price: '310 ml',
-            description: '20g ciocolată (50%) + espresso dublu 40 ml + lapte 250 ml\n',
+            description: 'Chocolate (50%) 20 g + Double Espresso 40 ml + 250 ml Milk',
             image: mocha,
         },
         {
             name: 'DIRTY CHAI LATTE',
             category : 'HOT-COFFEE',
             price: '315 ml',
-            description: '45 ml masala chai ( KO FI TI ) + espresso 20 ml + lapte 250 ml',
+            description: 'Masala Chai (KO FI TI) 45 ml + Double Espresso 20 ml + 250 ml Milk',
             image: chaiLatte,
         },
         {
-            name: 'ESPRESSO TONIC',
+            name: 'TONIC ESPRESSO',
             category : 'COLD-COFFEE',
             price: '240 ml',
-            description: 'Espresso dublu 40 ml + 200 ml apă tonică Franklin + gheață + garnish',
+            description: '40 ml Double Espresso + 200 ml Franklin Tonic Water + Ice',
             image: espressoTonic
         },
         {
-            name: 'ICE LATTE',
+            name: 'ICED LATTE',
             category : 'COLD-COFFEE',
             price: '190 ml',
-            description: 'Espresso dublu 40 ml + 150 ml lapte + gheațăl',
+            description: '40 ml Double Espresso + 150 ml Milk + Ice\n',
             image: iceLatte
         },
         {
-            name: 'COLD BREW SIMPLU',
+            name: 'COLD BREW WATER',
             category : 'COLD-COFFEE',
             price: '250 ml',
-            description: '80 ml cold brew + 170 ml apă filtrată + gheață + garnish',
+            description: '80 ml Cold Brew + 170 ml Filtered Water + Garnish\n',
             image: coldBrewSimplu
         },
         {
             name: 'COLD BREW w. MILK',
             category : 'COLD-COFFEE',
             price: '250 ml',
-            description: '80 ml cold brew + 170 ml lapte + gheață',
+            description: '80 ml Cold Brew + 170 ml Milk',
             image: coldBrewMilk
         },
         {
             name: 'COLD BREW TONIC',
             category : 'COLD-COFFEE',
             price: '280 ml',
-            description: '80 ml cold brew + 200 ml apă tonică Franklin + gheata + garnish',
+            description: '80 ml Cold Brew + 200 ml Franklin Tonic Water + Ice + Garnish',
             image: coldBrewTonic
         },
         {
             name: 'AFFOGATO',
             category : 'COLD-COFFEE',
             price: '110 ml',
-            description: '70 g înghețată Friddi de vanilie + espresso dublu 40 ml\n',
+            description: '70 g Friddi Vanilla Ice Cream + Double Espresso 40 ml',
             image: affogato
         },
         {
             name: 'AMAZONIQ FRAPPE',
             category : 'COLD-COFFEE',
             price: '260 ml',
-            description: 'Reteta noastra proprie de Frappe contine - 70 g înghețată friddi de vanilie + espresso dublu 40 ml + 150 ml lapte + gheata + crumble of oreo',
+            description: 'Our Unique Recipe - 70g Friddi Vanilla Ice Cream + Double Espresso 40 ml + 150 ml Milk + Ice + Oreo Crumbs',
             image: frappe
         },
         {
             name: 'BABYCCINO',
             category : 'NON-COFFEE',
             price: '220 ml',
-            description: 'Cremă de lapte pentru copii – 220 ml',
+            description: 'Steamed Milk - 220 ml',
             image: babyccino
         },
         {
             name: 'TEA',
             category : 'NON-COFFEE',
             price: '320 ml',
-            description: 'Diferite sortimente de ceaiuri - 6 g ceai vrac + 320 ml apă fierbinte',
+            description: 'A Varied Selection of Teas - 6 g Tea + 320 ml Water',
             image: tea
         },
         {
             name: 'CHAI LATTE',
             category : 'NON-COFFEE',
             price: '225 ml',
-            description: '45 ml masala chai ( KO FI TI )+ lapte 180 ml',
+            description: '45 ml Masala Chai (KO FI TI) + 180 ml Milk',
             image: chai
         },
         {
             name: 'HOT CHOCOLATE',
             category : 'NON-COFFEE',
             price: '300 ml',
-            description: '20 g ciocolată (50%) + lapte 280 ml',
+            description: '20 g Chocolate (50%) + 280 ml Milk',
             image: hotChocolate
         },
         {
             name: 'MATCHA LATTE',
             category : 'NON-COFFEE',
             price: '300 ml',
-            description: '5 g matcha + 20 ml apă fierbinte + lapte de ovăz 280 ml',
+            description: '5 g Matcha + 20 ml Hot Water + 280 ml Oat Milk',
             image: matcha
         },
         {
-            name: 'FLAT WHITE DECAF',
-            category : 'DECAF',
-            price: '220 ml',
-            description: 'Espresso dublu 40 ml + lapte 180 ml',
-            image: flatWhite
-        },
-        {
-            name: 'DOUBLE ESPRESSO DECAF',
+            name: 'DECAF DOUBLE ESPRESSO ',
             category : 'DECAF',
             price: '40 ml',
-            description: '45 ml masala chai ( KO FI TI )+ lapte 180 ml',
+            description: 'Decaf Double Espresso',
             image: dubluEspresso
         },
         {
-            name: 'LONG BLACK DECAF',
+            name: 'DECAF LONG BLACK',
             category : 'DECAF',
             price: '80 ml',
-            description: 'Espresso dublu 40 ml + 40 ml hot water',
+            description: 'Double Espresso 40 ml + 40 ml Hot Water',
             image: longBlack
         },
         {
-            name: 'DOUBLE LATTE DECAF',
+            name: 'DECAF DOUBLE LATTE',
             category : 'DECAF',
             price: '320 ml',
-            description: 'Espresso dublu 40 ml + lapte 280 ml',
+            description: 'Double Espresso 40 ml + 280 ml Milk',
             image: singleLatte
         },
         {
-            name: 'ICE LATTE DECAF',
+            name: 'DECAF FLAT WHITE',
+            category : 'DECAF',
+            price: '220 ml',
+            description: 'EDouble Espresso 40 ml + 180 ml Milk',
+            image: flatWhite
+        },
+        {
+            name: 'DECAF ICED LATTE',
             category : 'DECAF',
             price: '190 ml',
-            description: 'Espresso dublu 40 ml + 150 ml lapte + gheață',
+            description: 'Double Espresso 40 ml + 150 ml Milk + Ice',
             image: iceLatte
         },
         {
-            name: 'APĂ PLATĂ',
+            name: 'STILL WATER',
             category : 'REFRESHMENTS',
             price: '330ML',
-            description: 'Garanție returnare 0,50 lei',
+            description: 'Still Water',
             image: apa
         },
         {
-            name: 'APĂ MINERALĂ',
+            name: 'SPARKLING WATER',
             category : 'REFRESHMENTS',
             price: '330 ml',
-            description: 'Garanție returnare 0,50 lei',
+            description: 'Sparkling Water',
             image: apaMinerala
         },
         {
-            name: 'APĂ TONICĂ',
+            name: 'TONIC WATER',
             category : 'REFRESHMENTS',
             price: '200 ml',
-            description: 'Garanție returnare 0,50 lei - CONȚINE ZAHĂR 7.9% -',
+            description: '7.9% SUGAR CONTENT',
             image: apăTonica
         },
         {
-            name: 'LIMONADĂ SIMPLĂ',
+            name: 'SIMPLE LEMONADE',
             category : 'REFRESHMENTS',
             price: '330 ml',
-            description: 'Garanție returnare 0,50 lei - CONTINE 14% SUC DIN LAMAIE, ZAHAR 8.4%',
+            description: 'Contains 14% Lemon Juice, 8.4% Sugar',
             image: limonada
         },
         {
-            name: 'LIMONADĂ ZMEURĂ',
+            name: 'RASPBERRY LEMONADE',
             category : 'REFRESHMENTS',
             price: '330 ml',
-            description: 'CONTINE 10% SUC DIN LAMAIE + 10% SUC NATURAL DIN ZMEURA + ZAHAR 7.1%',
+            description: 'Contains 10% Lemon Juice + 10% Raspberry Juice, 7.1% Sugar',
             image: limonadaZmeura
         },
         {
-            name: 'SOCATA ARTIZANALA',
+            name: 'ARTISANAL ELDERFLOWER DRINK',
             category : 'REFRESHMENTS',
             price: '275 ml',
-            description: 'CONTINE FLOARE DE SOC, LAMAIE, ZAHAR 8.7%',
+            description: 'Artisanal Elderflower Drink',
             image: socata
         },
         {
             name: 'CHOCOLATE COOKIE',
-            category : 'THINGS TO EAT',
-            price: '1 buc',
-            description: 'Alergeni: ' +
-                'FAINA DE GRAU ALBA (NATURALA, FARA ADITIVI), OUA, UNT, CIOCOLATA BELGIANA 70% CACAO',
+            category: 'THINGS TO EAT',
+            price: '1 piece',
+            description: 'Allergens: WHITE WHEAT FLOUR (NATURAL, WITHOUT ADDITIVES), EGGS, BUTTER, BELGIAN CHOCOLATE 70% COCOA',
             image: cookie
         },
         {
             name: 'BANANA BREAD',
-            category : 'THINGS TO EAT',
+            category: 'THINGS TO EAT',
             price: '100 g',
-            description: 'Alergeni: ' +
-                'FAINA DE GRAU ALBA (NATURALA FARA ADITIVI), OUA, LAPTE, NUCA',
+            description: 'Allergens: WHITE WHEAT FLOUR (NATURAL, WITHOUT ADDITIVES), EGGS, MILK, WALNUTS',
             image: banana
         },
         {
             name: 'VEGAN CUPCAKE',
-            category : 'THINGS TO EAT',
+            category: 'THINGS TO EAT',
             price: '100 g',
-            description: 'Alergeni\n' +
-                'VEGAN FRIENDLY',
+            description: 'Allergens: VEGAN FRIENDLY',
             image: cupcake
         },
         {
             name: 'CHOCOLATE COOKIE COMBO',
-            category : 'THINGS TO EAT',
-            price: '2 buc',
-            description: 'Alergeni: ' +
-                'FAINA DE GRAU ALBA (NATURALA, FARA ADITIVI), OUA, UNT, CIOCOLATA BELGIANA 70% CACAO',
+            category: 'THINGS TO EAT',
+            price: '2 pieces',
+            description: 'Allergens: WHITE WHEAT FLOUR (NATURAL, WITHOUT ADDITIVES), EGGS, BUTTER, BELGIAN CHOCOLATE 70% COCOA',
             image: cookeieCombpo
         },
         {
             name: 'EXTRA SHOT of ESPRESSO',
             category : 'EXTRAS',
             price: '20 ml',
-            description: '',
+            description: 'Extra Shot of Espresso',
             image: espresso
         },
         {
-            name: "LAPTE DE OVAZ",
+            name: "OAT MILK",
             category : 'EXTRAS',
             price: '1 L',
             description: 'OATLY - 1L',
