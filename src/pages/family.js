@@ -10,6 +10,7 @@ import reviewAsset from "../assets/review-asset.svg"
 import reviewAssetWhite from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 7.svg"
 import reviewAssetGreen from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 6.svg"
 import vinesAll from "../assets/lamps and vines together.svg"
+import rope from "../assets/LONG ROPE.svg"
 import {useEffect, useState} from "react";
 import Carousel from "react-multi-carousel";
 
@@ -211,12 +212,16 @@ function Family() {
                     <img src={heart} className="heading-heart" alt="heart-logo"/>
                 </div>
                 <div className="maps-container">
+                    {/*<div className="map-border">*/}
                     <div className="map-asset-container">
-                            <iframe width="100%" height="500" frameBorder="0" scrolling="no" marginHeight="0"
-                                    marginWidth="0"
-                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amazoniq+(Amazoniq%20Drumul%20Taberei)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                                <a href="https://www.gps.ie/">gps vehicle tracker</a></iframe>
+                        {/*<iframe width="100%" height="500"*/}
+                        {/*        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amazoniq+(Amazoniq%20Drumul%20Taberei)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">*/}
+                        {/*</iframe>*/}
+                        <iframe
+                            src="https://www.google.com/maps/d/u/0/embed?mid=1Ufy8aAlwBATZzuz8lQcTpuQxGomur40&ehbc=2E312F"
+                            width="100%" height="500"></iframe>
                     </div>
+                    {/*</div>*/}
                     <div className="address-detail-mobile">
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
@@ -234,15 +239,18 @@ function Family() {
                     </div>
                     <div className="address-detail-mobile">
                         <div className="map-asset-container1">
-                            <iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"
-                                    allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"
-                                    frameBorder="0" scrolling="no" allowFullScreen
-                                    id="atlist-embed"></iframe>
+                            {/*<iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"*/}
+                            {/*        allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"*/}
+                            {/*        frameBorder="0" scrolling="no" allowFullScreen*/}
+                            {/*        id="atlist-embed"></iframe>*/}
+                            <iframe
+                                src="https://www.google.com/maps/d/u/0/embed?mid=1Ufy8aAlwBATZzuz8lQcTpuQxGomur40&ehbc=2E312F"
+                                width="100%" height="500"></iframe>
                         </div>
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="address-p">
-                                <p className="p-address">Gheorghe Sincai 2A</p>
+                            <p className="p-address">Gheorghe Sincai 2A</p>
                             </div>
                         </div>
                         <div className="address-p-container">
@@ -253,6 +261,9 @@ function Family() {
                             </div>
                         </div>
                     </div>
+                    {/*<div className="div-fill">*/}
+
+                    {/*</div>*/}
                 </div>
                 <div className="address-detail-container">
                     <div className="address-detail">
@@ -290,10 +301,14 @@ function Family() {
                     </div>
                 </div>
                 <div className="heading-container">
-                    <p className="heading-map" style={{marginTop: "50px"}}>
+
+                    <p className="heading-map1" style={{marginTop: "50px"}}>
                         YOUR LOVE IS APPRECIATED
                     </p>
                     <img src={heart} className="heading-heart1" alt="heart-logo"/>
+                </div>
+                <div className="div-fill">
+
                 </div>
                 <div className="family-decoration-line-bottom"></div>
                 <div className="review-carousel-container">
@@ -318,43 +333,46 @@ function Family() {
                         </div>
                     ))}
                 </div>
+                <img className="long-rope" src={rope} alt="longRope"/>
                 <div className="rate-us-container" onMouseLeave={handleMouseLeave}>
                     <p className="rate-us-p">RATE US!</p>
-                    {[...Array(5)].map((_, index) => (
-                        <a href="https://www.google.com/search?hl=ro-RO&gl=ro&q=AMAZONIQ+%7C+specialty+coffee+%7C+DTR,+Bloc+521,+Drumul+Taberei+96,+Bucure%C8%99ti+061408&ludocid=17526573910239422730&lsig=AB86z5VzSNmrzcDeIK5E_rZCUMkQ#lrd=0x40b20178d43f3b1f:0xf33ae61c9173290a,3"
-                           target="_blank">
-                            <img
-                                key={index}
-                                className="review-asset-rate"
-                                src={index <= hoveredIndex ? reviewAssetGreen : reviewAssetWhite}
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                alt={`Rating ${index + 1}`}
-                            />
-                        </a>
-                    ))}
+                    <div className="rating-asset-container">
+                        {[...Array(5)].map((_, index) => (
+                            <a href="https://www.google.com/search?hl=ro-RO&gl=ro&q=AMAZONIQ+%7C+specialty+coffee+%7C+DTR,+Bloc+521,+Drumul+Taberei+96,+Bucure%C8%99ti+061408&ludocid=17526573910239422730&lsig=AB86z5VzSNmrzcDeIK5E_rZCUMkQ#lrd=0x40b20178d43f3b1f:0xf33ae61c9173290a,3"
+                               target="_blank">
+                                <img
+                                    key={index}
+                                    className="review-asset-rate"
+                                    src={index <= hoveredIndex ? reviewAssetGreen : reviewAssetWhite}
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    alt={`Rating ${index + 1}`}
+                                />
+                            </a>
+                        ))}
+                    </div>
                 </div>
-                    {/*<div className="slider-container">*/}
-                    {/*    <Slider {...settings}>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>1</h3>*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>2</h3>*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>3</h3>*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>4</h3>*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>5</h3>*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <h3>6</h3>*/}
-                    {/*        </div>*/}
-                    {/*    </Slider>*/}
-                    {/*</div>*/}
+                {/*<div className="slider-container">*/}
+                {/*    <Slider {...settings}>*/}
+                {/*        <div>*/}
+                {/*            <h3>1</h3>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <h3>2</h3>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <h3>3</h3>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <h3>4</h3>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <h3>5</h3>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <h3>6</h3>*/}
+                {/*        </div>*/}
+                {/*    </Slider>*/}
+                {/*</div>*/}
                 <div className="family-decoration-line-bottom-bottom"></div>
                 <div className="contact-form-container">
                     {/* Button to show the form */}
@@ -372,56 +390,59 @@ function Family() {
                                 &times;
                             </button>
                             <div className="contact-container">
-                            <div className="contact-heading">
-                                CONTACT US !
-                            </div>
+                                <div className="contact-heading">
+                                    CONTACT US !
+                                </div>
 
 
-                            <div className="contact-warning-container">
-                                <p className="contact-warning-p">Soooo..... if you really want to, you can contact us for the following reasons:</p>
+                                <div className="contact-warning-container">
+                                    <p className="contact-warning-p">Soooo..... if you really want to, you can contact
+                                        us for the following reasons:</p>
                                     <li className="contact-warning-li">job opportunity (we are a really cool team)</li>
-                                    <li className="contact-warning-li">community events suggestions (we love to drink good coffee ;) and talk a lot)</li>
-                            </div>
-
-                            <div className="row">
-                                <div className="form-group">
-                                    <label htmlFor="nume">Name and Surname</label>
-                                    <input className="input-contact" type="text" id="nume" name="nume"
-                                           placeholder="Name and Surname" required/>
+                                    <li className="contact-warning-li">community events suggestions (we love to drink
+                                        good coffee ;) and talk a lot)
+                                    </li>
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="prenume">Phone</label>
-                                    <input className="input-contact" type="tel" id="prenume" name="prenume"
-                                           placeholder="Phone" required/>
+
+                                <div className="row">
+                                    <div className="form-group">
+                                        <label htmlFor="nume">Name and Surname</label>
+                                        <input className="input-contact" type="text" id="nume" name="nume"
+                                               placeholder="Name and Surname" required/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="contact-label" htmlFor="prenume">Phone</label>
+                                        <input className="input-contact" type="tel" id="prenume" name="prenume"
+                                               placeholder="Phone" required/>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="form-group">
-                                    <label htmlFor="telefon">Email</label>
-                                    <input className="input-contact" type="email" id="telefon" name="telefon"
-                                           placeholder="Email" required/>
+                                <div className="row">
+                                    <div className="form-group">
+                                        <label htmlFor="telefon">Email</label>
+                                        <input className="input-contact" type="email" id="telefon" name="telefon"
+                                               placeholder="Email" required/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="contact-label" htmlFor="email">Reason</label>
+                                        <input className="input-contact" type="text" id="email" name="email"
+                                               placeholder="Reason" required/>
+                                    </div>
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Reason</label>
-                                    <input className="input-contact" type="text" id="email" name="email"
-                                           placeholder="Reason" required/>
+
+
+                                <div className="form-group full-width">
+                                    <label htmlFor="mesaj">Message</label>
+                                    <textarea style={{resize: "none"}} className="input-contact" id="mesaj" name="mesaj"
+                                              rows="4" placeholder="Message"></textarea>
                                 </div>
-                            </div>
+
+                                <div className="form-group full-width">
+                                    <div></div>
+                                </div>
 
 
-                            <div className="form-group full-width">
-                                <label htmlFor="mesaj">Message</label>
-                                <textarea style={{resize: "none"}} className="input-contact" id="mesaj" name="mesaj"
-                                          rows="4" placeholder="Message"></textarea>
-                            </div>
-
-                            <div className="form-group full-width">
-                                <div></div>
-                            </div>
-
-
-                            <button className="button-submit" type="submit">Trimite</button>
+                                <button className="button-submit" type="submit">Trimite</button>
                             </div>
                         </form>
                     )}

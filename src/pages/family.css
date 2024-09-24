@@ -225,6 +225,15 @@
     margin-top: 30px;
 }
 
+.heading-map1{
+    font-family: KumbhSans;
+    font-weight: 550;
+    color: #f2f2eb;
+    font-size: 42px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
 .heading-heart{
     margin-top: -11px;
     height: 35px;
@@ -238,10 +247,14 @@
 .map-asset-container{
     height: 500px;
     background-color: #1c6c1c;
-    border: solid 2px #f2f2eb;
     width: 60%;
-    filter: grayscale(100%) invert(90%) contrast(80%);
+    /*filter: grayscale(100%) invert(90%) contrast(92%);*/
 }
+
+/*.map-border{*/
+/*    border: 3px solid #f2f2eb;*/
+/*    width: 60%;*/
+/*}*/
 
 .map-asset-container1{
     margin-top: 80px;
@@ -255,6 +268,7 @@
 }
 
 .maps-container{
+
     justify-content: space-evenly;
     margin-top: 60px;
     width: 96%;
@@ -444,10 +458,13 @@
 }
 
 .rate-us-container{
+    margin-bottom: 60px;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    background-color: #252422;
 }
 
 .rate-us-p{
@@ -479,6 +496,7 @@
 }
 
 .contact-form {
+    margin-top: 400px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -486,7 +504,6 @@
     margin-right: 5%;
     background-color: #252422;
     border-radius: 5px;
-    margin-top: 20px;
     position: relative;
     border: solid #090909 2px;
 
@@ -642,6 +659,14 @@ input{
     margin-right: 20%;
 }
 
+.long-rope{
+    display: none;
+}
+
+.div-fill{
+    display: none;
+}
+
 
 @media (max-width: 600px) {
     .lamp-img{
@@ -650,6 +675,13 @@ input{
 }
 
 @media (max-width: 768px) {
+
+    .div-fill{
+        display: flex;
+        height: 700px;
+        width: 100%;
+    }
+
 
     .top-black-screen{
         background-image: url('../assets/OAMENI IMBRATISATI .png');
@@ -668,13 +700,14 @@ input{
     }
 
     .family-container {
-        height: 1020px;
+        height: 1320px;
     }
 
 
     .family-heading{
         font-size: 32px;
         width: 100%;
+        margin-top: -40px;
     }
 
     .family-heading-top{
@@ -685,6 +718,7 @@ input{
     .family-p{
         font-size: 20px;
         width: 310px;
+        margin-top: -40px;
         line-height: 23px;
         z-index: 3;
     }
@@ -693,7 +727,7 @@ input{
         font-size: 20px;
         width: 310px;
         line-height: 23px;
-        margin-top: 107px;
+        margin-top: 67px;
         z-index: 3;
     }
 
@@ -709,13 +743,13 @@ input{
         width: 100%;
         position: absolute;
         height: 1px;
-        top: 1790px;
+        top: 1990px;
         background-color: #f2f2eb;
     }
 
 
     .family-image{
-        margin-top: 180px;
+        margin-top: 240px;
     }
 
 
@@ -766,7 +800,7 @@ input{
     }
 
     .map-container{
-        height: 2400px;
+        height: 100%;
         width: 100%;
     }
 
@@ -781,12 +815,13 @@ input{
         color: #f2f2eb;
         font-family: KumbhSans;
         font-size: 22px;
+        margin-bottom: 400px;
     }
 
     .heading-container{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
         padding-top: 50px;
         margin-bottom: -60px;
         display: flex;
@@ -796,8 +831,19 @@ input{
 
     .heading-map{
         font-size: 32px;
-        margin-right: 5px;
-        width: 60%;
+        margin-right: 10px;
+        /*width: 60%;*/
+    }
+
+    .heading-map1{
+        font-size: 32px;
+        margin-right: 10px;
+        /*width: 60%;*/
+    }
+
+    .heading-heart{
+        margin-top: -2px;
+        height: 30px;
     }
 
     .heading-heart1{
@@ -876,7 +922,7 @@ input{
         border-radius: 25px;
         position: absolute;
         z-index: 1;
-        top: 1880px;
+        top: 2080px;
         width: 90%;
         border: 1px solid #f2f2eb;
         margin-right: 5%;
@@ -898,12 +944,108 @@ input{
         text-align: center;
         margin-top: 8px;
         z-index: 1;
-        top: 1815px;
+        top: 2015px;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
     }
 
+    .rate-us-container{
+        position: absolute;
+        border-radius: 25px;
+        top: 4600px;
+        border: solid #090909 2px;
+        display: inline-block;
+        justify-content: center;
+        width: 80%;
+        margin-right: calc(10% - 2px);
+        margin-left: calc(10% - 2px);
+        align-items: center;
+        z-index: 5;
+    }
+
+    .rating-asset-container{
+        display: flex;
+        justify-content: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .rate-us-p{
+        margin: 0;
+        padding: 10px;
+        font-size: 32px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .contact-container{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .contact-form-container{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .contact-form{
+        z-index: 3;
+        width: 100%;
+    }
+
+    .contact-warning-container{
+        height: 210px;
+    }
+
+    .contact-warning-li{
+        margin-right: 5%;
+    }
+
+    .row{
+        width: 100%;
+        display: inline-block;
+    }
+
+    .contact-label{
+        margin-top: 10px;
+    }
+
+    .form-group{
+        margin: 0;
+    }
+
+    .button-submit{
+        margin-top: 20px;
+    }
+
+    .show-form-button{
+        margin-top: 400px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .long-rope{
+        display: flex;
+        position: absolute;
+        top: 4250px;
+        height: 1000px;
+        width: 30px;
+        object-fit: cover;
+        left: calc(50% - 30px);
+        z-index: 1;
+    }
+
+    /*label{*/
+    /*    text-align: center;*/
+    /*}*/
+
+    /*input{*/
+    /*    text-align: center;*/
+    /*}*/
 
 }
 
