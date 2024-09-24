@@ -15,6 +15,7 @@
 }
 
 .heart-on-top{
+    display: none;
     position: absolute;
     top: 180px;
     height: 50px;
@@ -953,7 +954,7 @@ input{
     .rate-us-container{
         position: absolute;
         border-radius: 25px;
-        top: 4600px;
+        top: 4700px;
         border: solid #090909 2px;
         display: inline-block;
         justify-content: center;

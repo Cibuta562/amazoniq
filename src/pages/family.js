@@ -11,8 +11,8 @@ import reviewAssetWhite from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 7.s
 import reviewAssetGreen from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 6.svg"
 import vinesAll from "../assets/lamps and vines together.svg"
 import rope from "../assets/LONG ROPE.svg"
-import {useEffect, useState} from "react";
-import Carousel from "react-multi-carousel";
+import {useEffect, useRef, useState} from "react";
+import emailjs from '@emailjs/browser';
 
 import "react-multi-carousel/lib/styles.css";
 
@@ -165,6 +165,26 @@ function Family() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
+    };
+
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_rrykgqu', 'template_7pfc2c4', form.current, {
+                publicKey: 'Vo_OfRgK6DeUPu2kL',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     };
 
     return(
@@ -374,6 +394,9 @@ function Family() {
                 {/*    </Slider>*/}
                 {/*</div>*/}
                 <div className="family-decoration-line-bottom-bottom"></div>
+                <div className="">
+
+                </div>
                 <div className="contact-form-container">
                     {/* Button to show the form */}
                     {!formVisible && (
@@ -384,7 +407,7 @@ function Family() {
 
                     {/* Form that becomes visible on button click */}
                     {formVisible && (
-                        <form className="contact-form">
+                        <form className="contact-form" ref={form} onSubmit={sendEmail}>
                             {/* X button to close the form */}
                             <button type="button" className="close-button" onClick={toggleForm}>
                                 &times;
@@ -412,7 +435,7 @@ function Family() {
                                     </div>
                                     <div className="form-group">
                                         <label className="contact-label" htmlFor="prenume">Phone</label>
-                                        <input className="input-contact" type="tel" id="prenume" name="prenume"
+                                        <input className="input-contact" type="tel" id="prenume" name="telefon"
                                                placeholder="Phone" required/>
                                     </div>
                                 </div>
@@ -420,12 +443,12 @@ function Family() {
                                 <div className="row">
                                     <div className="form-group">
                                         <label htmlFor="telefon">Email</label>
-                                        <input className="input-contact" type="email" id="telefon" name="telefon"
+                                        <input className="input-contact" type="email" id="telefon" name="email"
                                                placeholder="Email" required/>
                                     </div>
                                     <div className="form-group">
                                         <label className="contact-label" htmlFor="email">Reason</label>
-                                        <input className="input-contact" type="text" id="email" name="email"
+                                        <input className="input-contact" type="text" id="email" name="motiv"
                                                placeholder="Reason" required/>
                                     </div>
                                 </div>

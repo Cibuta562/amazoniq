@@ -1,0 +1,131 @@
+.merch-container{
+    width: 100%;
+    height: 800px;
+    background-color: #252422;
+}
+
+.vines-top-merch{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    margin-top: 50px;
+}
+
+.heading-merch{
+    position: absolute;
+    top: 350px;
+    font-size: 40px;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    left: calc(50% - 89px);
+    z-index: 2;
+}
+
+
+.p-merch{
+    font-size: 28px;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    /*left: calc(50% - 303px);*/
+    z-index: 2;
+    margin-right: 8px;
+}
+
+.p-merch-1{
+    font-size: 28px;
+    color: #f2f2eb;
+    font-family: KumbhSans;
+    /*left: calc(50% - 303px);*/
+    z-index: 2;
+}
+
+.flex-merch{
+    position: absolute;
+    top: 320px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 400px;
+}
+
+.merch-cont{
+    margin-top: -430px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.img-stanga{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+    .heading-merch{
+        position: absolute;
+        top: 130px;
+        font-size: 40px;
+        color: #f2f2eb;
+        font-family: KumbhSans;
+        left: calc(50% - 89px);
+        z-index: 2;
+    }
+
+    .merch-cont{
+        text-align: center;
+    }
+
+
+    .p-merch{
+        position: absolute;
+        top: 240px;
+        font-size: 20px;
+        color: #f2f2eb;
+        font-family: KumbhSans;
+        left: 0;
+        z-index: 2;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10% ;
+    }
+
+    .p-merch-1{
+        position: absolute;
+        top: 270px;
+        font-size: 20px;
+        color: #f2f2eb;
+        font-family: KumbhSans;
+        left: 0;
+        z-index: 2;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10% ;
+    }
+
+    .img-stanga{
+        width: 100%;
+        height: 70%;
+        object-fit: contain;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .flex-merch{
+        position: absolute;
+        top: 380px;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        height: 400px;
+    }
+
+
+}
