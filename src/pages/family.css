@@ -65,7 +65,7 @@
 /*}*/
 
 .top-black-screen{
-    background-image: url('../assets/OAMENI IMBRATISATI .png');
+    background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
     background-position: center;
     background-size: cover;
     height: 900px;
@@ -204,7 +204,7 @@
     border-bottom: solid #090909 5px;
     height: 100%;
     width: 100%;
-    background-image: url("../assets/Pattern fundal LEMN.svg");
+    background-image: url("../assets/Pattern fundal LEMN.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -684,7 +684,7 @@ input{
 
 
     .top-black-screen{
-        background-image: url('../assets/OAMENI IMBRATISATI .png');
+        background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
         background-position: center;
         background-size: cover;
         height: 885px;
