@@ -58,7 +58,7 @@ function Footer() {
             <img className="logo-amazoniq" src={logoAmazoniq} alt="logo-amz"/>
             </div>
             <div className="footer-section-1">
-                Coltisorul de specialitate, unde se bea cafea buna, se rade mult si se leaga prietenii magice, din 2022, pana acum.
+                Coltisorul de specialitate, unde se bea cafea buna, se rade mult si se leaga prietenii magice.
                 <div className="footer-socials-container">
                     <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
                     <a href="https://www.facebook.com/amazoniq.coffee" target="_blank" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>
@@ -82,8 +82,8 @@ function Footer() {
             <div className="footer-section-3">
                 <p className="footer-heading">INFO</p>
                 <a href="/under-construction/our-family" onClick={scrollToPosition}><p  className="footer-p">Contact</p></a>
-                <a href="/under-construction/prelucrarea-datelor"><p  className="footer-p">Prelucrarea datelor</p></a>
-                <a href="/under-construction/cookies"><p  className="footer-p">Politica cookie</p></a>
+                <a href="/under-construction/prelucrarea-datelor"><p  className="footer-p">Privacy Policy</p></a>
+                <a href="/under-construction/cookies"><p  className="footer-p">Cookies Policy</p></a>
                 {/*<a href="#"><p  className="footer-p">Termeni si conditii</p></a>*/}
             </div>
             <div className="footer-mobile-line-bottom"></div>

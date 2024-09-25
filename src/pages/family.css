@@ -126,7 +126,7 @@
      /*width: fit-content;*/
      top: 1355px;
      font-size: 20px;
-     width: 510px;
+     width: 590px;
      z-index: 5;
      color: white;
      font-family: KumbhSans;
@@ -141,9 +141,9 @@
     right: 0;
     margin: auto;
     /*width: fit-content;*/
-    top: 1530px;
+    top: 1432px;
     font-size: 20px;
-    width: 510px;
+    width: 590px;
     z-index: 5;
     color: white;
     font-family: KumbhSans;
@@ -709,7 +709,7 @@ input{
     }
 
     .family-container {
-        height: 1320px;
+        height: 1120px;
     }
 
 
@@ -736,7 +736,7 @@ input{
         font-size: 20px;
         width: 310px;
         line-height: 23px;
-        margin-top: 67px;
+        margin-top: 40px;
         z-index: 3;
     }
 
@@ -752,13 +752,13 @@ input{
         width: 100%;
         position: absolute;
         height: 1px;
-        top: 1990px;
+        top: 1790px;
         background-color: #f2f2eb;
     }
 
 
     .family-image{
-        margin-top: 240px;
+        margin-top: 10px;
     }
 
 
@@ -931,7 +931,7 @@ input{
         border-radius: 25px;
         position: absolute;
         z-index: 1;
-        top: 2080px;
+        top: 1880px;
         width: 90%;
         border: 1px solid #f2f2eb;
         margin-right: 5%;
@@ -953,7 +953,7 @@ input{
         text-align: center;
         margin-top: 8px;
         z-index: 1;
-        top: 2015px;
+        top: 1815px;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
@@ -1010,7 +1010,7 @@ input{
     }
 
     .contact-warning-container{
-        height: 210px;
+        height: 260px;
     }
 
     .contact-warning-li{

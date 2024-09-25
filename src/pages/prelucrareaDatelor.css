@@ -1,5 +1,5 @@
 .prelucrareaDatelor-container{
-    height: 2000px;
+    height: 100%;
     background-color: #252422;
     text-align: center;
 }
@@ -9,4 +9,14 @@
     font-family: KumbhSans;
     font-size: 40px;
     color: #f2f2eb;
+}
+
+.prelucrare-texte{
+    font-family: KumbhSans;
+    font-size: 20px;
+    color: #f2f2eb;
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }

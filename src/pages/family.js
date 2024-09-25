@@ -201,6 +201,32 @@ function Family() {
         setRandomLink(selectedLink);
     }, []);
 
+
+    const [mapSrc, setMapSrc] = useState("");
+
+    useEffect(() => {
+        // Function to update the map src based on screen width
+        const updateMapSrc = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth >= 1024) {
+                // For larger screens (e.g., desktops)
+                setMapSrc("https://www.google.com/maps/d/u/3/embed?mid=1ekbpzasGrrmzVB65ctTw4race-Imvzs&ehbc=2E312F");
+            } else {
+                // For smaller screens (e.g., mobile)
+                setMapSrc("https://www.google.com/maps/d/u/3/embed?mid=1cv5ORqaEzrLjyhH-DDdTmgaxCagA7Fk&ehbc=2E312F");
+            }
+        };
+        updateMapSrc();
+
+        // Add an event listener to update the src when the window is resized
+        window.addEventListener("resize", updateMapSrc);
+
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener("resize", updateMapSrc);
+    }, []);
+
+
     return(
         <div>
             <Menu/>
@@ -222,10 +248,10 @@ function Family() {
             </div>
             <p className="family-heading">ABOUT US</p>
             <p className="family-p">
-                We have embarked on the wonderful journey of providing you with the highest quality coffee, alongside our partners at MABO by Bogdan Georgescu, the runner-up in coffee roasting. We want you to enjoy this experience at home as well! Therefore, on our shelves, you will find a carefully selected range of origins with unique profiles.
+                We’ve committed to a journey where we prepare the highest quality coffee, roasted by our friends at MABO by Bogdan Georgescu, the world coffee roasting vice-champion.
             </p>
             <p className="family-p2">
-                In shorter terms, AMAZONIQ is the place where good coffee is enjoyed, laughter is abundant, and magical friendships are formed. We look forward to welcoming you!
+                We have built a place where you can enjoy good coffee, laugh, and create magical friendships - we can’t wait to see you all!
             </p>
             {/*<p className="family-p3">*/}
             {/*    Va asteptam cu drag!*/}
@@ -252,12 +278,13 @@ function Family() {
                         {/*        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amazoniq+(Amazoniq%20Drumul%20Taberei)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">*/}
                         {/*</iframe>*/}
                         <iframe
-                            src="https://www.google.com/maps/d/u/0/embed?mid=1Ufy8aAlwBATZzuz8lQcTpuQxGomur40&ehbc=2E312F"
+                            src={mapSrc}
                             width="100%" height="500"></iframe>
-                    </div>
-                    {/*</div>*/}
-                    <div className="address-detail-mobile">
-                        <div className="address-p-container">
+
+                </div>
+                {/*</div>*/}
+                <div className="address-detail-mobile">
+                    <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="address-p">
                                 <p className="p-address">Drumul Taberei 24</p>
@@ -278,7 +305,7 @@ function Family() {
                             {/*        frameBorder="0" scrolling="no" allowFullScreen*/}
                             {/*        id="atlist-embed"></iframe>*/}
                             <iframe
-                                src="https://www.google.com/maps/d/u/0/embed?mid=1Ufy8aAlwBATZzuz8lQcTpuQxGomur40&ehbc=2E312F"
+                                src="https://www.google.com/maps/d/u/3/embed?mid=1RtAEG9dqEzL4wyZAoS3fVLY0RfIm_o4&ehbc=2E312F"
                                 width="100%" height="500"></iframe>
                         </div>
                         <div className="address-p-container">
@@ -435,14 +462,15 @@ function Family() {
                                 <div className="contact-warning-container">
                                     <p className="contact-warning-p">Soooo..... if you really want to, you can contact
                                         us for the following reasons:</p>
+                                    <li className="contact-warning-li">if you have any feedback/enquiry (we would love to hear your thoughts)</li>
                                     <li className="contact-warning-li">job opportunity (we are a really cool team)</li>
                                     <li className="contact-warning-li">community events suggestions (we love to drink
-                                        good coffee ;) and talk a lot)
+                                        good coffee and talk a lot)
                                     </li>
                                 </div>
 
                                 <div className="row">
-                                    <div className="form-group">
+                                <div className="form-group">
                                         <label htmlFor="nume">Name and Surname</label>
                                         <input className="input-contact" type="text" id="nume" name="nume"
                                                placeholder="Name and Surname" required/>
