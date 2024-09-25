@@ -8,6 +8,8 @@ import Family from "./pages/family";
 import MerchAndBeans from "./pages/merchAndBeans";
 import Footer from "./pages/footer";
 import LoadingAnimation, {LoadingProvider} from "./components/loadingAnimation";
+import PrelucrareaDatelor from "./pages/prelucrareaDatelor";
+import Cookies from "./pages/cookies";
 
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
                     <Route path='/under-construction/meniu' element={<Meniu/>} />
                     <Route path="/under-construction/our-family" element={<Family />} />
                     <Route path="/under-construction/merch-and-beans" element={<MerchAndBeans />} />
+                    <Route path="/under-construction/merch-and-beans" element={<MerchAndBeans />} />
+                    <Route path="/under-construction/prelucrarea-datelor" element={<PrelucrareaDatelor />} />
+                    <Route path="/under-construction/cookies" element={<Cookies />} />
                 </Routes>
             {/*<Footer/>*/}
         </BrowserRouter>

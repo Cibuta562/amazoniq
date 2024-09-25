@@ -236,13 +236,13 @@
 }
 
 .heading-heart{
-    margin-top: -11px;
-    height: 35px;
+    margin-top: -12px;
+    height: 48px;
 }
 
 .heading-heart1{
-    margin-top: 8px;
-    height: 34px;
+    margin-top: 5px;
+    height: 46px;
 }
 
 .map-asset-container{
@@ -839,13 +839,13 @@ input{
     }
 
     .heading-map{
-        font-size: 32px;
+        font-size: 30px;
         margin-right: 10px;
         /*width: 60%;*/
     }
 
     .heading-map1{
-        font-size: 32px;
+        font-size: 30px;
         margin-right: 10px;
         /*width: 60%;*/
     }
@@ -994,9 +994,11 @@ input{
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
+
     }
 
     .contact-form-container{
+        margin-top: 300px;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
@@ -1033,7 +1035,7 @@ input{
     }
 
     .show-form-button{
-        margin-top: 400px;
+        margin-top: 120px;
         width: 100%;
         z-index: 2;
     }

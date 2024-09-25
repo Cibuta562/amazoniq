@@ -188,8 +188,8 @@ function Family() {
     };
 
     const links = [
-        'https://link1.com',
-        'https://link2.com'
+        'https://g.page/r/Cbv7bVFNMMUQEBE/review',
+        'https://g.page/r/CQopc5Ec5jrzEBE/review'
     ];
 
 

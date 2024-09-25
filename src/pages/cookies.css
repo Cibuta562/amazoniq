@@ -1,0 +1,12 @@
+.cookies-container{
+    height: 2000px;
+    background-color: #252422;
+    text-align: center;
+}
+
+.cookies-p{
+    padding-top: 80px;
+    font-family: KumbhSans;
+    font-size: 40px;
+    color: #f2f2eb;
+}

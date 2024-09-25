@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import Family from "./family";
 import Meniu from "./meniu";
 import MerchAndBeans from "./merchAndBeans";
+
 import logo from "../assets/Amazoniq Icon Seashell White.svg"
 import logoInsta from "../assets/socials-footer/INSTAGRAM (1).svg"
 import logoFacebook from "../assets/socials-footer/FACEBOOK (1).svg"
@@ -11,10 +12,35 @@ import logoWhatsApp from "../assets/socials-footer/WHATSAPP (1).svg"
 import mapFooter from "../assets/socials-footer/Map asset dark.svg"
 import logoMC from "../assets/socials-footer/ma_symbol_opt_73_2x.png"
 import logoVisa from "../assets/socials-footer/Visa_Brandmark_White_RGB_2021.png"
-import logoAmazoniq from "../assets/socials-footer/AMAZONIQ INLINE SEASHELL WHITE CLEAR.svg"
+import logoAmazoniq from "../assets/product-images-webp/seashell white inline clear.webp"
 import vine from "../assets/product-images-webp/VINE nou pentru SUBSOL.webp"
 
 function Footer() {
+
+    const scrollToPosition = () => {
+
+        // Get the current screen height (window height)
+
+        const timer = setTimeout(() => {
+        const screenWidth = window.innerWidth;
+
+        // Define scroll heights based on screen height (you can customize this logic)
+        let scrollHeight;
+        if (screenWidth >= 720) {
+            scrollHeight = 2000; // For large screens
+        } else {
+            scrollHeight = 400; // For mobile/smaller screens
+        }
+
+        // Scroll to the specific height smoothly
+        window.scrollTo({
+            top: scrollHeight,
+            behavior: 'smooth'
+        });
+        }, 3000);
+
+    };
+
     return(
         <div className="footer-cont">
             <img className="footer-vine-1" src={vine} alt="vine"/>
@@ -55,9 +81,9 @@ function Footer() {
             </div>
             <div className="footer-section-3">
                 <p className="footer-heading">INFO</p>
-                <a href="#"><p  className="footer-p">Contact</p></a>
-                <a href="#"><p  className="footer-p">Prelucrarea datelor</p></a>
-                <a href="#"><p  className="footer-p">Politica cookie</p></a>
+                <a href="/under-construction/our-family" onClick={scrollToPosition}><p  className="footer-p">Contact</p></a>
+                <a href="/under-construction/prelucrarea-datelor"><p  className="footer-p">Prelucrarea datelor</p></a>
+                <a href="/under-construction/cookies"><p  className="footer-p">Politica cookie</p></a>
                 {/*<a href="#"><p  className="footer-p">Termeni si conditii</p></a>*/}
             </div>
             <div className="footer-mobile-line-bottom"></div>
