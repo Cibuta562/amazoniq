@@ -1,3 +1,4 @@
+import React from "react"
 import "./family.css"
 import vinesTop from "../assets/ABOUT US Ceiling vines with gradient.svg"
 import lamp from "../assets/ABOUT US Ceiling lamps with lines.svg"
@@ -13,6 +14,7 @@ import vinesAll from "../assets/product-images-webp/lamps and vines together.web
 import rope from "../assets/LONG ROPE.svg"
 import {useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
+import "./family.scss"
 
 import "react-multi-carousel/lib/styles.css";
 
@@ -227,6 +229,150 @@ function Family() {
     }, []);
 
 
+    const slides = [
+        {
+            profilePicture: 'https://via.placeholder.com/150',
+            review: "This coffee is amazing! The ambiance is perfect for getting work done or just relaxing.",
+            name: "John Doe",
+            stars: 5,
+            date: "June 15, 2024"
+        },
+        {
+            profilePicture: 'https://via.placeholder.com/150',
+            review: "The best coffee shop I've ever been to! Friendly staff and great vibes.",
+            name: "Jane Smith",
+            stars: 4,
+            date: "July 20, 2024"
+        },
+        {
+            profilePicture: 'https://via.placeholder.com/150',
+            review: "Delicious coffee, and the atmosphere is just right for a chill hangout.",
+            name: "Emily Johnson",
+            stars: 5,
+            date: "August 5, 2024"
+        }
+    ];
+
+        const [active, setActive] = React.useState(0);
+        const [autoplay, setAutoplay] = React.useState(1);
+        const max = slides.length;
+
+        const intervalBetweenSlides = () => autoplay && setActive(active === max - 1 ? 0 : active + 1)
+
+        React.useEffect(() => {
+            const interval = setInterval( () => intervalBetweenSlides(), 3000);
+            return () => clearInterval(interval);
+        });
+
+        const toggleAutoPlay = () => setAutoplay(!autoplay)
+
+        const nextOne = () => active < max - 1 && setActive(active + 1)
+
+        const prevOne = () => active > 0 && setActive(active - 1)
+
+        const isActive = value => active === value && 'active'
+
+        const setSliderStyles = () => {
+            const transition = active * - 100;
+
+            return {
+                width: ( slides.length * 100 ) + 'vw',
+                transform: 'translateX(' + transition + 'vw)'
+            }
+        }
+
+    const [displayedSlides, setDisplayedSlides] = useState([]);
+
+    // Function to shuffle slides array
+    const shuffleSlides = (slides) => {
+        let shuffled = [...slides]; // Copy the array to avoid mutating original slides
+
+        // Fisher-Yates algorithm for shuffling
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+
+        return shuffled;
+    };
+
+    useEffect(() => {
+        if (slides.length > 0) {
+            // Shuffle and pick 3 random slides once the component mounts
+            const shuffledSlides = shuffleSlides(slides);
+            setDisplayedSlides(shuffledSlides.slice(0, 3)); // Get first 3 shuffled slides
+        }
+    }, []);
+
+    const renderSlides = () => displayedSlides.map((item, index) => (
+        <div
+            className='slide'
+            key={index}
+            // style={{ backgroundImage: item.eachSlide }}
+        >
+            <div className="slide-content">
+                <div className="review-details">
+                    <img
+                        src={item.profilePicture}
+                        alt={`${item.name}'s profile`}
+                        className="profile-picture"
+                    />
+                    <span className="review-name">{item.name}</span>
+                    {/*<span className="review-stars">{'★'.repeat(item.stars)}</span>*/}
+                    {/*<span className="review-date">{item.date}</span>*/}
+                </div>
+                <p className="review-text">{item.review}</p>
+            </div>
+        </div>
+    ));
+
+    const renderDots = () => slides.map((silde, index) => ( // check index
+        <li
+            className={isActive(index) + ' dots'}
+            key={index}>
+            <button onClick={() => setActive(index)}>
+            <span>&#9679;</span>
+                </button>
+            </li>
+        ));
+
+        const renderPlayStop = () => autoplay
+            ? (
+                <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
+                    <path d='M0 0h24v24H0z' fill='none'/>
+                    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z'/>
+                </svg>
+            )
+            : (
+                <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
+                    <path d='M0 0h24v24H0z' fill='none'/>
+                    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/>
+                </svg>
+            )
+
+        const renderArrows = () => (
+            <React.Fragment>
+                <button
+                    type='button'
+                    className='arrows prev'
+                    onClick={ () => prevOne() } >
+                    <svg fill='#FFFFFF' width='50' height='50' viewBox='0 0 24 24'>
+                        <path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/>
+                        <path d='M0 0h24v24H0z' fill='none'/>
+                    </svg>
+                </button>
+                <button
+                    type='button'
+                    className='arrows next'
+                    onClick={ () => nextOne() } >
+                    <svg fill='#FFFFFF' height='50' viewBox='0 0 24 24' width='50'>
+                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/>
+                        <path d='M0 0h24v24H0z' fill='none'/>
+                    </svg>
+                </button>
+            </React.Fragment>
+        )
+
     return(
         <div>
             <Menu/>
@@ -281,10 +427,10 @@ function Family() {
                             src={mapSrc}
                             width="100%" height="500"></iframe>
 
-                </div>
-                {/*</div>*/}
-                <div className="address-detail-mobile">
-                    <div className="address-p-container">
+                    </div>
+                    {/*</div>*/}
+                    <div className="address-detail-mobile">
+                        <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="address-p">
                                 <p className="p-address">Drumul Taberei 24</p>
@@ -311,7 +457,7 @@ function Family() {
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="address-p">
-                            <p className="p-address">Gheorghe Sincai 2A</p>
+                                <p className="p-address">Gheorghe Sincai 2A</p>
                             </div>
                         </div>
                         <div className="address-p-container">
@@ -371,12 +517,27 @@ function Family() {
                 <div className="div-fill">
 
                 </div>
+                <div className="slider-container">
+                    <section className='slider'>
+                        <div className='wrapper' style={setSliderStyles()}>
+                            {renderSlides()}
+                        </div>
+                        {renderArrows()}
+                        <ul className='dots-container'>
+                            {renderDots()}
+                        </ul>
+                        <button type='button' className='toggle-play' onClick={toggleAutoPlay}>
+                            {renderPlayStop()}
+                        </button>
+                    </section>
+
+                </div>
                 <div className="family-decoration-line-bottom"></div>
                 <div className="review-carousel-container">
                     {randomReviews.map((review, index) => (
                         <div key={index} className="review-card">
                             <div className="reviews-maps-top">
-                                <img
+                            <img
                                     src={review.profilePicture}
                                     alt={`${review.name}'s profile`}
                                     className="profile-picture"
@@ -462,7 +623,9 @@ function Family() {
                                 <div className="contact-warning-container">
                                     <p className="contact-warning-p">Soooo..... if you really want to, you can contact
                                         us for the following reasons:</p>
-                                    <li className="contact-warning-li">if you have any feedback/enquiry (we would love to hear your thoughts)</li>
+                                    <li className="contact-warning-li">if you have any feedback/enquiry (we would love
+                                        to hear your thoughts)
+                                    </li>
                                     <li className="contact-warning-li">job opportunity (we are a really cool team)</li>
                                     <li className="contact-warning-li">community events suggestions (we love to drink
                                         good coffee and talk a lot)
@@ -470,7 +633,7 @@ function Family() {
                                 </div>
 
                                 <div className="row">
-                                <div className="form-group">
+                                    <div className="form-group">
                                         <label htmlFor="nume">Name and Surname</label>
                                         <input className="input-contact" type="text" id="nume" name="nume"
                                                placeholder="Name and Surname" required/>
