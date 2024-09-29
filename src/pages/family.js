@@ -355,16 +355,18 @@ function Family() {
                 <button
                     type='button'
                     className='arrows prev'
-                    onClick={ () => prevOne() } >
+                    onClick={() => prevOne()}>
                     <svg fill='#FFFFFF' width='50' height='50' viewBox='0 0 24 24'>
-                        <path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/>
+                        <path d='M14.5 7.5L13 6l-6 6 6 6 1.5-1.5L10.5 12z'/>
                         <path d='M0 0h24v24H0z' fill='none'/>
                     </svg>
+
+
                 </button>
                 <button
                     type='button'
                     className='arrows next'
-                    onClick={ () => nextOne() } >
+                    onClick={() => nextOne()}>
                     <svg fill='#FFFFFF' height='50' viewBox='0 0 24 24' width='50'>
                         <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/>
                         <path d='M0 0h24v24H0z' fill='none'/>

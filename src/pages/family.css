@@ -180,7 +180,7 @@
     position: absolute;
     z-index: 3;
     height: 1px;
-    top: 1760px;
+    top: 1810px;
     background-color: #f2f2eb;
 }
 
@@ -199,7 +199,7 @@
     height: 100px;
     position: absolute;
     z-index: 1;
-    top: 1680px;
+    top: 1730px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -341,7 +341,7 @@
     border-radius: 25px;
     position: absolute;
     z-index: 3;
-    top: 1860px;
+    top: 1910px;
     width: 500px;
     left: 50%;
     transform: translateX(-50%);
@@ -366,7 +366,7 @@
     text-align: center;
     margin-top: 8px;
     z-index: 1;
-    top: 1800px;
+    top: 1850px;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -464,22 +464,19 @@
 
 .rate-us-container{
     border-radius: 15px;
-    margin-bottom: 60px;
-    margin-top: 30px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    background-color: #252422;
-    border: solid #090909 2px;
+    /*background-color: #252422;*/
+    /*border: solid #090909 2px;*/
     width: 91%;
-    margin-right: 4.5%;
-    margin-left: 4.5%;
+    margin: 70px 4.5% 60px;
 }
 
 .rate-us-p{
-    font-size: 40px;
+    font-size: 42px;
     color: #f2f2eb;
     font-family: KumbhSans;
     margin-right: 15px;
@@ -494,8 +491,8 @@
 }
 
 .show-form-button {
-    margin-top: 50px;
-    padding: 20px 20px;
+    margin-top: 150px;
+    padding: 15.5px 20px;
     width: 91%;
     background-color: #252422;
     border-radius: 15px;
@@ -503,7 +500,7 @@
     color: white;
     cursor: pointer;
     font-family: KumbhSans;
-    font-size: 22px;
+    font-size: 38px;
 }
 
 .contact-form {
@@ -1039,6 +1036,7 @@ input{
     }
 
     .show-form-button{
+        font-size: 28px;
         margin-top: 120px;
         width: 100%;
         z-index: 2;
