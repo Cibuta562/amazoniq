@@ -368,6 +368,7 @@ const ProductGrid = () => {
 
     const toggleSidebar = () => {
         setShowSidebar(prevState => !prevState);
+            setIsRotated(!isRotated);
     };
 
     const toggleMobileDropdown = () => {
@@ -395,9 +396,13 @@ const ProductGrid = () => {
         : products;
 
 
+    const [isRotated, setIsRotated] = useState(false);
+
+    // Toggle rotation state on click
+
 
     return (
-        <div>
+        <div >
             <div className="padding-top-div"></div>
             <div className="product-heading-container">
                 {/* Heading section if needed */}
@@ -426,8 +431,12 @@ const ProductGrid = () => {
                 </div>
             </div>
             <div className="grid-wrapper">
-                <button className="button-close" onClick={toggleSidebar}>
-                    {/* Icon or text for closing sidebar */}
+                <button className="button-close" onClick={toggleSidebar}
+                        style={{
+                            transform: isRotated ? 'rotate(-90deg)' : 'rotate(0deg)', // Rotate based on state
+                            transition: 'transform 0.3s ease' // Smooth rotation transition
+                        }}
+                >
                 </button>
                 {showSidebar && (
                     <div className="sidebar">

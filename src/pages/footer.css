@@ -566,6 +566,7 @@ a{
          height: 300px;
          width: 50px;
          object-fit: cover;
+        transform: scaleX(-1);
      }
 
     .footer-vine-2{
