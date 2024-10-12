@@ -1,5 +1,4 @@
 import ProductGrid from "../components/ProductGrid";
-import ScrollAnimation from 'react-animate-on-scroll';
 import "./meniu.css"
 import Menu from "../Menu";
 import Footer from "./footer";

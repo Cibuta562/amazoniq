@@ -202,7 +202,7 @@
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 3050px;
+    top: 2990px;
     background-color: #f2f2eb;
 }
 
@@ -218,7 +218,7 @@
 
 .map-container{
     border-top: solid #090909 5px;
-    border-bottom: solid #090909 5px;
+    border-bottom: solid #090909 3px;
     height: 100%;
     width: 100%;
     background-image: url("../assets/Pattern fundal LEMN.webp");
@@ -287,7 +287,7 @@
 .maps-container{
 
     justify-content: space-evenly;
-    margin-top: 60px;
+    margin-top: 10px;
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
@@ -740,7 +740,7 @@ input{
     .family-p{
         font-size: 20px;
         width: 310px;
-        margin-top: -40px;
+        margin-top: -80px;
         line-height: 23px;
         z-index: 3;
     }
@@ -749,7 +749,7 @@ input{
         font-size: 20px;
         width: 310px;
         line-height: 23px;
-        margin-top: 40px;
+        margin-top: -15px;
         z-index: 3;
     }
 
@@ -771,7 +771,7 @@ input{
 
 
     .family-image{
-        margin-top: 10px;
+        margin-top: -10px;
     }
 
 
@@ -1012,7 +1012,7 @@ input{
     }
 
     .contact-form-container{
-        margin-top: 300px;
+        margin-top: 360px;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
@@ -1024,7 +1024,7 @@ input{
     }
 
     .contact-warning-container{
-        height: 260px;
+        height: 280px;
     }
 
     .contact-warning-li{
@@ -1050,7 +1050,7 @@ input{
 
     .show-form-button{
         font-size: 28px;
-        margin-top: 120px;
+        margin-top: 150px;
         width: 100%;
         z-index: 2;
     }
@@ -1059,7 +1059,7 @@ input{
         display: flex;
         position: absolute;
         top: 4050px;
-        height: 1000px;
+        height: 1115px;
         width: 30px;
         object-fit: cover;
         left: calc(50% - 30px);
@@ -1122,6 +1122,7 @@ input{
         width: 80%;
         margin-right: 20%;
         height: 500px;
+        font-family: KumbhSans;
 
     }
 
@@ -1136,23 +1137,54 @@ input{
         font-size: 14px;
         display: flex;
         align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .profile-picture{
-        margin-left: 10%;
     }
 
     .review-name {
-        font-size: 28px;
+        font-size: 25px;
         margin-left: 20px;
-    }
-
-    .review-stars {
-        color: gold;
     }
 
     .review-date {
         font-style: italic;
+    }
+
+    .rating-green-cont{
+        margin-top: 25px;
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    .logo-green-rating{
+        height: 30px;
+        margin-right: 4px;
+    }
+
+    .date-review-mobile{
+        margin-top: 20px;
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    .decoration-bottom-black{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #090909;
+        top: 5285px;
+    }
+
+    .arrow-left{
+        rotate: -180deg;
+        margin-left: 15px;
+    }
+
+    .arrow-right{
+        margin-right: 15px;
     }
 
 

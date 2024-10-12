@@ -53,8 +53,7 @@ const Product = ({ name, price, description, image }) => {
                 <img src={arrow} className={`arrow-dec ${isDescriptionVisible ? 'active' : ''}`} alt="lipsa poza"  />
             </div>
             <div
-                className={`wrapper wrapper1 ${isDescriptionVisible ? 'active' : ''}`}
-                id="wrapper"
+                className={`wrapper ${isDescriptionVisible ? 'active' : ''}`}
                 onClick={toggleDescription}
             >
                 <p className="click-text">

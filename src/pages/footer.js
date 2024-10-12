@@ -128,19 +128,19 @@ function Footer() {
                                 <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
                                     <img className="anpc-img1" src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor"/>
                                 </a>
-                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow">
+                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow" >
                                     <img className="anpc-img2"  src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sol.png" alt="Solutionarea Online a Litigiilor"/>
                                 </a>
                         </div>
                     </div>
                     <div className="footer-anpc-mobile-cont">
-                        <a><p className="footer-anpc-p-mobile-1">
+                        <p className="footer-anpc-p-mobile-1">
                             Copyright © 2024 AMAZONIQ Coffee SRL
-                        </p></a>
-                        <a><p className="footer-anpc-p-mobile-1">
+                        </p>
+                        <p className="footer-anpc-p-mobile-1">
                             All Rights Reserved
-                        </p></a>
-                    <a><p className="footer-anpc-p-mobile">
+                        </p>
+                    <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer"><p className="footer-anpc-p-mobile">
                         Powered by Generation Salez
                     </p></a>
                     <a><p className="footer-anpc-p-mobile-2">

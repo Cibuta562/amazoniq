@@ -1,15 +1,12 @@
 import React from "react"
 import "./family.css"
-import vinesTop from "../assets/ABOUT US Ceiling vines with gradient.svg"
-import lamp from "../assets/ABOUT US Ceiling lamps with lines.svg"
 import Menu from "../Menu";
 import Footer from "./footer";
-import Slider from 'react-slick';
 import logo from "../assets/Amazoniq Icon Seashell White.svg"
 import heart from "../assets/Inima cu PUNCT.svg"
-import reviewAsset from "../assets/review-asset.svg"
+import arrowNext from "../assets/Phone reviews arrow.svg"
 import reviewAssetWhite from "../assets/Amazoniq Icon Seashell White.svg"
-import reviewAssetGreen from "../assets/AMAZONIQ INLINE SEASHELL WHITE CLEAR 6.svg"
+import reviewAssetGreen from "../assets/Amazoniq Monkey Green.svg"
 import vinesAll from "../assets/product-images-webp/lamps and vines together.webp"
 import rope from "../assets/LONG ROPE.svg"
 import {useEffect, useRef, useState} from "react";
@@ -71,20 +68,11 @@ const reviews = [
     // Add more reviews as needed
 ];
 
+const ratingArray = new Array(5).fill(null);
+
 function Family() {
 
 
-    const renderStars = (stars) => {
-        const starElements = [];
-        for (let i = 0; i < 5; i++) {
-            if (i < stars) {
-                starElements.push(<span key={i} className="star filled">★</span>);
-            } else {
-                starElements.push(<span key={i} className="star">☆</span>);
-            }
-        }
-        return starElements;
-    };
 
     const [formVisible, setFormVisible] = useState(false);
 
@@ -153,22 +141,6 @@ function Family() {
     const handleMouseLeave = () => {
         setHoveredIndex(-1); // Reset when mouse leaves the container
     };
-
-    const responsive = {
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
 
     const form = useRef();
 
@@ -254,7 +226,7 @@ function Family() {
     ];
 
         const [active, setActive] = React.useState(0);
-        const [autoplay, setAutoplay] = React.useState(1);
+        const [autoplay, setAutoplay] = React.useState(0);
         const max = slides.length;
 
         const intervalBetweenSlides = () => autoplay && setActive(active === max - 1 ? 0 : active + 1)
@@ -321,6 +293,19 @@ function Family() {
                     {/*<span className="review-stars">{'★'.repeat(item.stars)}</span>*/}
                     {/*<span className="review-date">{item.date}</span>*/}
                 </div>
+                <div className="date-review-mobile">
+                    {item.date}
+                </div>
+                <div className="rating-green-cont">
+                    {ratingArray.map((_, index) => (
+                        <img
+                            key={index}
+                            src={reviewAssetGreen}
+                            alt="star"
+                            className="logo-green-rating"
+                        />
+                    ))}
+                </div>
                 <p className="review-text">{item.review}</p>
             </div>
         </div>
@@ -331,14 +316,14 @@ function Family() {
             className={isActive(index) + ' dots'}
             key={index}>
             <button onClick={() => setActive(index)}>
-            <span>&#9679;</span>
-                </button>
-            </li>
-        ));
+                <span>&#9679;</span>
+            </button>
+        </li>
+    ));
 
-        const renderPlayStop = () => autoplay
-            ? (
-                <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
+    const renderPlayStop = () => autoplay
+        ? (
+            <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
                     <path d='M0 0h24v24H0z' fill='none'/>
                     <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z'/>
                 </svg>
@@ -356,10 +341,7 @@ function Family() {
                     type='button'
                     className='arrows prev'
                     onClick={() => prevOne()}>
-                    <svg fill='#FFFFFF' width='50' height='50' viewBox='0 0 24 24'>
-                        <path d='M14.5 7.5L13 6l-6 6 6 6 1.5-1.5L10.5 12z'/>
-                        <path d='M0 0h24v24H0z' fill='none'/>
-                    </svg>
+                    <img className="arrow-left" src={arrowNext} alt="arrowNext"/>
 
 
                 </button>
@@ -367,10 +349,7 @@ function Family() {
                     type='button'
                     className='arrows next'
                     onClick={() => nextOne()}>
-                    <svg fill='#FFFFFF' height='50' viewBox='0 0 24 24' width='50'>
-                        <path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/>
-                        <path d='M0 0h24v24H0z' fill='none'/>
-                    </svg>
+                    <img className="arrow-right" src={arrowNext} alt="arrowNext"/>
                 </button>
             </React.Fragment>
         )
@@ -401,9 +380,6 @@ function Family() {
             <p className="family-p2">
                 We have built a place where you can enjoy good coffee, laugh, and create magical friendships - we can’t wait to see you all!
             </p>
-            {/*<p className="family-p3">*/}
-            {/*    Va asteptam cu drag!*/}
-            {/*</p>*/}
             <img className="family-image" src={logo} alt="logo"/>
             <div className="family-decoration-line"></div>
             <p className="citate-about-us-top">Each of us is unique~</p>
@@ -420,17 +396,13 @@ function Family() {
                     <img src={heart} className="heading-heart" alt="heart-logo"/>
                 </div>
                 <div className="maps-container">
-                    {/*<div className="map-border">*/}
                     <div className="map-asset-container">
-                        {/*<iframe width="100%" height="500"*/}
-                        {/*        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amazoniq+(Amazoniq%20Drumul%20Taberei)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">*/}
-                        {/*</iframe>*/}
                         <iframe
+                            title="map-amazoniq"
                             src={mapSrc}
                             width="100%" height="500"></iframe>
 
                     </div>
-                    {/*</div>*/}
                     <div className="address-detail-mobile">
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
@@ -448,11 +420,8 @@ function Family() {
                     </div>
                     <div className="address-detail-mobile">
                         <div className="map-asset-container1">
-                            {/*<iframe src="https://my.atlist.com/map/de294c32-7c19-46e5-842e-138ba53eeef6/?share=true"*/}
-                            {/*        allow="geolocation 'self' https://my.atlist.com" width="100%" height="500px"*/}
-                            {/*        frameBorder="0" scrolling="no" allowFullScreen*/}
-                            {/*        id="atlist-embed"></iframe>*/}
                             <iframe
+                                title="map-amazoniq-2"
                                 src="https://www.google.com/maps/d/u/3/embed?mid=1RtAEG9dqEzL4wyZAoS3fVLY0RfIm_o4&ehbc=2E312F"
                                 width="100%" height="500"></iframe>
                         </div>
@@ -470,9 +439,6 @@ function Family() {
                             </div>
                         </div>
                     </div>
-                    {/*<div className="div-fill">*/}
-
-                    {/*</div>*/}
                 </div>
                 <div className="address-detail-container">
                     <div className="address-detail">
@@ -490,9 +456,6 @@ function Family() {
                             </div>
                         </div>
                     </div>
-                    {/*<div className="vertical-dec">*/}
-
-                    {/*</div>*/}
                     <div className="address-detail">
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
@@ -548,7 +511,6 @@ function Family() {
                             </div>
                             <div className="review-date-container">
                                 <div className="review-stars">
-                                    {/* Placeholder for star icons or star rating component */}
                                     <span>{'★'.repeat(review.stars)}</span>
                                 </div>
                                 <div className="review-date">{review.date}</div>
@@ -563,7 +525,7 @@ function Family() {
                     <div className="rating-asset-container">
                         {[...Array(5)].map((_, index) => (
                             <a href={randomLink}
-                               target="_blank">
+                               target="_blank"  rel="noreferrer">
                                 <img
                                     key={index}
                                     className="review-asset-rate"
@@ -575,28 +537,6 @@ function Family() {
                         ))}
                     </div>
                 </div>
-                {/*<div className="slider-container">*/}
-                {/*    <Slider {...settings}>*/}
-                {/*        <div>*/}
-                {/*            <h3>1</h3>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <h3>2</h3>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <h3>3</h3>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <h3>4</h3>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <h3>5</h3>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <h3>6</h3>*/}
-                {/*        </div>*/}
-                {/*    </Slider>*/}
-                {/*</div>*/}
                 <div className="family-decoration-line-bottom-bottom"></div>
                 <div className="">
 
@@ -679,6 +619,9 @@ function Family() {
                 </div>
             </div>
             <div style={{height: "50px", backgroundColor: "#252422"}}>
+
+            </div>
+            <div className="decoration-bottom-black">
 
             </div>
             <Footer/>

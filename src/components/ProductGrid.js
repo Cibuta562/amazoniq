@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import './ProductGrid.css';
 import Product from "./ProductContainer";
 import coldBrewSimplu from "../assets/product-images-webp/img_35.webp"
@@ -37,12 +37,8 @@ import mazare from "../assets/product-images-webp/img_32.webp"
 import bere from "../assets/product-images-webp/img_33.webp"
 import prosecco from "../assets/product-images-webp/img_34.webp"
 import arrowToggle from "../assets/arrowClose.svg"
-import LoadingSpinner from "./loadingSpinner";
-import {useLoading} from "./loadingAnimation";
-
 
 const ProductGrid = () => {
-
     const [selectedCategory, setSelectedCategory] = useState('');
     const [showSidebar, setShowSidebar] = useState(true);
     const [showMobileDropdown, setShowMobileDropdown] = useState(false);
@@ -360,69 +356,40 @@ const ProductGrid = () => {
         },
     ];
 
-    const categories = [...new Set(products.map(product => product.category))];
+
+    const categories = useMemo(() => [...new Set(products.map(product => product.category))], [products]);
+
+    const filteredProducts = useMemo(() => {
+        return selectedCategory
+            ? products.filter(product => product.category === selectedCategory)
+            : products;
+    }, [selectedCategory, products]);
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
+        setShowMobileDropdown(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-
-    const toggleSidebar = () => {
-        setShowSidebar(prevState => !prevState);
-            setIsRotated(!isRotated);
-    };
-
-    const toggleMobileDropdown = () => {
-        setShowMobileDropdown(prevState => !prevState);
-    };
-
-    useEffect(() => {
-        // Function to handle scrolling to top
-        const scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Smooth scrolling effect
-            });
-        };
-
-        // Close the dropdown and scroll to the top when a category is selected
-        if (selectedCategory || "ALL PRODUCTS") {
-            setShowMobileDropdown(false);
-            scrollToTop(); // Scroll to the top
-        }
-    }, [selectedCategory]);
-
-    const filteredProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory)
-        : products;
-
-
-    const [isRotated, setIsRotated] = useState(false);
-
-    // Toggle rotation state on click
-
 
     return (
-        <div >
+        <div>
             <div className="padding-top-div"></div>
-            <div className="product-heading-container">
-                {/* Heading section if needed */}
-            </div>
+            <div className="product-heading-container"></div>
             <div className="parent-container">
                 <div className={`mobile-dropdown-container ${showMobileDropdown ? 'show' : ''}`}>
-                    <button className="mobile-dropdown-toggle" onClick={toggleMobileDropdown}>
+                    <button className="mobile-dropdown-toggle" onClick={() => setShowMobileDropdown(prev => !prev)}>
                         {selectedCategory || 'WHAT FILLS YOUR CUP?'}
-                        <img className="arrow-toggle-mobile" src={arrowToggle} alt="toggle-mobile"/>
+                        <img className="arrow-toggle-mobile" src={arrowToggle} alt="toggle-mobile" />
                     </button>
-                    {/* Dropdown Menu */}
                     <ul className={`mobile-dropdown ${showMobileDropdown ? 'show' : ''}`}>
                         <li>
-                            <button className={`button-category ${selectedCategory === '' ? 'active' : ''}`} onClick={() => handleCategoryChange('')}>
+                            <button onClick={() => handleCategoryChange('')} className={selectedCategory === '' ? 'active' : ''}>
                                 ALL PRODUCTS
                             </button>
                         </li>
                         {categories.map((category, index) => (
                             <li key={index}>
-                                <button className={`button-category ${selectedCategory === category ? 'active' : ''}`} onClick={() => handleCategoryChange(category)}>
+                                <button onClick={() => handleCategoryChange(category)} className={selectedCategory === category ? 'active' : ''}>
                                     {category}
                                 </button>
                             </li>
@@ -431,30 +398,18 @@ const ProductGrid = () => {
                 </div>
             </div>
             <div className="grid-wrapper">
-                <button className="button-close" onClick={toggleSidebar}
-                        style={{
-                            transform: isRotated ? 'rotate(-90deg)' : 'rotate(0deg)', // Rotate based on state
-                            transition: 'transform 0.3s ease' // Smooth rotation transition
-                        }}
-                >
-                </button>
+                <button className="button-close" onClick={() => setShowSidebar(prev => !prev)}></button>
                 {showSidebar && (
                     <div className="sidebar">
                         <ul>
                             <li>
-                                <button
-                                    className={`button-category ${selectedCategory === '' ? 'active' : ''}`}
-                                    onClick={() => handleCategoryChange('')}
-                                >
+                                <button onClick={() => handleCategoryChange('')} className={selectedCategory === '' ? 'active' : ''}>
                                     ALL PRODUCTS
                                 </button>
                             </li>
                             {categories.map((category, index) => (
                                 <li key={index}>
-                                    <button
-                                        className={`button-category ${selectedCategory === category ? 'active' : ''}`}
-                                        onClick={() => handleCategoryChange(category)}
-                                    >
+                                    <button onClick={() => handleCategoryChange(category)} className={selectedCategory === category ? 'active' : ''}>
                                         {category}
                                     </button>
                                 </li>
@@ -464,13 +419,14 @@ const ProductGrid = () => {
                 )}
                 <div className="product-grid">
                     {filteredProducts.map((product, index) => (
-                        <Product
-                            key={index}
-                            name={product.name}
-                            price={product.price}
-                            description={product.description}
-                            image={product.image}
-                        />
+                        <Suspense key={index} fallback={<div>Loading...</div>}>
+                            <Product
+                                name={product.name}
+                                price={product.price}
+                                description={product.description}
+                                image={product.image}
+                            />
+                        </Suspense>
                     ))}
                 </div>
             </div>

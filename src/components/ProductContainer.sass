@@ -1,9 +1,9 @@
 .wrapper
-  margin: -5px auto
+  margin: -5px 7px 10px 10px
   width: 300px
   display: block
   text-align: center
-  transition: 0.1s ease
+  transition: 0.4s ease
   &.active
     .arrow
       transform: rotate(45deg) translate(-5px,-5px)
@@ -13,6 +13,14 @@
         transform: rotate(90deg) translate(10px,0)
     .div-desc
       opacity: 1
+
+
+@media (max-width: 768px)
+.wrapper
+  margin: 0
+  &.active
+    margin-left: -65px
+    width: 300px
 
 
 
@@ -43,7 +51,7 @@
   margin: 0
   cursor: pointer
   color: rgba(0, 0, 0, 0.72)
-  transition: 0.15s ease
+  //transition: 0.15s ease
   &:hover
     color: rgb(0, 0, 0)
 
@@ -57,7 +65,7 @@
   height: 0
   overflow: hidden
   opacity: 0
-  transition: 0.4s ease
+  transition: height 0.4s ease, padding 0.4s ease, margin 0.4s ease
   color: #252422
 
 
