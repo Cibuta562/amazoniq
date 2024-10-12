@@ -1,15 +1,11 @@
 import "./footer.css"
 import {Link} from "react-router-dom";
-import Family from "./family";
-import Meniu from "./meniu";
-import MerchAndBeans from "./merchAndBeans";
 
 import logo from "../assets/Amazoniq Icon Seashell White.svg"
 import logoInsta from "../assets/socials-footer/INSTAGRAM (1).svg"
 import logoFacebook from "../assets/socials-footer/FACEBOOK (1).svg"
 import logoTikTok from "../assets/socials-footer/TIKTOK (1).svg"
 import logoWhatsApp from "../assets/socials-footer/WHATSAPP (1).svg"
-import mapFooter from "../assets/socials-footer/Map asset dark.svg"
 import logoMC from "../assets/socials-footer/ma_symbol_opt_73_2x.png"
 import logoVisa from "../assets/socials-footer/Visa_Brandmark_White_RGB_2021.png"
 import logoAmazoniq from "../assets/product-images-webp/seashell white inline clear.webp"
@@ -19,25 +15,25 @@ function Footer() {
 
     const scrollToPosition = () => {
 
-        // Get the current screen height (window height)
-
-        const timer = setTimeout(() => {
-        const screenWidth = window.innerWidth;
-
-        // Define scroll heights based on screen height (you can customize this logic)
-        let scrollHeight;
-        if (screenWidth >= 720) {
-            scrollHeight = 2000; // For large screens
-        } else {
-            scrollHeight = 400; // For mobile/smaller screens
-        }
-
-        // Scroll to the specific height smoothly
-        window.scrollTo({
-            top: scrollHeight,
-            behavior: 'smooth'
-        });
-        }, 3000);
+        // // Get the current screen height (window height)
+        //
+        // const timer = setTimeout(() => {
+        // const screenWidth = window.innerWidth;
+        //
+        // // Define scroll heights based on screen height (you can customize this logic)
+        // let scrollHeight;
+        // if (screenWidth >= 720) {
+        //     scrollHeight = 2000; // For large screens
+        // } else {
+        //     scrollHeight = 400; // For mobile/smaller screens
+        // }
+        //
+        // // Scroll to the specific height smoothly
+        // window.scrollTo({
+        //     top: scrollHeight,
+        //     behavior: 'smooth'
+        // });
+        // }, 3000);
 
     };
 
@@ -101,12 +97,12 @@ function Footer() {
             </div>
             <div className="footer-legal-section-container">
                 <div className="footer-legal-text">
-                   <a><p className="footer-legal-p">
+                   <p className="footer-legal-p">
                         Copyright © 2024 AMAZONIQ Coffee SRL
-                    </p></a>
-                    <a><p className="footer-legal-p">
+                    </p>
+                    <p className="footer-legal-p">
                         All Rights Reserved
-                    </p></a>
+                    </p>
                 </div>
                 <div className="footer-legal-logo">
                     <div className="cards-footer-cont">
