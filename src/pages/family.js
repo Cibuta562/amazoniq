@@ -97,25 +97,21 @@ function Family() {
 
         const [shuffledMessages, setShuffledMessages] = useState([]); // Store shuffled messages
         const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-        const [fade, setFade] = useState(true); // For fading effect
 
-        useEffect(() => {
-            // Shuffle the messages once on component mount
-            setShuffledMessages(shuffleArray(messages));
-        }, []); // Empty array means this runs only once when the component mounts
+    const [fade, setFade] = useState(true);
 
-        useEffect(() => {
-            const intervalId = setInterval(() => {
-                setFade(false); // Trigger fade-out
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setFade(false); // Start fade-out effect
 
-                setTimeout(() => {
-                    setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % shuffledMessages.length); // Cycle through shuffled messages
-                    setFade(true); // Trigger fade-in after message change
-                }, 500); // Wait for the fade-out animation to complete
-            }, 5000); // Change message every 5 seconds
+            setTimeout(() => {
+                setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % shuffledMessages.length); // Change message
+                setFade(true); // Fade back in
+            }, 500); // Adjust time for the fade-out effect
+        }, 5000); // Interval for changing the message
 
-            return () => clearInterval(intervalId); // Clean up the interval on unmount
-        }, [shuffledMessages]); // Run effect after the messages are shuffled
+        return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    }, [shuffledMessages]);
 
 
     const [randomReviews, setRandomReviews] = useState([]);
@@ -179,26 +175,21 @@ function Family() {
     const [mapSrc, setMapSrc] = useState("");
 
     useEffect(() => {
-        // Function to update the map src based on screen width
         const updateMapSrc = () => {
             const screenWidth = window.innerWidth;
-
             if (screenWidth >= 1024) {
-                // For larger screens (e.g., desktops)
                 setMapSrc("https://www.google.com/maps/d/u/3/embed?mid=1ekbpzasGrrmzVB65ctTw4race-Imvzs&ehbc=2E312F");
             } else {
-                // For smaller screens (e.g., mobile)
                 setMapSrc("https://www.google.com/maps/d/u/3/embed?mid=1cv5ORqaEzrLjyhH-DDdTmgaxCagA7Fk&ehbc=2E312F");
             }
         };
-        updateMapSrc();
 
-        // Add an event listener to update the src when the window is resized
-        window.addEventListener("resize", updateMapSrc);
+        updateMapSrc(); // Call function to set initial map source
+        window.addEventListener("resize", updateMapSrc); // Add resize listener
 
-        // Cleanup event listener on component unmount
-        return () => window.removeEventListener("resize", updateMapSrc);
+        return () => window.removeEventListener("resize", updateMapSrc); // Cleanup on unmount
     }, []);
+
 
 
     const slides = [
