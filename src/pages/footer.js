@@ -135,12 +135,12 @@ function Footer() {
                         <p className="footer-anpc-p-mobile-1">
                             All Rights Reserved
                         </p>
-                    <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer" aria-label="Visit Generation Salez Website" ><p className="footer-anpc-p-mobile">
+                    <a className="footer-anpc-p-mobile" href="https://www.generationsalez.com/" target="_blank" rel="noreferrer" aria-label="Visit Generation Salez Website" >
                         Powered by Generation Salez
-                    </p></a>
-                    <a href="https://puccart.portfoliobox.net/" target="_blank" rel="noreferrer" aria-label="Visit Generation Salez Website"><p className="footer-anpc-p-mobile-2">
+                    </a>
+                    <a className="footer-anpc-p-mobile-2" href="https://puccart.portfoliobox.net/" target="_blank" rel="noreferrer" aria-label="Visit Generation Salez Website">
                         Designed by Cristina-Maria Spiridon
-                    </p></a>
+                    </a>
                     </div>
                 </div>
             </div>
