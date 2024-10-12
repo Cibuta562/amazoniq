@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './ProductGrid.css';
 import Product from "./ProductContainer";
 import coldBrewSimplu from "../assets/product-images-webp/img_35.webp"

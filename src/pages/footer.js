@@ -15,25 +15,25 @@ function Footer() {
 
     const scrollToPosition = () => {
 
-        // // Get the current screen height (window height)
-        //
-        // const timer = setTimeout(() => {
-        // const screenWidth = window.innerWidth;
-        //
-        // // Define scroll heights based on screen height (you can customize this logic)
-        // let scrollHeight;
-        // if (screenWidth >= 720) {
-        //     scrollHeight = 2000; // For large screens
-        // } else {
-        //     scrollHeight = 400; // For mobile/smaller screens
-        // }
-        //
-        // // Scroll to the specific height smoothly
-        // window.scrollTo({
-        //     top: scrollHeight,
-        //     behavior: 'smooth'
-        // });
-        // }, 3000);
+        // Get the current screen height (window height)
+
+        const timer = setTimeout(() => {
+        const screenWidth = window.innerWidth;
+
+        // Define scroll heights based on screen height (you can customize this logic)
+        let scrollHeight;
+        if (screenWidth >= 720) {
+            scrollHeight = 2000; // For large screens
+        } else {
+            scrollHeight = 400; // For mobile/smaller screens
+        }
+
+        // Scroll to the specific height smoothly
+        window.scrollTo({
+            top: scrollHeight,
+            behavior: 'smooth'
+        });
+        }, 3000);
 
     };
 
@@ -56,10 +56,10 @@ function Footer() {
             <div className="footer-section-1">
                 Coltisorul de specialitate, unde se bea cafea buna, se rade mult si se leaga prietenii magice.
                 <div className="footer-socials-container">
-                    <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
-                    <a href="https://www.facebook.com/amazoniq.coffee" target="_blank" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>
-                    <a href="https://www.tiktok.com/@amazoniq.coffee" target="_blank" className="logo-footer-social1"><img src={logoTikTok} alt="logo-social"/></a>
-                    <a href="https://chat.whatsapp.com/DaEV4nslvgG08c7JAPHz5n" target="_blank" className="logo-footer-social"><img src={logoWhatsApp} alt="logo-social"/></a>
+                    <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank" rel="noreferrer" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
+                    <a href="https://www.facebook.com/amazoniq.coffee" target="_blank" rel="noreferrer" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>
+                    <a href="https://www.tiktok.com/@amazoniq.coffee" target="_blank" rel="noreferrer" className="logo-footer-social1"><img src={logoTikTok} alt="logo-social" /></a>
+                    <a href="https://chat.whatsapp.com/DaEV4nslvgG08c7JAPHz5n" target="_blank" rel="noreferrer" className="logo-footer-social"><img src={logoWhatsApp} alt="logo-social"/></a>
                 </div>
             </div>
             <div className="footer-mobile-line-top"></div>
@@ -80,7 +80,6 @@ function Footer() {
                 <a href="/under-construction/our-family" onClick={scrollToPosition}><p  className="footer-p">Contact</p></a>
                 <a href="/under-construction/prelucrarea-datelor"><p  className="footer-p">Privacy Policy</p></a>
                 <a href="/under-construction/cookies"><p  className="footer-p">Cookies Policy</p></a>
-                {/*<a href="#"><p  className="footer-p">Termeni si conditii</p></a>*/}
             </div>
             <div className="footer-mobile-line-bottom"></div>
         </div>
@@ -112,19 +111,19 @@ function Footer() {
                 </div>
                 <div className="footer-anpc-section-container">
                     <div className="footer-anpc-text">
-                        <a href="https://www.generationsalez.com/" target="_blank"><p className="footer-anpc-p">
+                        <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer"><p className="footer-anpc-p">
                             Powered by Generation Salez
                         </p></a>
-                        <a><p className="footer-anpc-p">
+                        <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer"><p className="footer-anpc-p">
                             Designed by Cristina-Maria Spiridon
                         </p></a>
                     </div>
                     <div className="footer-anpc-logo">
                         <div className="footer-anpc-cont">
-                                <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow">
+                                <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noreferrer">
                                     <img className="anpc-img1" src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sal.png" alt="Solutionarea Alternativa a Litigiilor"/>
                                 </a>
-                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="nofollow" >
+                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noreferrer" >
                                     <img className="anpc-img2"  src="https://wpfitness.eu/wp-content/uploads/2022/10/anpc-sol.png" alt="Solutionarea Online a Litigiilor"/>
                                 </a>
                         </div>
@@ -139,7 +138,7 @@ function Footer() {
                     <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer"><p className="footer-anpc-p-mobile">
                         Powered by Generation Salez
                     </p></a>
-                    <a><p className="footer-anpc-p-mobile-2">
+                    <a href="https://www.generationsalez.com/" target="_blank" rel="noreferrer"><p className="footer-anpc-p-mobile-2">
                         Designed by Cristina-Maria Spiridon
                     </p></a>
                     </div>
