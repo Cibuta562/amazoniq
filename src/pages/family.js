@@ -86,6 +86,25 @@ function Family() {
         "Ce te doboara te face mai puternic - Cris"
     ];
 
+    const [shuffledMessages, setShuffledMessages] = useState([]);
+    const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+    const [fade, setFade] = useState(true);
+
+    useEffect(() => {
+        setShuffledMessages(shuffleArray(messages)); // Shuffle the messages once on mount
+
+        const intervalId = setInterval(() => {
+            setFade(false);
+
+            setTimeout(() => {
+                setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % shuffledMessages.length);
+                setFade(true);
+            }, 500);
+        }, 5000);
+
+        return () => clearInterval(intervalId); // Clean up interval on unmount
+    }, [shuffledMessages]);
+
     const shuffleArray = (array) => {
         const shuffled = [...array];
         for (let i = shuffled.length - 1; i > 0; i--) {
@@ -94,24 +113,6 @@ function Family() {
         }
         return shuffled;
     };
-
-        const [shuffledMessages, setShuffledMessages] = useState([]); // Store shuffled messages
-        const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-
-    const [fade, setFade] = useState(true);
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setFade(false); // Start fade-out effect
-
-            setTimeout(() => {
-                setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % shuffledMessages.length); // Change message
-                setFade(true); // Fade back in
-            }, 500); // Adjust time for the fade-out effect
-        }, 5000); // Interval for changing the message
-
-        return () => clearInterval(intervalId); // Cleanup interval on component unmount
-    }, [shuffledMessages]);
 
 
     const [randomReviews, setRandomReviews] = useState([]);
