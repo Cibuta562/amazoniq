@@ -217,11 +217,11 @@
 }
 
 .map-container{
-    border-top: solid #090909 5px;
-    border-bottom: solid #090909 3px;
+    /*border-top: solid #090909 5px;*/
+    border-bottom: solid #090909 8px;
     height: 100%;
     width: 100%;
-    background-image: url("../assets/Pattern fundal LEMN.webp");
+    background-image: url("../assets/product-images-webp/MAMA-TA.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -385,7 +385,7 @@
 }
 
 .review-card{
-    height: 200px;
+    height: 310px;
     width: 30%;
     padding: 20px;
     background-color: #252422;
@@ -413,6 +413,7 @@
 }
 
 .profile-picture{
+    height: 40px;
     border-radius: 20px;
     text-align: center;
     align-items: center;
@@ -426,10 +427,18 @@
     margin-right: 10px;
 }
 
-.review-date-container{
-    display: flex;
+.logo-green-rating{
+    height: 28px;
+    margin-right: 4px;
+}
+
+
+.review-date-container-pc{
     margin-top: 12px;
-    font-size: 16px;
+}
+
+.review-date{
+    margin-top: 5px;
 }
 
 .review-text{
@@ -822,6 +831,7 @@ input{
     }
 
     .map-container{
+        border: none;
         height: 100%;
         width: 100%;
     }
@@ -915,6 +925,7 @@ input{
     }
 
     .profile-picture{
+        height: 40px;
         border-radius: 20px;
         text-align: center;
         align-items: center;
@@ -1050,7 +1061,7 @@ input{
 
     .show-form-button{
         font-size: 28px;
-        margin-top: 150px;
+        margin-top: 155px;
         width: 100%;
         z-index: 2;
     }
@@ -1127,7 +1138,7 @@ input{
     }
 
     .review-text {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 10px;
         width: 80%;
         margin-left: 10%;
@@ -1145,7 +1156,7 @@ input{
     }
 
     .review-name {
-        font-size: 25px;
+        font-size: 23px;
         margin-left: 20px;
     }
 
@@ -1165,17 +1176,19 @@ input{
     }
 
     .date-review-mobile{
+        font-size: 18px;
         margin-top: 20px;
         text-align: left;
         margin-left: 10%;
     }
 
     .decoration-bottom-black{
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #090909;
-        top: 5285px;
+        /*position: absolute;*/
+        /*width: 100%;*/
+        /*height: 2px;*/
+        /*background-color: #090909;*/
+        /*top: 5285px;*/
+        display: none;
     }
 
     .arrow-left{

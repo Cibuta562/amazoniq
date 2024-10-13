@@ -9,6 +9,12 @@ import reviewAssetWhite from "../assets/Amazoniq Icon Seashell White.svg"
 import reviewAssetGreen from "../assets/Amazoniq Monkey Green.svg"
 import vinesAll from "../assets/product-images-webp/lamps and vines together.webp"
 import rope from "../assets/LONG ROPE.svg"
+import review1 from "../assets/profile-pics/img.png"
+import pablitos from "../assets/profile-pics/pablitos.png"
+import review2 from "../assets/profile-pics/img_1.png"
+import review3 from "../assets/profile-pics/img_2.png"
+import review4 from "../assets/profile-pics/img_3.png"
+import review5 from "../assets/profile-pics/img_4.png"
 import {useEffect, useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import "./family.scss"
@@ -17,55 +23,40 @@ import "react-multi-carousel/lib/styles.css";
 
 const reviews = [
     {
-        name: 'John Doe',
-        profilePicture: 'https://via.placeholder.com/150', // Placeholder image
-        review: 'Great service and amazing quality! Highly recommended.',
+        name: 'Rares Radu',
+        profilePicture: review3, // Placeholder image
+        review: 'Great vibe, amaizing coffee ❤️',
         stars: 5,
-        date: "4 months ago"
+        date: "Local Guide • 6 reviews"
     },
     {
-        name: 'Jane Smith',
-        profilePicture: 'https://via.placeholder.com/150',
-        review: 'The experience was fantastic. Will definitely come back!',
-        stars: 4,
-        date: "4 months ago"
-    },
-    {
-        name: 'Alex Johnson',
-        profilePicture: 'https://via.placeholder.com/150',
-        review: 'Good service but a bit expensive.',
-        stars: 3,
-        date: "4 months ago"
-    },
-    {
-        name: 'John Doe 2',
-        profilePicture: 'https://via.placeholder.com/150', // Placeholder image
-        review: 'Great service and amazing quality! Highly recommended.',
+        name: 'Sorana Borhina',
+        profilePicture: review1, // Placeholder image
+        review: 'The specialty coffee here is exceptional, with a rich and unique flavor that stands out. The atmosphere is cozy and inviting, making it the perfect spot to shade from the burning sun. The staff are friendly and knowledgeable, always ready to recommend something new. Highly recommend to any coffee lover!\n' ,
         stars: 5,
-        date: "4 months ago"
+        date: "9 reviews"
     },
     {
-        name: 'John Doe 3',
-        profilePicture: 'https://via.placeholder.com/150', // Placeholder image
-        review: 'Great service and amazing quality! Highly recommended.',
+        name: 'Laura Iuliana',
+        profilePicture: review2, // Placeholder image
+        review: 'Always a joy to come here. Friendly atmosphere, good conversations, and good coffee. I also recommend that banana bread with a good old flat white. It is simply gorgeous 🤩.\n',
         stars: 5,
-        date: "4 months ago"
+        date: "4 reviews"
     },
     {
-        name: 'John Doe 4',
-        profilePicture: 'https://via.placeholder.com/150', // Placeholder image
-        review: 'Great service and amazing quality! Highly recommended.',
+        name: 'Diana Pîrje',
+        profilePicture: review4, // Placeholder image
+        review: 'Una din cele mai dragute cafenele, cu cafea de specialitate savuroasa!!❤️ Ma bucur tare mult ca au deschis locatie si aproape de mine!\n',
         stars: 5,
-        date: "4 months ago"
+        date: "Local Guide • 25 reviews"
     },
     {
-        name: 'John Doe 5',
-        profilePicture: 'https://via.placeholder.com/150', // Placeholder image
-        review: 'Great service and amazing quality! Highly recommended.',
+        name: 'Marius Beju',
+        profilePicture: review5, // Placeholder image
+        review: 'Am primit un espresso bine extras și echilibrat și un cappuccino dulce, ca o prăjiturică. Laptele a fost foarte bine frothat, nu și-a pierdut pufoșenia nici pana aproape la ultima gura. Felicitări barista pentru service, amabilitate și abilitați! Mi-a plăcut :)\n',
         stars: 5,
-        date: "4 months ago"
+        date: "Local Guide • 68 reviews"
     },
-    // Add more reviews as needed
 ];
 
 const ratingArray = new Array(5).fill(null);
@@ -86,33 +77,34 @@ function Family() {
         "Ce te doboara te face mai puternic - Cris"
     ];
 
+
+    const shuffleArray = (array) => {
+        return array.sort(() => Math.random() - 0.5);
+    };
+
     const [shuffledMessages, setShuffledMessages] = useState([]);
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
+    // Shuffle messages only once on mount
     useEffect(() => {
-        setShuffledMessages(shuffleArray(messages)); // Shuffle the messages once on mount
+        setShuffledMessages(shuffleArray(messages));
+    }, []); // Empty array to ensure this runs only once on mount
 
+    // Interval effect to change messages
+    useEffect(() => {
         const intervalId = setInterval(() => {
-            setFade(false);
+            setFade(false); // Trigger fade-out
 
+            // After 500ms, switch to the next message and fade in
             setTimeout(() => {
                 setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % shuffledMessages.length);
-                setFade(true);
+                setFade(true); // Trigger fade-in
             }, 500);
         }, 5000);
 
         return () => clearInterval(intervalId); // Clean up interval on unmount
-    }, [shuffledMessages]);
-
-    const shuffleArray = (array) => {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-    };
+    }, [shuffledMessages.length]);
 
 
     const [randomReviews, setRandomReviews] = useState([]);
@@ -195,26 +187,40 @@ function Family() {
 
     const slides = [
         {
-            profilePicture: 'https://via.placeholder.com/150',
-            review: "This coffee is amazing! The ambiance is perfect for getting work done or just relaxing.",
-            name: "John Doe",
+            name: 'Rares Radu',
+            profilePicture: review3, // Placeholder image
+            review: 'Great vibe, amaizing coffee ❤️',
             stars: 5,
-            date: "June 15, 2024"
+            date: "Local Guide • 6 reviews"
         },
         {
-            profilePicture: 'https://via.placeholder.com/150',
-            review: "The best coffee shop I've ever been to! Friendly staff and great vibes.",
-            name: "Jane Smith",
-            stars: 4,
-            date: "July 20, 2024"
+            name: 'Sorana Borhina',
+            profilePicture: review1, // Placeholder image
+            review: 'The specialty coffee here is exceptional, with a rich and unique flavor that stands out. The staff are friendly and knowledgeable, always ready to recommend something new. Highly recommend to any coffee lover!\n' ,
+            stars: 5,
+            date: "9 reviews"
         },
         {
-            profilePicture: 'https://via.placeholder.com/150',
-            review: "Delicious coffee, and the atmosphere is just right for a chill hangout.",
-            name: "Emily Johnson",
+            name: 'Laura Iuliana',
+            profilePicture: review2, // Placeholder image
+            review: 'Always a joy to come here. Friendly atmosphere, good conversations, and good coffee. I also recommend that banana bread with a good old flat white. It is simply gorgeous 🤩.\n',
             stars: 5,
-            date: "August 5, 2024"
-        }
+            date: "4 reviews"
+        },
+        {
+            name: 'Diana Pîrje',
+            profilePicture: review4, // Placeholder image
+            review: 'Una din cele mai dragute cafenele, cu cafea de specialitate savuroasa!!❤️ Ma bucur tare mult ca au deschis locatie si aproape de mine!\n',
+            stars: 5,
+            date: "Local Guide • 25 reviews"
+        },
+        {
+            name: 'Marius Beju',
+            profilePicture: review5, // Placeholder image
+            review: 'Am primit un espresso bine extras și echilibrat și un cappuccino dulce, ca o prăjiturică. Laptele a fost foarte bine frothat, nu și-a pierdut pufoșenia nici pana aproape la ultima gura. Felicitări barista pentru service, amabilitate și abilitați! Mi-a plăcut :)\n',
+            stars: 5,
+            date: "Local Guide • 68 reviews"
+        },
     ];
 
         const [active, setActive] = React.useState(0);
@@ -501,9 +507,16 @@ function Family() {
                                 />
                                 <h3 className="review-name">{review.name}</h3>
                             </div>
-                            <div className="review-date-container">
-                                <div className="review-stars">
-                                    <span>{'★'.repeat(review.stars)}</span>
+                            <div className="review-date-container-pc">
+                                <div className="rating-green-cont">
+                                    {ratingArray.map((_, index) => (
+                                        <img
+                                            key={index}
+                                            src={reviewAssetGreen}
+                                            alt="star"
+                                            className="logo-green-rating"
+                                        />
+                                    ))}
                                 </div>
                                 <div className="review-date">{review.date}</div>
                             </div>
