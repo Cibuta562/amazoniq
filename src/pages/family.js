@@ -223,37 +223,11 @@ function Family() {
         },
     ];
 
-        const [active, setActive] = React.useState(0);
-        const [autoplay, setAutoplay] = React.useState(0);
-        const max = slides.length;
+    const [active, setActive] = React.useState(0);
+    const [autoplay, setAutoplay] = React.useState(0);
+    const [displayedSlides, setDisplayedSlides] = React.useState([]);
 
-        const intervalBetweenSlides = () => autoplay && setActive(active === max - 1 ? 0 : active + 1)
-
-        React.useEffect(() => {
-            const interval = setInterval( () => intervalBetweenSlides(), 3000);
-            return () => clearInterval(interval);
-        });
-
-        const toggleAutoPlay = () => setAutoplay(!autoplay)
-
-        const nextOne = () => active < max - 1 && setActive(active + 1)
-
-        const prevOne = () => active > 0 && setActive(active - 1)
-
-        const isActive = value => active === value && 'active'
-
-        const setSliderStyles = () => {
-            const transition = active * - 100;
-
-            return {
-                width: ( slides.length * 100 ) + 'vw',
-                transform: 'translateX(' + transition + 'vw)'
-            }
-        }
-
-    const [displayedSlides, setDisplayedSlides] = useState([]);
-
-    // Function to shuffle slides array
+// Function to shuffle slides array
     const shuffleSlides = (slides) => {
         let shuffled = [...slides]; // Copy the array to avoid mutating original slides
 
@@ -266,7 +240,7 @@ function Family() {
         return shuffled;
     };
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (slides.length > 0) {
             // Shuffle and pick 3 random slides once the component mounts
             const shuffledSlides = shuffleSlides(slides);
@@ -274,83 +248,89 @@ function Family() {
         }
     }, []);
 
-    const renderSlides = () => displayedSlides.map((item, index) => (
-        <div
-            className='slide'
-            key={index}
-            // style={{ backgroundImage: item.eachSlide }}
-        >
-            <div className="slide-content">
-                <div className="review-details">
-                    <img
-                        src={item.profilePicture}
-                        alt={`${item.name}'s profile`}
-                        className="profile-picture"
-                    />
-                    <span className="review-name">{item.name}</span>
-                    {/*<span className="review-stars">{'★'.repeat(item.stars)}</span>*/}
-                    {/*<span className="review-date">{item.date}</span>*/}
-                </div>
-                <div className="date-review-mobile">
-                    {item.date}
-                </div>
-                <div className="rating-green-cont">
-                    {ratingArray.map((_, index) => (
+// Function to auto-transition between slides
+    const intervalBetweenSlides = () => {
+        if (autoplay) {
+            setActive(active === displayedSlides.length - 1 ? 0 : active + 1);
+        }
+    };
+
+    React.useEffect(() => {
+        const interval = setInterval(() => intervalBetweenSlides(), 3000);
+        return () => clearInterval(interval);
+    }, [autoplay, active, displayedSlides]);
+
+    const toggleAutoPlay = () => setAutoplay(!autoplay);
+
+    const nextOne = () => active < displayedSlides.length - 1 && setActive(active + 1);
+
+    const prevOne = () => active > 0 && setActive(active - 1);
+
+    const isActive = (value) => (active === value ? 'active' : '');
+
+    const setSliderStyles = () => {
+        const transition = active * -100;
+        return {
+            width: displayedSlides.length * 100 + 'vw',
+            transform: 'translateX(' + transition + 'vw)',
+        };
+    };
+
+    const renderSlides = () =>
+        displayedSlides.map((item, index) => (
+            <div className='slide' key={index}>
+                <div className="slide-content">
+                    <div className="review-details">
                         <img
-                            key={index}
-                            src={reviewAssetGreen}
-                            alt="star"
-                            className="logo-green-rating"
+                            src={item.profilePicture}
+                            alt={`${item.name}'s profile`}
+                            className="profile-picture"
                         />
-                    ))}
+                        <span className="review-name">{item.name}</span>
+                    </div>
+                    <div className="date-review-mobile">{item.date}</div>
+                    <div className="rating-green-cont">
+                        {Array.from({ length: item.stars }).map((_, index) => (
+                            <img key={index} src={reviewAssetGreen} alt="star" className="logo-green-rating" />
+                        ))}
+                    </div>
+                    <p className="review-text">{item.review}</p>
                 </div>
-                <p className="review-text">{item.review}</p>
             </div>
-        </div>
-    ));
+        ));
 
-    const renderDots = () => slides.map((silde, index) => ( // check index
-        <li
-            className={isActive(index) + ' dots'}
-            key={index}>
-            <button onClick={() => setActive(index)}>
-                <span>&#9679;</span>
-            </button>
-        </li>
-    ));
+    const renderDots = () =>
+        displayedSlides.map((_, index) => (
+            <li className={isActive(index) + ' dots'} key={index}>
+                <button onClick={() => setActive(index)}>
+                    <span>&#9679;</span>
+                </button>
+            </li>
+        ));
 
-    const renderPlayStop = () => autoplay
-        ? (
+    const renderPlayStop = () =>
+        autoplay ? (
             <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
-                    <path d='M0 0h24v24H0z' fill='none'/>
-                    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z'/>
-                </svg>
-            )
-            : (
-                <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
-                    <path d='M0 0h24v24H0z' fill='none'/>
-                    <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/>
-                </svg>
-            )
+                <path d='M0 0h24v24H0z' fill='none' />
+                <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z' />
+            </svg>
+        ) : (
+            <svg fill='#FFFFFF' height='24' viewBox='0 0 24 24' width='24'>
+                <path d='M0 0h24v24H0z' fill='none' />
+                <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z' />
+            </svg>
+        );
 
-        const renderArrows = () => (
-            <React.Fragment>
-                <button
-                    type='button'
-                    className='arrows prev'
-                    onClick={() => prevOne()}>
-                    <img className="arrow-left" src={arrowNext} alt="arrowNext"/>
-
-
-                </button>
-                <button
-                    type='button'
-                    className='arrows next'
-                    onClick={() => nextOne()}>
-                    <img className="arrow-right" src={arrowNext} alt="arrowNext"/>
-                </button>
-            </React.Fragment>
-        )
+    const renderArrows = () => (
+        <React.Fragment>
+            <button type='button' className='arrows prev' onClick={prevOne}>
+                <img className="arrow-left" src={arrowNext} alt="arrowNext" />
+            </button>
+            <button type='button' className='arrows next' onClick={nextOne}>
+                <img className="arrow-right" src={arrowNext} alt="arrowNext" />
+            </button>
+        </React.Fragment>
+    );
 
     return(
         <div>

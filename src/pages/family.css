@@ -70,7 +70,7 @@
 /*}*/
 
 .top-black-screen{
-    background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
+    background-image: url('../assets/hug people.webp');
     background-position: 10% 50%;
     background-size: cover;
     height: 900px;
@@ -715,7 +715,7 @@ input{
 
 
     .top-black-screen{
-        background-image: url('../assets/product-images-webp/HUG PEOPLE FINAL PROMIT.webp');
+        background-image: url('../assets/hug people.webp');
         background-position: 43% 50%;
         background-size: cover;
         height: 885px;
@@ -1061,7 +1061,7 @@ input{
 
     .show-form-button{
         font-size: 28px;
-        margin-top: 155px;
+        margin-top: 170px;
         width: 100%;
         z-index: 2;
     }
