@@ -54,7 +54,7 @@ function Footer() {
             <img className="logo-amazoniq" src={logoAmazoniq} alt="logo-amz"/>
             </div>
             <div className="footer-section-1">
-                Coltisorul de specialitate, unde se bea cafea buna, se rade mult si se leaga prietenii magice.
+                Your specialty coffee corner where we drink specialty coffee, laugh a lot and create magical friendships
                 <div className="footer-socials-container">
                     <a href="https://www.instagram.com/amazoniq.coffee/?fbclid=IwAR1pbYfi03IQHg0bD3XjdvvDvM3l84GLKfD-0e97f0pbSFiE_QdXpEwwUXs_aem_AZ5BwviwCY5PtQM1oLxtgX-46LtT1Cc5zdea2iL3k7h08ZFczE4I-xCkgj0ZyBx_h5djegnAqPENCKAse9TH2NDd" target="_blank" rel="noreferrer" className="logo-footer-social1"><img src={logoInsta} alt="logo-social"/></a>
                     <a href="https://www.facebook.com/amazoniq.coffee" target="_blank" rel="noreferrer" className="logo-footer-social1"><img src={logoFacebook} alt="logo-social"/></a>

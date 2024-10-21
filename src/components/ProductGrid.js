@@ -352,8 +352,7 @@ const ProductGrid = () => {
             name: "PROSECCO DOC EXTRA DRY SERENA",
             category : 'ALCOOALE',
             price: '200 ml',
-            description: 'Garanție returnare 050 lei\n' +
-                'Sticluțe de 200ML',
+            description: 'Garanție returnare 0,50 lei\n',
             image: prosecco
         },
     ];

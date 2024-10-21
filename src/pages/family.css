@@ -963,7 +963,7 @@ input{
 
     .citate-about-us{
         color: #f2f2eb;
-        font-size: 18px;
+        font-size: 17px;
         font-family: KumbhSans;
         text-align: center;
         margin-top: 8px;
@@ -1156,7 +1156,7 @@ input{
     }
 
     .review-name {
-        font-size: 23px;
+        font-size: 22px;
         margin-left: 20px;
     }
 
@@ -1165,7 +1165,7 @@ input{
     }
 
     .rating-green-cont{
-        margin-top: 25px;
+        margin-top: 18px;
         text-align: left;
         margin-left: 10%;
     }
@@ -1208,3 +1208,14 @@ input{
         margin-top: 130px;
     }
 }
+
+@media (max-width: 361px) {
+    .citate-about-us{
+        color: #f2f2eb;
+        font-size: 16px;
+        font-family: KumbhSans;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+

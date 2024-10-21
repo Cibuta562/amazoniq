@@ -74,7 +74,8 @@ function Family() {
     const messages = [
         "Se regleaza din soft - Boboc",
         "Imi place sa desenez floricele - Raluca",
-        "Ce te doboara te face mai puternic - Cris"
+        "Lucrurile bune se intampla random - Cris",
+        "Si cappuccino e cafea cu lapte! - Alex"
     ];
 
 
@@ -217,7 +218,7 @@ function Family() {
         {
             name: 'Marius Beju',
             profilePicture: review5, // Placeholder image
-            review: 'Am primit un espresso bine extras și echilibrat și un cappuccino dulce, ca o prăjiturică. Laptele a fost foarte bine frothat, nu și-a pierdut pufoșenia nici pana aproape la ultima gura. Felicitări barista pentru service, amabilitate și abilitați! Mi-a plăcut :)\n',
+            review: 'Am primit un espresso bine extras și echilibrat și un cappuccino dulce, ca o prăjiturică. Laptele a fost foarte bine frothat, nu și-a pierdut pufoșenia nici pana aproape la ultima gura. Felicitări barista pentru service, amabilitate și abilitați!\n',
             stars: 5,
             date: "Local Guide • 68 reviews"
         },
@@ -412,8 +413,8 @@ function Family() {
                         <div className="address-p-container">
                             <div className="circle-decorator"></div>
                             <div className="schedule-p">
-                                <p className="p-address">L-V 7:00 - 18:00</p>
-                                <p className="p-address">S-D 8:30 - 18:30</p>
+                                <p className="p-address">L-V 7:30 - 17:30</p>
+                                <p className="p-address">S-D 8:30 - 17:30</p>
                             </div>
                         </div>
                     </div>
