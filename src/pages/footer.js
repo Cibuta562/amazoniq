@@ -65,21 +65,21 @@ function Footer() {
             <div className="footer-mobile-line-top"></div>
             <div className="footer-section-2">
                 <p className="footer-heading">MENU</p>
-                <Link to="/under-construction/our-family">
+                <Link to="/our-family">
                     <p className="footer-p">Our family</p>
                 </Link>
-                <Link to="/under-construction/meniu">
+                <Link to="/meniu">
                     <p  className="footer-p">Drinks</p>
                 </Link>
-                <Link to="/under-construction/merch-and-beans">
+                <Link to="/merch-and-beans">
                     <p  className="footer-p">Shop with us</p>
                 </Link>
             </div>
             <div className="footer-section-3">
                 <p className="footer-heading">INFO</p>
-                <a href="/under-construction/our-family" onClick={scrollToPosition}><p  className="footer-p">Contact</p></a>
-                <a href="/under-construction/prelucrarea-datelor"><p  className="footer-p">Privacy Policy</p></a>
-                <a href="/under-construction/cookies"><p  className="footer-p">Cookies Policy</p></a>
+                <a href="/our-family" onClick={scrollToPosition}><p  className="footer-p">Contact</p></a>
+                <a href="/prelucrarea-datelor"><p  className="footer-p">Privacy Policy</p></a>
+                <a href="/cookies"><p  className="footer-p">Cookies Policy</p></a>
             </div>
             <div className="footer-mobile-line-bottom"></div>
         </div>

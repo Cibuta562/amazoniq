@@ -3,6 +3,11 @@ html, body, #root {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('./fonts/KastelovAxiformaLight.otf') format('opentype');

@@ -44,13 +44,13 @@ const Menu = () => {
                 </div>
             </div>
             <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-                <Link to="/under-construction/our-family" onClick={closeMenu}>
+                <Link to="/our-family" onClick={closeMenu}>
                     OUR FAMILY
                 </Link>
-                <Link to="/under-construction/meniu" onClick={closeMenu}>
+                <Link to="/meniu" onClick={closeMenu}>
                     DRINKS
                 </Link>
-                <Link to="/under-construction/merch-and-beans" onClick={closeMenu}>
+                <Link to="/merch-and-beans" onClick={closeMenu}>
                     MERCH & BEANS
                 </Link>
             </div>

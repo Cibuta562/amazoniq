@@ -18,13 +18,12 @@ function App() {
         <BrowserRouter>
                 {/*<Menu />*/}
                 <Routes>
-                    <Route path='/' element={<Loading/>} />
-                    <Route path='/under-construction/meniu' element={<Meniu/>} />
-                    <Route path="/under-construction/our-family" element={<Family />} />
-                    <Route path="/under-construction/merch-and-beans" element={<MerchAndBeans />} />
-                    <Route path="/under-construction/merch-and-beans" element={<MerchAndBeans />} />
-                    <Route path="/under-construction/prelucrarea-datelor" element={<PrelucrareaDatelor />} />
-                    <Route path="/under-construction/cookies" element={<Cookies />} />
+                    <Route path='/' element={<Family/>} />
+                    <Route path='/meniu' element={<Meniu/>} />
+                    <Route path="/our-family" element={<Family />} />
+                    <Route path="/merch-and-beans" element={<MerchAndBeans />} />
+                    <Route path="/prelucrarea-datelor" element={<PrelucrareaDatelor />} />
+                    <Route path="/cookies" element={<Cookies />} />
                 </Routes>
             {/*<Footer/>*/}
         </BrowserRouter>
