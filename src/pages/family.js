@@ -9,8 +9,8 @@ import reviewAssetWhite from "../assets/Amazoniq Icon Seashell White.svg"
 import reviewAssetGreen from "../assets/Amazoniq Monkey Green.svg"
 import vinesAll from "../assets/product-images-webp/lamps and vines together.webp"
 import rope from "../assets/LONG ROPE.svg"
+import hat from "../assets/christmashat.jpg"
 import review1 from "../assets/profile-pics/img.png"
-import pablitos from "../assets/profile-pics/pablitos.png"
 import review2 from "../assets/profile-pics/img_1.png"
 import review3 from "../assets/profile-pics/img_2.png"
 import review4 from "../assets/profile-pics/img_3.png"
@@ -72,10 +72,10 @@ function Family() {
     };
 
     const messages = [
-        "Se regleaza din soft - Boboc",
-        "Imi place sa desenez floricele - Raluca",
-        "Lucrurile bune se intampla random - Cris",
-        "Si cappuccino e cafea cu lapte! - Alex"
+        "Se reglează din soft - Boboc",
+        "Îmi place să desenez floricele - Raluca",
+        "Lucrurile bune se întamplă random - Cris",
+        "Și cappuccino e cafea cu lapte! - Alex"
     ];
 
 
@@ -336,6 +336,8 @@ function Family() {
     return(
         <div>
             <Menu/>
+            {/*<img className="hat1" src={hat}/>*/}
+            {/*<img className="hat2" src={hat}/>*/}
             <img className="heart-on-top" src={heart} alt="heartTop"/>
             <p className="family-heading-top">Welcome To Our Family!</p>
             <div className="top-black-screen">
@@ -346,18 +348,17 @@ function Family() {
                 <div className="family-vines">
                     <img className="family-vines-img" src={vinesAll} alt="vines"/>
                 </div>
-                {/*<div className="family-lamps">*/}
-                {/*    <img className="lamp-img" src={lamp} alt="lamps"/>*/}
-                {/*</div>*/}
                 <div className="family-container">
                 </div>
             </div>
             <p className="family-heading">ABOUT US</p>
             <p className="family-p">
-                We’ve committed to a journey where we prepare the highest quality coffee, roasted by our friends at MABO by Bogdan Georgescu, the world coffee roasting vice-champion.
+                We’ve committed to a journey where we prepare the highest quality coffee, roasted by our friends at MABO
+                by Bogdan Georgescu, the world coffee roasting vice-champion.
             </p>
             <p className="family-p2">
-                We have built a place where you can enjoy good coffee, laugh, and create magical friendships - we can’t wait to see you all!
+                We have built a place where you can enjoy good coffee, laugh, and create magical friendships - we can’t
+                wait to see you all!
             </p>
             <img className="family-image" src={logo} alt="logo"/>
             <div className="family-decoration-line"></div>
@@ -380,6 +381,7 @@ function Family() {
                             title="map-amazoniq"
                             src={mapSrc}
                             width="100%" height="500"></iframe>
+                        y
 
                     </div>
                     <div className="address-detail-mobile">
@@ -481,7 +483,7 @@ function Family() {
                     {randomReviews.map((review, index) => (
                         <div key={index} className="review-card">
                             <div className="reviews-maps-top">
-                            <img
+                                <img
                                     src={review.profilePicture}
                                     alt={`${review.name}'s profile`}
                                     className="profile-picture"
@@ -511,7 +513,7 @@ function Family() {
                     <div className="rating-asset-container">
                         {[...Array(5)].map((_, index) => (
                             <a href={randomLink}
-                               target="_blank"  rel="noreferrer">
+                               target="_blank" rel="noreferrer">
                                 <img
                                     key={index}
                                     className="review-asset-rate"

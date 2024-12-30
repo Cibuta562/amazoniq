@@ -130,7 +130,7 @@ function Footer() {
                     </div>
                     <div className="footer-anpc-mobile-cont">
                         <p className="footer-anpc-p-mobile-1">
-                            Copyright © 2024 AMAZONIQ Coffee SRL
+                            Copyright © 2025 AMAZONIQ Coffee SRL
                         </p>
                         <p className="footer-anpc-p-mobile-1">
                             All Rights Reserved

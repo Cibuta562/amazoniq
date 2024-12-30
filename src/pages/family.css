@@ -14,6 +14,20 @@
     height: 1100px;
 }
 
+.hat1{
+    position: absolute;
+    top: 410px;
+    height: 50px;
+    left: 815px;
+}
+
+.hat2{
+    position: absolute;
+    top: 450px;
+    left: 670px;
+    height: 50px;
+}
+
 .heart-on-top{
     display: none;
     position: absolute;
@@ -37,6 +51,7 @@
     color: #f2f2eb;
     font-family: KumbhSans;
     font-weight: 100;
+    margin-top: 140px;
     font-size: 50px;
 }
 
@@ -70,8 +85,8 @@
 /*}*/
 
 .top-black-screen{
-    background-image: url('../assets/product-images-webp/Hug people final (2).webp');
-    background-position: 10% 50%;
+    background-image: url('../assets/product-images-webp/imimanancaRAMII.webp');
+    background-position: 40% 100%;
     background-size: cover;
     height: 900px;
     margin-top: 50px;
@@ -202,7 +217,7 @@
     margin-left: 5%;
     position: absolute;
     height: 1px;
-    top: 2990px;
+    top: 2920px;
     background-color: #f2f2eb;
 }
 
@@ -221,13 +236,23 @@
     border-bottom: solid #090909 8px;
     height: 100%;
     width: 100%;
-    background-image: url("../assets/product-images-webp/MAMA-TA.webp");
+    /*background-image: url("../assets/product-images-webp/MAMA-TA.webp");*/
+    background-color: #252422;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/*.map-container2{*/
+/*    !*border-top: solid #090909 5px;*!*/
+/*    border-bottom: solid #090909 8px;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
 .heading-container{
-    padding-top: 80px;
+    padding-top: 50px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -237,7 +262,7 @@
     font-family: KumbhSans;
     font-weight: 550;
     color: #f2f2eb;
-    font-size: 42px;
+    font-size: 36px;
     margin-right: 20px;
     margin-top: 30px;
 }
@@ -246,7 +271,7 @@
     font-family: KumbhSans;
     font-weight: 550;
     color: #f2f2eb;
-    font-size: 42px;
+    font-size: 36px;
     margin-right: 20px;
     margin-top: 30px;
 }
@@ -263,7 +288,7 @@
 
 .map-asset-container{
     height: 500px;
-    background-color: #1c6c1c;
+    /*background-color: #1c6c1c;*/
     width: 60%;
     /*filter: grayscale(100%) invert(90%) contrast(92%);*/
 }
@@ -277,7 +302,7 @@
     margin-top: 80px;
     display: none;
     height: 500px;
-    background-color: #1c6c1c;
+    /*background-color: #1c6c1c;*/
     border: solid 2px #f2f2eb;
     width: 80%;
     margin-left: 10%;
@@ -385,7 +410,7 @@
 }
 
 .review-card{
-    height: 310px;
+    height: 380px;
     width: 30%;
     padding: 20px;
     background-color: #252422;
@@ -453,7 +478,7 @@
 .review-carousel-container{
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     display: flex;
 }
 
@@ -479,8 +504,8 @@
 }
 
 .review-asset-rate{
-    height: 55px;
-    width: 55px;
+    height: 48px;
+    width: 48px;
 }
 
 .rate-us-container{
@@ -497,7 +522,7 @@
 }
 
 .rate-us-p{
-    font-size: 42px;
+    font-size: 36px;
     color: #f2f2eb;
     font-family: KumbhSans;
     margin-right: 15px;
@@ -512,7 +537,7 @@
 }
 
 .show-form-button {
-    margin-top: 150px;
+    margin-top: 100px;
     padding: 15.5px 20px;
     width: 91%;
     background-color: #252422;
@@ -521,7 +546,7 @@
     color: white;
     cursor: pointer;
     font-family: KumbhSans;
-    font-size: 38px;
+    font-size: 36px;
 }
 
 .contact-form {
@@ -715,8 +740,8 @@ input{
 
 
     .top-black-screen{
-        background-image: url('../assets/product-images-webp/Hug people final (2).webp');
-        background-position: 43% 50%;
+        background-image: url('../assets/product-images-webp/imimanancaRAMII.webp');
+        background-position: 50% 40%;
         background-size: cover;
         height: 885px;
         margin-top: 50px;
@@ -742,7 +767,7 @@ input{
     }
 
     .family-heading-top{
-        margin-top: -40px;
+        margin-top: 150px;
         font-size: 33px;
     }
 
@@ -796,7 +821,7 @@ input{
 
     .map-asset-container{
         display: flex;
-        background-color: #1c6c1c;
+        /*background-color: #1c6c1c;*/
         border: solid 2px #f2f2eb;
         width: 80%;
         margin: 80px 10%;
@@ -806,7 +831,6 @@ input{
         margin-bottom: 80px;
         display: flex;
         height: 500px;
-        background-color: #1c6c1c;
         border: solid 2px #f2f2eb;
         width: 80%;
         margin-left: 10%;
@@ -854,7 +878,7 @@ input{
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
-        padding-top: 50px;
+        padding-top: 10px;
         margin-bottom: -60px;
         display: flex;
         align-items: center;
